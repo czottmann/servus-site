@@ -186,19 +186,6 @@
       <div class="twelve columns">
         <hr>
       </div>
-      <div class="four columns" id="requirements">
-        <h3>
-          Requirements
-        </h3>
-        <ul class="disc">
-          <li>
-            a free or paid
-            <a href="http://db.tt/T84kkEv">Dropbox account</a>
-          </li>
-          <li>OS X 10.6 Snow Leopard or higher</li>
-          <li>a Mac with 64bit architecture (i.e. pretty much any Mac since 2006)</li>
-        </ul>
-      </div>
       <div class="four columns end">
         <blockquote>
           "I use Droplings to send PDFs of frivolous cease-and-decist letters in style.  Jolly!"
@@ -212,6 +199,19 @@
           I'm so glad someone finally built it."
           <cite>Carlo Zottmann, Droplings dev</cite>
         </blockquote>
+      </div>
+      <div class="four columns" id="requirements">
+        <h3>
+          Requirements
+        </h3>
+        <ul class="disc">
+          <li>
+            a free or paid
+            <a href="http://db.tt/T84kkEv">Dropbox account</a>
+          </li>
+          <li>OS X 10.6 Snow Leopard or higher</li>
+          <li>a Mac with 64bit architecture (i.e. pretty much any Mac since 2006)</li>
+        </ul>
       </div>
     </div>
     <footer>
@@ -251,8 +251,15 @@
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
+        
+        if ( document.location.host === "localhost" ) {
+          $.getScript("http://localhost:35729/livereload.js?snipver=1");
+        }
       //]]>
     </script>
-    <script src="http://localhost:35729/livereload.js?snipver=1"></script>
   </body>
+  <!--
+    This site uses glyphs by Font Awesome: http://fortawesome.github.com/Font-Awesome
+    Licensed under CC BY 3.0, and highly recommended by me.
+  -->
 </html>

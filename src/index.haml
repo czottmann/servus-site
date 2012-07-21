@@ -162,17 +162,6 @@
       .twelve.columns
         %hr
 
-      .four.columns#requirements
-        %h3
-          Requirements
-
-        %ul.disc
-          %li
-            a free or paid
-            %a{ :href => "http://db.tt/T84kkEv" } Dropbox account
-          %li OS X 10.6 Snow Leopard or higher
-          %li a Mac with 64bit architecture (i.e. pretty much any Mac since 2006)
-
       .four.columns.end
         %blockquote
           "I use Droplings to send PDFs of frivolous cease-and-decist letters in style.  Jolly!"
@@ -184,6 +173,17 @@
           %em forever!
           I'm so glad someone finally built it."
           %cite Carlo Zottmann, Droplings dev
+
+      .four.columns#requirements
+        %h3
+          Requirements
+
+        %ul.disc
+          %li
+            a free or paid
+            %a{ :href => "http://db.tt/T84kkEv" } Dropbox account
+          %li OS X 10.6 Snow Leopard or higher
+          %li a Mac with 64bit architecture (i.e. pretty much any Mac since 2006)
 
     %footer
       .row
@@ -222,4 +222,10 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
 
-    %script{ :src => "http://localhost:35729/livereload.js?snipver=1" }
+      if ( document.location.host === "localhost" ) {
+        $.getScript("http://localhost:35729/livereload.js?snipver=1");
+      }
+
+  /
+    This site uses glyphs by Font Awesome: http://fortawesome.github.com/Font-Awesome
+    Licensed under CC BY 3.0, and highly recommended by me.
