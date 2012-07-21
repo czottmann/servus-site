@@ -1,0 +1,222 @@
+!!! 5
+%html
+  %head
+    %meta{ :charset => "utf-8" }
+    %meta{ :"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+    %meta{ :"http-equiv" => "Content-Type", :content => "text/html" }
+    %meta{ :name => "viewport", :content => "width=device-width" }
+    %title Droplings for Mac
+
+    :javascript
+      if ( top !== self ) { top.location = self.location.href; }
+
+    %link{ :rel => "shortcut icon", :href => "img/favicon.png" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/foundation.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/droplings.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "http://assets.drpln.gs/1/font-awesome.css" }
+    /[if IE 7 ]
+      %link{ :rel => "stylesheet", :type => "text/css", :href => "http://assets.drpln.gs/1/font-awesome-ie7.css" }
+
+    /[if lt IE 9]
+      %script{ :src => "http://html5shiv.googlecode.com/svn/trunk/html5.js" }
+
+  %body
+    %header
+      .row
+        .twelve.columns
+          %h1
+            %i.icon-tint
+            Droplings for Mac
+          %h2.subheader
+            Quickly share files through your Dropbox, using custom themes.
+
+    .row
+      .twelve.columns
+        .panel
+          .row
+            .five.columns
+              %p
+                I really like those menubar icon sharing apps.  Drag a file from the
+                Finder to a menubar icon, it'll be uploaded to
+                %strike the moon
+                the cloud, and the link to its fancy new preview page is copied to
+                the clipboard.
+
+              %p
+                So useful, but every app I came across raised the same two
+                questions for me:
+
+              %ol.disc
+                %li
+                  I already have a
+                  %a{ :href => "http://db.tt/T84kkEv" } Dropbox
+                  account, why use yet another service?
+                %li
+                  Why do my generated preview pages have to look like everyone
+                  else's?
+
+
+            .seven.columns
+              %p
+                Holy crap, so much whitespace.
+
+              %p
+                %a.large.success.radius.button{ :href => "http://drpln.gs/QjNR5F" }
+                  %i.icon-download-alt
+                  Download Droplings 0.9.4
+
+
+    .row
+      .nine.columns
+
+        .row#reasons
+          .six.columns
+            %h3
+              %i.icon-cloud
+              Dropbox-Powered
+
+            %p
+              You already have a Dropbox account.  If it's a paid one, you have
+              100GB+ at your disposal.  So why not use that one for your simple
+              sharing needs?  With it's public-facing
+              %code ~/Dropbox/Public
+              folder it makes it easy to put static files online.
+              %strong{ :style => "white-space: nowrap" }
+                %i.icon-tint
+                Droplings
+              utilizes that feature.
+
+          .six.columns
+            %h3
+              %i.icon-magic
+              Custom Themes
+
+            %p
+              I'm a freelancer.  Often times I need to send files to my clients.
+              Many sharing services out there build nice preview pages
+              around my file, yet all those pages look alike.  I'd like to go the
+              extra mile here.
+
+            %p
+              Thus, you can either go with
+              %strong{ :style => "white-space: nowrap" }
+                %i.icon-tint
+                Droplings'
+              default theme, or you create your own
+              %a{ :href => "http://mustache.github.com/" }
+                Mustache-based
+              theme — check out
+              %a{ :href => "http://documentup.com/carlo/droplings-default-theme" }
+                the documentation.
+
+
+          .six.columns
+            %h3
+              %i.icon-plus-sign
+              No Size Limits
+
+            %p
+              None of those silly "25MB max" limits!  The sky's the limit, and by
+              "sky" I mean your Dropbox account.  According to
+              %a{ :href => "https://www.dropbox.com/help/5/en" } Dropbox' FAQs
+              the maximum file size is only restricted by your account.
+
+            %p
+              And if you'll pass it a folder, it'll zip it up before uploading.
+
+
+          .six.columns
+            %h3
+              %i.icon-link
+              Here's Your Link
+
+            %p
+              The second you drop a file on the menubar icon, the preview page
+              link is copied to your clipboard, even if the file is still
+              uploading.  And by the time you're done writing that email, your
+              file usually is online, too.
+
+      .three.columns
+        %p
+          %a{ :href => "#screenshot" }
+            %img{ :src => "http://placehold.it/250x100", :title => "Screenshot" }
+            Screenshot #1
+
+        %p
+          %a{ :href => "#screenshot" }
+            %img{ :src => "http://placehold.it/250x100", :title => "Screenshot" }
+            %br
+            Screenshot #2
+
+        %p
+          %a{ :href => "#screenshot" }
+            %img{ :src => "http://placehold.it/250x100", :title => "Screenshot" }
+            %br
+            The built-in default theme
+
+
+    .row
+      .twelve.columns
+        %hr
+
+      .four.columns#requirements
+        %h3
+          Requirements
+
+        %ul.disc
+          %li
+            a free or paid
+            %a{ :href => "http://db.tt/T84kkEv" } Dropbox account
+          %li OS X 10.6 Snow Leopard or higher
+          %li a Mac with 64bit architecture (i.e. pretty much any Mac since 2006)
+
+      .four.columns.end
+        %blockquote
+          "I use Droplings to send PDFs of frivolous cease-and-decist letters in style.  Jolly!"
+          %cite Cecil Madeupington III, Esq.
+
+      .four.columns.end
+        %blockquote
+          "I've been waiting for an app like this, like,
+          %em forever!
+          I'm so glad someone finally built it."
+          %cite Carlo Zottmann, Droplings dev
+
+    %footer
+      .row
+        .twelve.columns
+          %hr
+
+          %p
+            Droplings (c) Carlo Zottmann, all rights reserved.
+            \&middot;
+            %a{ :href => "mailto:droplings@municode.de" } Email
+            \&middot;
+            %a{ :href => "http://twitter.com/drplings" } @drplings
+
+          %hr
+
+          #imprint
+            %p
+              %strong Impressum:
+              Carlo Zottmann, Zeisigweg 30, 81827 München, droplings@municode.de,
+              USt-ID gemäß §27 a UStG: DE260224054
+
+
+    %script{ :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" }
+    %script{ :src => "js/modernizr.foundation.js" }
+    %script{ :src => "js/foundation.js" }
+
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3142618-11']);
+      _gaq.push(['_setDomainName', 'droplings.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    %script{ :src => "http://localhost:35729/livereload.js?snipver=1" }
