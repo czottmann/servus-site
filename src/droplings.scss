@@ -16,6 +16,13 @@ header {
   }
 }
 
+#download {
+  p {
+    font-size: 11px;
+    color: #777;
+  }
+}
+
 #reasons {
   h3 {
     font-size: 23px;
@@ -45,9 +52,8 @@ header {
 }
 
 
-#imprint {
-  p {
-    font-size: 9px;
-    text-align: center;
+footer {
+  p small {
+    color: #666;
   }
 }
