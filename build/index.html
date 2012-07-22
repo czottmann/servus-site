@@ -23,227 +23,72 @@
     <![endif]-->
   </head>
   <body>
-    <header>
-      <div class="row">
-        <div class="twelve columns">
-          <h1>
-            <i class="icon-tint"></i>
-            Droplings for Mac
-          </h1>
-          <h2 class="subheader">
-            Quickly share files through your Dropbox, using custom themes.
-          </h2>
-        </div>
-      </div>
-    </header>
     <div class="row">
-      <div class="twelve columns">
-        <div class="panel">
-          <div class="row">
-            <div class="seven columns">
-              <p>
-                I really like those menubar icon sharing apps.  Drag a file from the
-                Finder to a menubar icon, it'll be uploaded to
-                <strike>the moon</strike>
-                the cloud, and the link to its fancy new preview page is copied to
-                the clipboard.
-              </p>
-              <p>
-                So useful, but every app I came across raised the same two
-                questions for me:
-              </p>
-              <ol class="disc">
-                <li>
-                  I already have a
-                  <a href="http://db.tt/T84kkEv">Dropbox</a>
-                  account, why use yet another service?
-                </li>
-                <li>
-                  Why do my generated preview pages have to look like everyone
-                  else's?
-                </li>
-              </ol>
-              <p>
-                <strong>So I wrote Droplings.</strong>
-              </p>
-            </div>
-            <div class="five columns" id="download">
-              <p>
-                <a class="large success radius button" href="http://drpln.gs/QjNR5F">
-                  <i class="icon-download-alt"></i>
-                  Download Droplings 0.9.4
-                </a>
-              </p>
-              <p>
-                Droplings is free at the moment as the 0.9.x versions are
-                considered betas.  However, once Droplings reaches
-                1.0 it'll be a paid app.  (Not to worry, tho, its price
-                will be less than $10.)
-              </p>
-            </div>
-          </div>
+      <div class="seven columns centered">
+        <div id="drop-img">
+          <img alt="Droplings icon" src="img/app-icon.png">
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="nine columns">
-        <div class="row" id="reasons">
-          <div class="six columns">
-            <h3>
-              <i class="icon-cloud"></i>
-              Dropbox-Powered
-            </h3>
-            <p>
-              You already have a Dropbox account.  If it's a paid one, you have
-              100GB+ at your disposal.  So why not use that one for your simple
-              sharing needs?  With it's public-facing
-              <code>~/Dropbox/Public</code>
-              folder it makes it easy to put static files online.
-              <strong style="white-space: nowrap">
-                <i class="icon-tint"></i>
-                Droplings
-              </strong>
-              utilizes that feature.
-            </p>
-          </div>
-          <div class="six columns">
-            <h3>
-              <i class="icon-magic"></i>
-              Custom Themes
-            </h3>
-            <p>
-              I'm a freelancer.  Often times I need to send files to my clients.
-              Many sharing services out there build nice preview pages
-              around my file, yet all those pages look alike.  I'd like to go the
-              extra mile here.
-            </p>
-            <p>
-              Thus, you can either go with
-              <strong style="white-space: nowrap">
-                <i class="icon-tint"></i>
-                Droplings'
-              </strong>
-              default theme, or you create your own
-              <a href="http://mustache.github.com/">
-                Mustache-based
-              </a>
-              theme — check out
-              <a href="http://documentup.com/carlo/droplings-default-theme">
-                the documentation.
-              </a>
-            </p>
-          </div>
-          <div class="six columns">
-            <h3>
-              <i class="icon-plus-sign"></i>
-              No Size Limits
-            </h3>
-            <p>
-              None of those silly "25MB max" limits!  The sky's the limit, and by
-              "sky" I mean your Dropbox account.  According to
-              <a href="https://www.dropbox.com/help/5/en">Dropbox' FAQs</a>
-              the maximum file size is only restricted by your account.
-            </p>
-            <p>
-              And if you'll pass it a folder, it'll zip it up before uploading.
-            </p>
-          </div>
-          <div class="six columns">
-            <h3>
-              <i class="icon-link"></i>
-              Here's Your Link
-            </h3>
-            <p>
-              The second you drop a file on the menubar icon, the preview page
-              link is copied to your clipboard, even if the file is still
-              uploading.  And by the time you're done writing that email, your
-              file usually is online, too.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="three columns">
+        <p></p>
+        <h1>
+          <small>This is</small>
+          Droplings for Mac.
+        </h1>
         <p>
-          <a href="#screenshot">
-            <img src="http://placehold.it/250x100" title="Screenshot">
-            Screenshot #1
+          <img src="http://placehold.it/518x120" title="Screenshot">
+        </p>
+        <p>
+          It's a menubar icon.  If you drop a file on it, it'll build a nice
+          <strong>preview page</strong>
+          around it, upload both to
+          <strong>your Dropbox,</strong>
+          then copy the public preview link to your clipboard.
+        </p>
+        <p>Droplings comes with a clean preview page theme (see the download
+        link below for an example), but you can use
+        <strong>your own custom themes.</strong>
+        (There's&nbsp;<a href="http://documentup.com/carlo/droplings-default-theme">documentation</a>.)</p>
+        <p>
+          The
+          <strong>maximum file size</strong>
+          of the files you share is only restricted by the size of your
+          Dropbox account.
+        </p>
+        <p>
+          Droplings
+          <strong>requires</strong>
+          OS X 10.6 or higher, running on a 64bit
+          architecture (i.e. any 2007+ Mac should do).  And of course you
+          need a free or Pro
+          <a href="http://db.tt/T84kkEv">Dropbox account.</a>
+        </p>
+        <p>
+          Droplings is free at the moment as the 0.9.x versions are
+          considered betas.  Once we reach 1.0 there'll be a (modest) price
+          tag.
+        </p>
+        <p id="download">
+          <a href="http://drpln.gs/QjNR5F">
+            <i class="icon-download-alt"></i>
+            Download Droplings 0.9.4
           </a>
         </p>
         <p>
-          <a href="#screenshot">
-            <img src="http://placehold.it/250x100" title="Screenshot">
-            <br>
-            Screenshot #2
+          If you want to be informed of what's going on with Droplings,
+          <a href="http://twitter.com/drplings">
+            follow @drplngs on Twitter.
           </a>
+          If you need to contact me, Carlo Zottmann, feel free to send me
+          <a href="mailto:droplings@municode.de">an email.</a>
         </p>
-        <p>
-          <a href="#screenshot">
-            <img src="http://placehold.it/250x100" title="Screenshot">
-            <br>
-            The built-in default theme
-          </a>
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="twelve columns">
         <hr>
-      </div>
-      <div class="four columns end">
-        <blockquote>
-          "I use Droplings to send PDFs of frivolous cease-and-decist letters in style.  Jolly!"
-          <cite>Cecil Madeupington III, Esq.</cite>
-        </blockquote>
-      </div>
-      <div class="four columns end">
-        <blockquote>
-          "I've been waiting for an app like this, like,
-          <em>forever!</em>
-          I'm so glad someone finally built it."
-          <cite>Carlo Zottmann, Droplings dev</cite>
-        </blockquote>
-      </div>
-      <div class="four columns" id="requirements">
-        <h3>
-          Requirements
-        </h3>
-        <ul class="disc">
-          <li>
-            a free or paid
-            <a href="http://db.tt/T84kkEv">Dropbox account</a>
-          </li>
-          <li>OS X 10.6 Snow Leopard or higher</li>
-          <li>a Mac with 64bit architecture (i.e. pretty much any Mac since 2006)</li>
-        </ul>
+        <p id="imprint">
+          <strong>Impressum/imprint:</strong>
+          Carlo Zottmann, Zeisigweg 30, 81827 München, Germany
+           &middot; droplings@municode.de
+           &middot; USt-ID: DE260224054
+        </p>
       </div>
     </div>
-    <footer>
-      <div class="row">
-        <div class="twelve columns">
-          <hr>
-          <p>
-            Droplings (c) Carlo Zottmann, all rights reserved.
-            &middot;
-            <a href="mailto:droplings@municode.de">Email</a>
-            &middot;
-            <a href="http://twitter.com/drplings">@drplings</a>
-          </p>
-          <hr>
-          <p>
-            <center>
-              <img alt="Droplings icon" src="img/app-icon.png">
-            </center>
-          </p>
-          <p>
-            <small>
-              <strong>Impressum:</strong>
-              Carlo Zottmann, Zeisigweg 30, 81827 München, droplings@municode.de,
-              USt-ID gemäß §27 a UStG: DE260224054
-            </small>
-          </p>
-        </div>
-      </div>
-    </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="js/modernizr.foundation.js"></script>
     <script src="js/foundation.js"></script>
