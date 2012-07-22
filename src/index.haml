@@ -72,7 +72,22 @@
         %p
           If you want to be informed of what's going on with Droplings,
           %a{ :href => "http://twitter.com/drplngs" }
-            follow @drplngs on Twitter.
+            follow @drplngs on Twitter
+          or sign up for the Droplings Updates newsletter:
+
+        %form{ :action => "https://tinyletter.com/droplings", :method => "post", :onsubmit => "window.open('https://tinyletter.com/droplings', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true", :target => "popupwindow" }
+          %input{ :name => "embed", :type => "hidden", :value => "1" }
+
+          .row
+            .four.mobile-one.columns
+              %label.right.inline{ :for => "tlemail" } Your email address
+            .eight.mobile-three.columns
+              %input#tlemail{ :name => "email", :placeholder => "you@example.com", :type => "email" }
+
+            .eight.mobile-three.columns
+              %input.small.secondary.button{ :type => "submit", :value => "Subscribe" }
+
+        %p
           If you need to contact me, Carlo Zottmann, feel free to send me
           %a{ :href => "mailto:droplings@municode.de" } an email.
 
