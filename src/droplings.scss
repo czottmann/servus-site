@@ -23,13 +23,28 @@
 }
 
 
+html {
+  background-color: #f8f8fc;
+}
+
 body {
-  color: #444;
+  color: #333;
   text-shadow: 1px 1px 1px rgba( 255, 255, 255, 0.8 );
 }
 
 p {
   line-height: 1.8;
+
+  img {
+    @include border-radius(7px);
+    @include box-shadow( 0 1px 4px rgba( 0, 0, 0, 0.5 ), inset 0 0 #fff );
+    margin: 0;
+  }
+
+  small {
+    color: #888;
+    font-size: 12px;
+  }
 }
 
 #drop-img {
@@ -38,10 +53,12 @@ p {
 }
 
 h1 {
-  font-size: 23px;
+  font-size: 27px;
+  margin-top: 30px;
 
   small {
     margin: 14px 0;
+    font-weight: normal;
   }
 }
 
@@ -67,7 +84,7 @@ h1 {
 }
 
 p#imprint {
-  margin-top: 50px;
   color: #666;
   font-size: 9px;
+  text-align: center;
 }
