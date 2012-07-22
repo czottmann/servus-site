@@ -74,10 +74,8 @@
           If you need to contact me, Carlo Zottmann, feel free to send me
           %a{ :href => "mailto:droplings@municode.de" } an email.
 
-
         #drop-img
           %img{ :src => "img/app-icon.png", :alt => "Droplings icon" }
-
 
         %p#imprint
           %strong Imprint:
@@ -86,10 +84,6 @@
           \ &middot; droplings@municode.de
           \ &middot; USt-ID: DE260224054
 
-
-    %script{ :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" }
-    %script{ :src => "js/modernizr.foundation.js" }
-    %script{ :src => "js/foundation.js" }
 
     :javascript
       var _gaq = _gaq || [];
@@ -103,10 +97,10 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
 
-      if ( document.location.host === "localhost" ) {
-        $.getScript("http://localhost:35729/livereload.js?snipver=1");
-      }
-
-  /
-    This site uses glyphs by Font Awesome: http://fortawesome.github.com/Font-Awesome
-    Licensed under CC BY 3.0, and highly recommended by me.
+      (function() {
+        if ( document.location.host === "localhost" ) {
+          var ga = document.createElement('script'); ga.type = 'text/javascript';
+          ga.src = "http://localhost:35729/livereload.js?snipver=1";
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        }
+      })();
