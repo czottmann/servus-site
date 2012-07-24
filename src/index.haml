@@ -1,7 +1,7 @@
 !!! 5
 
-- download_url = "http://drpln.gs/MUtgyz"
-- version = "0.9.6"
+- download_url = "http://drpln.gs/O5hjvB"
+- version = "0.9.7"
 
 %html
   %head
@@ -17,6 +17,9 @@
     %link{ :rel => "shortcut icon", :href => "img/favicon.png" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "css/foundation.css" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "css/droplings.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "https://assets.drpln.gs/1/font-awesome.css" }
+    /[if IE 7 ]
+      %link{ :rel => "stylesheet", :type => "text/css", :href => "https://assets.drpln.gs/1/font-awesome-ie7.css" }
 
   %body
 
@@ -37,14 +40,20 @@
           then copy the public preview link to your clipboard.  If you drop a
           folder on it, the folder will be zipped up before uploading.
 
+        %p
+          %strong I wrote it because
+          I'm a freelancer and often need to send files to clients.  I feel
+          having a branded preview page makes for a more professional
+          appearance.
+
         %p<
-          Droplings comes with a clean preview page theme — see the download
+          So Droplings comes with a clean preview page theme — see the download
           link below for
           %a{ :href => download_url } an example
           — but you can use
           %strong your own custom themes.
           (There's
-          %a{ :href => "https://github.com/carlo/droplings-default-theme#readme" } documentation
+          %a{ :href => "https://documentup.com/carlo/droplings-default-theme" } documentation
           on how to do it.)
 
         %p
@@ -64,14 +73,8 @@
           too.
 
         %p
-          %strong I wrote it because
-          I'm a freelancer and often need to send files to clients.  I feel
-          having a branded preview page makes for a more professional
-          appearance.
-
-        %p
-          Droplings is free at the moment as the 0.9.x versions are
-          considered beta.
+          The app is free at the moment as the 0.9.x versions are considered
+          beta.
           %small So, there might be bugs.
           Once we reach 1.0 there'll be a (modest) price tag.
 
@@ -79,6 +82,11 @@
           %a{ :href => download_url }
             %i.icon-download-alt
             Download Droplings #{version}
+
+        %p#release-notes
+          %a{ :href => "https://updates.drpln.gs/#{version}/release_notes.html" }
+            %i.icon-file
+            Release notes for v#{version}
 
         %hr
 

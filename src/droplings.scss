@@ -63,7 +63,7 @@ h1 {
 }
 
 #download {
-  margin: 24px;
+  margin: 24px 0 6px 0;
   text-align: center;
 
   a {
@@ -81,6 +81,12 @@ h1 {
       @include bg-gradient( #8f8, #0c0 );
     }
   }
+}
+
+#release-notes {
+  font-size: 13px;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 p#imprint {
