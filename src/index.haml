@@ -1,7 +1,7 @@
 !!! 5
 
-- download_url = "http://drpln.gs/O5hjvB"
-- version = "0.9.7"
+- download_url = "https://updates.drpln.gs/0.9.8/Droplings.zip"
+- version = "0.9.8"
 
 %html
   %head
@@ -47,10 +47,9 @@
           appearance.
 
         %p<
-          So Droplings comes with a clean preview page theme — see the download
-          link below for
-          %a{ :href => download_url } an example
-          — but you can use your own
+          So Droplings comes with a clean preview page theme
+          %a{ :href => "http://drpln.gs/NSPDZJ" } (example)
+          but you can use your own
           %strong custom themes.
           (There's
           %a{ :href => "http://documentup.com/carlo/droplings-default-theme" } documentation
@@ -79,7 +78,7 @@
           Once we reach 1.0 there'll be a (modest) price tag.
 
         %p#download
-          %a{ :href => download_url }
+          %a{ :href => download_url, :onclick => "recordDownload(this,'Downloads','#{version}');return false;" }
             %i.icon-download-alt
             Download Droplings #{version}
 
@@ -136,6 +135,17 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+
+      function recordDownload(link, category, action) {
+        try {
+          var dnwldTracker = _gat._getTrackerByName();
+          _gaq.push([ "dnwldTracker._trackEvent", category, action ]);
+          setTimeout( 'document.location = "' + link.href + '"', 100 );
+        } catch(err) {}
+      }
+
+
+
 
       (function() {
         if ( document.location.host === "localhost" ) {

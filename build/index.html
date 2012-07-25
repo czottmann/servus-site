@@ -43,10 +43,9 @@
           having a branded preview page makes for a more professional
           appearance.
         </p>
-        <p>So Droplings comes with a clean preview page theme — see the download
-        link below for
-        <a href="http://drpln.gs/O5hjvB">an example</a>
-        — but you can use your own
+        <p>So Droplings comes with a clean preview page theme
+        <a href="http://drpln.gs/NSPDZJ">(example)</a>
+        but you can use your own
         <strong>custom themes.</strong>
         (There's
         <a href="http://documentup.com/carlo/droplings-default-theme">documentation</a>
@@ -74,15 +73,15 @@
           Once we reach 1.0 there'll be a (modest) price tag.
         </p>
         <p id="download">
-          <a href="http://drpln.gs/O5hjvB">
+          <a href="https://updates.drpln.gs/0.9.8/Droplings.zip" onclick="recordDownload(this,'Downloads','0.9.8');return false;">
             <i class="icon-download-alt"></i>
-            Download Droplings 0.9.7
+            Download Droplings 0.9.8
           </a>
         </p>
         <p id="release-notes">
-          <a href="https://updates.drpln.gs/0.9.7/release_notes.html">
+          <a href="https://updates.drpln.gs/0.9.8/release_notes.html">
             <i class="icon-file"></i>
-            Release notes for v0.9.7
+            Release notes for v0.9.8
           </a>
         </p>
         <hr>
@@ -136,6 +135,17 @@
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
+        
+        function recordDownload(link, category, action) {
+          try {
+            var dnwldTracker = _gat._getTrackerByName();
+            _gaq.push([ "dnwldTracker._trackEvent", category, action ]);
+            setTimeout( 'document.location = "' + link.href + '"', 100 );
+          } catch(err) {}
+        }
+        
+        
+        
         
         (function() {
           if ( document.location.host === "localhost" ) {
