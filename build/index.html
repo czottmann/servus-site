@@ -73,7 +73,7 @@
           Once we reach 1.0 there'll be a (modest) price tag.
         </p>
         <p id="download">
-          <a href="https://updates.drpln.gs/0.9.8/Droplings.zip" onclick="recordDownload(this,'Downloads','0.9.8');return false;">
+          <a href="https://updates.drpln.gs/0.9.8/Droplings.zip">
             <i class="icon-download-alt"></i>
             Download Droplings 0.9.8
           </a>
@@ -135,17 +135,6 @@
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
-        
-        function recordDownload(link, category, action) {
-          try {
-            var dnwldTracker = _gat._getTrackerByName();
-            _gaq.push([ "dnwldTracker._trackEvent", category, action ]);
-            setTimeout( 'document.location = "' + link.href + '"', 100 );
-          } catch(err) {}
-        }
-        
-        
-        
         
         (function() {
           if ( document.location.host === "localhost" ) {
