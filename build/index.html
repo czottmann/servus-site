@@ -6,18 +6,23 @@
     <meta content="text/html" http-equiv="Content-Type">
     <meta content="width=device-width" name="viewport">
     <meta content="Turn any file on your computer into a branded download page hosted on Dropbox." name="description">
-    <title>Droplings for Mac</title>
+    <title>Servus for Mac (formerly Droplings)</title>
     <script>
       //<![CDATA[
-        if ( top !== self ) { top.location = self.location.href; }
+        if ( top !== self ) {
+          top.location = self.location.href;
+        }
+        else if ( document.location.host !== "servus.io" && document.location.host !== "localhost" ) {
+          document.location.href = "https://servus.io";
+        }
       //]]>
     </script>
     <link href="img/favicon.png" rel="shortcut icon">
     <link href="css/foundation.css" rel="stylesheet" type="text/css">
-    <link href="css/droplings.css" rel="stylesheet" type="text/css">
-    <link href="//assets.drpln.gs/1/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="css/servus.css" rel="stylesheet" type="text/css">
+    <link href="//assets.servus.io/2/font-awesome.css" rel="stylesheet" type="text/css">
     <!--[if IE 7 ]>
-      <link href="//assets.drpln.gs/1/font-awesome-ie7.css" rel="stylesheet" type="text/css">
+      <link href="//assets.servus.io/2/font-awesome-ie7.css" rel="stylesheet" type="text/css">
     <![endif]-->
   </head>
   <body>
@@ -25,7 +30,8 @@
       <div class="seven columns centered">
         <h1>
           <small>This is</small>
-          Droplings for Mac.
+          Servus for Mac.
+          <small>(Formerly known as Droplings.)</small>
         </h1>
         <p>
           <img src="img/screenshot-menubar.jpg" title="Screenshot Menubar">
@@ -50,12 +56,12 @@
           having a branded preview page makes for a more professional
           appearance.
         </p>
-        <p>Droplings comes with a clean preview page theme
-        <a href="http://drpln.gs/NSPDZJ">(example)</a>
+        <p>Droplings comes with a clean built-in preview page theme
+        <a href="https://dl.dropbox.com/s/4or9t1hdy2b74go/index.html">(example)</a>
         but you can use your own
         <strong>custom themes.</strong>
         (Here's
-        <a href="http://documentup.com/carlo/droplings-theme-boilerplate">a theme boilerplate kit with documentation</a>
+        <a href="https://dl.dropbox.com/s/1csvhe4supq8jf5/index.html">a theme boilerplate kit with documentation</a>
         to get you started.)</p>
         <p>
           The
@@ -80,26 +86,26 @@
           Once we reach 1.0 there'll be a (modest) price tag.
         </p>
         <p id="download">
-          <a href="https://updates.drpln.gs/0.9.9/Droplings.zip">
+          <a href="https://updates.servus.io/0.9.12/Servus.zip">
             <i class="icon-download-alt"></i>
-            Download Droplings 0.9.9
+            Download Droplings 0.9.12
           </a>
         </p>
         <p id="release-notes">
-          <a href="https://updates.drpln.gs/0.9.9/release_notes.html">
+          <a href="https://updates.servus.io/0.9.12/release_notes.html">
             <i class="icon-file"></i>
-            Release notes for v0.9.9
+            Release notes for v0.9.12
           </a>
         </p>
         <hr>
         <p>
           If you want to be informed of what's going on with Droplings,
-          <a href="http://twitter.com/drplngs">
-            follow @drplngs on Twitter
+          <a href="http://twitter.com/servusio">
+            follow @servusio on Twitter
           </a>
-          or sign up for the Droplings Updates newsletter:
+          or sign up for the Servus Updates newsletter:
         </p>
-        <form action="https://tinyletter.com/droplings" method="post" onsubmit="window.open('https://tinyletter.com/droplings', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true" target="popupwindow">
+        <form action="https://tinyletter.com/servusio" method="post" onsubmit="window.open('https://tinyletter.com/servusio', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true" target="popupwindow">
           <input name="embed" type="hidden" value="1">
           <div class="row">
             <div class="four mobile-one columns">
@@ -115,7 +121,7 @@
         </form>
         <p>
           If you need to contact me, Carlo Zottmann, feel free to send me
-          <a href="mailto:droplings@municode.de">an email.</a>
+          <a href="mailto:carlo@servus.io">an email.</a>
         </p>
         <hr>
         <div id="drop-img">
@@ -125,7 +131,7 @@
           <strong>Imprint:</strong>
           <a href="http://municode.de">Carlo Zottmann,</a>
           Zeisigweg 30, 81827 München, Germany
-           &middot; droplings@municode.de
+           &middot; carlo@servus.io
            &middot; USt-ID: DE260224054
         </p>
       </div>
@@ -134,7 +140,7 @@
       //<![CDATA[
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-3142618-11']);
-        _gaq.push(['_setDomainName', 'droplings.com']);
+        _gaq.push(['_setDomainName', 'servus.io']);
         _gaq.push(['_trackPageview']);
         
         (function() {

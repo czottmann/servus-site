@@ -1,7 +1,7 @@
 !!! 5
 
-- download_url = "https://updates.drpln.gs/0.9.9/Droplings.zip"
-- version = "0.9.9"
+- download_url = "https://updates.servus.io/0.9.12/Servus.zip"
+- version = "0.9.12"
 
 %html
   %head
@@ -10,17 +10,22 @@
     %meta{ :"http-equiv" => "Content-Type", :content => "text/html" }
     %meta{ :name => "viewport", :content => "width=device-width" }
     %meta{ :name => "description", :content => "Turn any file on your computer into a branded download page hosted on Dropbox." }
-    %title Droplings for Mac
+    %title Servus for Mac (formerly Droplings)
 
     :javascript
-      if ( top !== self ) { top.location = self.location.href; }
+      if ( top !== self ) {
+        top.location = self.location.href;
+      }
+      else if ( document.location.host !== "servus.io" && document.location.host !== "localhost" ) {
+        document.location.href = "https://servus.io";
+      }
 
     %link{ :rel => "shortcut icon", :href => "img/favicon.png" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "css/foundation.css" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/droplings.css" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.drpln.gs/1/font-awesome.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/servus.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/2/font-awesome.css" }
     /[if IE 7 ]
-      %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.drpln.gs/1/font-awesome-ie7.css" }
+      %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/2/font-awesome-ie7.css" }
 
   %body
 
@@ -28,7 +33,8 @@
       .seven.columns.centered
         %h1
           %small This is
-          Droplings for Mac.
+          Servus for Mac.
+          %small (Formerly known as Droplings.)
 
         %p
           %img{ :src => "img/screenshot-menubar.jpg", :title => "Screenshot Menubar" }
@@ -53,12 +59,12 @@
           appearance.
 
         %p<
-          Droplings comes with a clean preview page theme
-          %a{ :href => "http://drpln.gs/NSPDZJ" } (example)
+          Droplings comes with a clean built-in preview page theme
+          %a{ :href => "https://dl.dropbox.com/s/4or9t1hdy2b74go/index.html" } (example)
           but you can use your own
           %strong custom themes.
           (Here's
-          %a{ :href => "http://documentup.com/carlo/droplings-theme-boilerplate" } a theme boilerplate kit with documentation
+          %a{ :href => "https://dl.dropbox.com/s/1csvhe4supq8jf5/index.html" } a theme boilerplate kit with documentation
           to get you started.)
 
         %p
@@ -89,7 +95,7 @@
             Download Droplings #{version}
 
         %p#release-notes
-          %a{ :href => "https://updates.drpln.gs/#{version}/release_notes.html" }
+          %a{ :href => "https://updates.servus.io/#{version}/release_notes.html" }
             %i.icon-file
             Release notes for v#{version}
 
@@ -97,11 +103,11 @@
 
         %p
           If you want to be informed of what's going on with Droplings,
-          %a{ :href => "http://twitter.com/drplngs" }
-            follow @drplngs on Twitter
-          or sign up for the Droplings Updates newsletter:
+          %a{ :href => "http://twitter.com/servusio" }
+            follow @servusio on Twitter
+          or sign up for the Servus Updates newsletter:
 
-        %form{ :action => "https://tinyletter.com/droplings", :method => "post", :onsubmit => "window.open('https://tinyletter.com/droplings', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true", :target => "popupwindow" }
+        %form{ :action => "https://tinyletter.com/servusio", :method => "post", :onsubmit => "window.open('https://tinyletter.com/servusio', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true", :target => "popupwindow" }
           %input{ :name => "embed", :type => "hidden", :value => "1" }
 
           .row
@@ -115,7 +121,7 @@
 
         %p
           If you need to contact me, Carlo Zottmann, feel free to send me
-          %a{ :href => "mailto:droplings@municode.de" } an email.
+          %a{ :href => "mailto:carlo@servus.io" } an email.
 
         %hr
 
@@ -126,14 +132,14 @@
           %strong Imprint:
           %a{ :href => "http://municode.de" } Carlo Zottmann,
           Zeisigweg 30, 81827 München, Germany
-          \ &middot; droplings@municode.de
+          \ &middot; carlo@servus.io
           \ &middot; USt-ID: DE260224054
 
 
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-3142618-11']);
-      _gaq.push(['_setDomainName', 'droplings.com']);
+      _gaq.push(['_setDomainName', 'servus.io']);
       _gaq.push(['_trackPageview']);
 
       (function() {
