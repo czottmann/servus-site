@@ -1,7 +1,8 @@
 !!! 5
 
-- download_url = "https://updates.servus.io/0.9.12/Servus.zip"
-- version = "0.9.12"
+- download_url = "https://updates.servus.io/0.9.13/Servus.zip"
+- version = "0.9.13"
+- blog_post = "http://blog.servus.io/post/32809997137/release-0-9-13"
 
 %html
   %head
@@ -95,9 +96,9 @@
             Download Servus #{version}
 
         %p#release-notes
-          %a{ :href => "https://updates.servus.io/#{version}/release_notes.html" }
+          %a{ :href => "blog_post" }
             %i.icon-file
-            Release notes for v#{version}
+            Blog post for v#{version}
 
         %hr
 
@@ -105,6 +106,9 @@
           If you want to be informed of what's going on with Servus,
           %a{ :href => "http://twitter.com/servusio" }
             follow @servusio on Twitter
+          or
+          %a{ :href => "http://blog.servus.io/" }
+            read the Servus blog
           or sign up for the Servus Updates newsletter:
 
         %form{ :action => "https://tinyletter.com/servusio", :method => "post", :onsubmit => "window.open('https://tinyletter.com/servusio', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true", :target => "popupwindow" }
