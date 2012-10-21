@@ -1,6 +1,5 @@
 require "rack/contrib/response_headers"
 require "rack/rewrite"
-require 'rack/ssl-enforcer'
 
 use Rack::ResponseHeaders do |headers|
   headers["Access-Control-Allow-Origin"] = "https://assets.servus.io"
