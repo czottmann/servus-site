@@ -2,4 +2,4 @@ source :rubygems
 
 gem "rack"
 gem "rack-contrib"
-gem "rack-rewrite"
+gem "rack-rewrite", "~> 1.3.0"
