@@ -5,6 +5,7 @@ GEM
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
     rack-rewrite (1.3.0)
+    rack-ssl-enforcer (0.2.4)
 
 PLATFORMS
   ruby
@@ -13,3 +14,4 @@ DEPENDENCIES
   rack
   rack-contrib
   rack-rewrite (~> 1.3.0)
+  rack-ssl-enforcer
