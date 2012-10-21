@@ -4,6 +4,7 @@ GEM
     rack (1.4.1)
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
+    rack-rewrite (1.2.1)
 
 PLATFORMS
   ruby
@@ -11,3 +12,4 @@ PLATFORMS
 DEPENDENCIES
   rack
   rack-contrib
+  rack-rewrite
