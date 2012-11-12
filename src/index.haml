@@ -1,7 +1,7 @@
 !!! 5
 
-- download_url = "https://updates.servus.io/0.9.13/Servus.zip"
-- version = "0.9.13"
+- download_url = "https://updates.servus.io/1.0.1/Servus.zip"
+- version = "1.0.1"
 - blog_post = "http://blog.servus.io/post/32809997137/release-0-9-13"
 
 %html
@@ -31,11 +31,10 @@
   %body
 
     .row
-      .seven.columns.centered
+      #content-column.seven.columns.centered
         %h1
           %small This is
-          Servus for Mac.
-          %small (Formerly known as Droplings.)
+          Servus. For Mac & Dropbox.
 
         %p
           %img{ :src => "img/screenshot-menubar.jpg", :title => "Screenshot Menubar" }
@@ -54,10 +53,11 @@
           folder on it, the folder will be zipped up before uploading.
 
         %p
-          %strong I wrote it because
+          %strong I created it because
           I'm a freelancer and often need to send files to clients.  I feel
-          having a branded preview page makes for a more professional
-          appearance.
+          having
+          %strong my own branded preview page
+          makes for a more professional appearance.
 
         %p<
           Servus comes with a clean built-in preview page theme
@@ -84,21 +84,17 @@
           %a{ :href => "http://db.tt/T84kkEv" } Dropbox account,
           too.
 
-        %p
-          The app is free at the moment as the 0.9.x versions are considered
-          beta.
-          %small So, there might be bugs.
-          Once we reach 1.0 there'll be a (modest) price tag.
-
-        %p#download
-          %a{ :href => download_url }
+        %p.app-link
+          %a.button.radius.success.large{ :href => download_url }
             %i.icon-download-alt
-            Download Servus #{version}
+            Download Servus #{version} &nbsp;&amp;&nbsp; Try For Free
+          %br
+          14 days trial, fully functional
 
-        %p#release-notes
-          %a{ :href => blog_post }
-            %i.icon-file
-            Blog post for v#{version}
+        %p.app-link
+          %a.button.radius.disabled{ :href => "#" }
+            %i.icon-shopping-cart
+            Available on the Mac App Store (soon!)
 
         %hr
 
@@ -138,6 +134,9 @@
           Zeisigweg 30, 81827 München, Germany
           \ &middot; carlo@servus.io
           \ &middot; USt-ID: DE260224054
+          %br
+          Background pattern is "Light Wool" from
+          %a{ :href => "http://subtlepatterns.com/" } Subtle Patterns.
 
 
     :javascript
