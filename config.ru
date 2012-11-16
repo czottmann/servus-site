@@ -7,6 +7,7 @@ end
 
 use Rack::Rewrite do
   found "/theme-docs", "http://documentup.com/carlo/servus-theme-boilerplate"
+  found "/download-trial", "https://updates.servus.io/1.0.2/ServusTrial.zip"
 end
 
 use Rack::Deflater
