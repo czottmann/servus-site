@@ -21,13 +21,33 @@
       }
 
     %link{ :rel => "shortcut icon", :href => "img/favicon.png" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/foundation.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/foundation.min.css" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "css/servus.css" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/2/font-awesome.css" }
     /[if IE 7 ]
       %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/2/font-awesome-ie7.css" }
 
   %body
+
+
+    .fixed.contain-to-grid
+      %nav.top-bar
+        %ul
+          %li.name
+            %h1
+              %a{ :href => "/" } Servus. For Mac & Dropbox.
+
+        %section
+          %ul.right
+            %li
+              %a{ :href => "http://blog.servus.io/" } Blog
+
+            %li
+              %a{ :href => "http://twitter.com/servusio" } Twitter
+
+            %li
+              %a{ :href => "https://tinyletter.com/servusio" } Newsletter
+
 
     .row
       #content-column.seven.columns.centered
