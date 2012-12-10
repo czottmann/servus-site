@@ -7,7 +7,7 @@ end
 
 use Rack::Rewrite do
   found "/theme-docs", "http://documentup.com/carlo/servus-theme-boilerplate"
-  found "/download-trial", "https://updates.servus.io/1.0.4/ServusTrial.zip"
+  found "/download-trial", "https://updates.servus.io/1.1/Servus.zip"
   found "/buy", "http://sites.fastspring.com/municode/product/servus"
 
   r301 %r{.*}, "https://servus.io/", :if => Proc.new {|rack_env|
