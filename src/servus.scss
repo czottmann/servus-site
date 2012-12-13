@@ -80,21 +80,33 @@ h1 {
   }
 }
 
-.button {
-  text-shadow: none;
-}
-
 .app-link {
   text-align: center;
 
   a.button {
-    &.success {
+    text-shadow: -1px -1px 2px rgba( 0, 0, 0, 0.5 );
+    width: 240px;
+
+    &#download {
       @include bg-gradient( #0d0, #0a0 );
 
       &:hover {
         @include bg-gradient( #0d0, #080 );
       }
     }
+
+    &#buy {
+      @include bg-gradient( #6666ff, #3333bb );
+
+      &:hover {
+        @include bg-gradient( #4444ee, #1111aa );
+      }
+    }
+  }
+
+  small {
+    color: #888;
+    font-size: 12px;
   }
 }
 

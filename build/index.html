@@ -31,14 +31,14 @@
         <ul>
           <li class="name">
             <h1>
-              <a href="/">Servus. For Mac &amp; Dropbox.</a>
+              <a href="/">Servus. For Mac & Dropbox.</a>
             </h1>
           </li>
         </ul>
         <section>
           <ul class="right">
             <li>
-              <a href="/download-trial">Download trial version</a>
+              <a href="/download-trial">Download Servus</a>
             </li>
             <li>
               <a href="http://blog.servus.io/">Blog</a>
@@ -57,7 +57,7 @@
       <div class="seven columns centered" id="content-column">
         <h1>
           <small>This is</small>
-          Servus. For Mac &amp; Dropbox.
+          Servus. For Mac & Dropbox.
         </h1>
         <p>
           <img src="img/screenshot-menubar.jpg" title="Screenshot Menubar">
@@ -106,20 +106,28 @@
           <a href="http://db.tt/T84kkEv">Dropbox account,</a>
           too.
         </p>
-        <p class="app-link">
-          <a class="button radius success large" href="/download-trial">
-            <i class="icon-download-alt"></i>
-            Download Servus 1.1 &nbsp;&amp;&nbsp; Try For Free
-          </a>
-          <br>
-          14 days trial, fully functional
-        </p>
-        <p class="app-link">
-          <a class="button radius success large" href="/buy">
-            <i class="icon-shopping-cart"></i>
-            Buy Servus — €8 / $10 / £6.50
-          </a>
-        </p>
+        <ul class="block-grid two-up app-link">
+          <li>
+            <a class="button radius success large" href="/download-trial" id="download">
+              <i class="icon-download-alt"></i>
+              Download Servus
+            </a>
+            <br>
+            <small>
+              Try Servus for free for 2 weeks!
+            </small>
+          </li>
+          <li>
+            <a class="button radius success large" href="/buy" id="buy">
+              <i class="icon-shopping-cart"></i>
+              Buy Servus
+            </a>
+            <br>
+            <small>
+              €8 / $10 / £6.50
+            </small>
+          </li>
+        </ul>
         <hr>
         <p>
           If you want to be informed of what's going on with Servus,
@@ -172,13 +180,13 @@
         _gaq.push(['_setAccount', 'UA-3142618-11']);
         _gaq.push(['_setDomainName', 'servus.io']);
         _gaq.push(['_trackPageview']);
-
+        
         (function() {
           var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
-
+        
         (function() {
           if ( document.location.host === "localhost" ) {
             var ga = document.createElement('script'); ga.type = 'text/javascript';

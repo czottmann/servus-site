@@ -40,7 +40,7 @@
         %section
           %ul.right
             %li
-              %a{ :href => "/download-trial" } Download trial version
+              %a{ :href => "/download-trial" } Download Servus
 
             %li
               %a{ :href => "http://blog.servus.io/" } Blog
@@ -106,17 +106,22 @@
           %a{ :href => "http://db.tt/T84kkEv" } Dropbox account,
           too.
 
-        %p.app-link
-          %a.button.radius.success.large{ :href => "/download-trial" }
-            %i.icon-download-alt
-            Download Servus #{version} &nbsp;&amp;&nbsp; Try For Free
-          %br
-          14 days trial, fully functional
+        %ul.block-grid.two-up.app-link
+          %li
+            %a#download.button.radius.success.large{ :href => "/download-trial" }
+              %i.icon-download-alt
+              Download Servus
+            %br
+            %small
+              Try Servus for free for 2 weeks!
 
-        %p.app-link
-          %a.button.radius.success.large{ :href => "/buy" }
-            %i.icon-shopping-cart
-            Buy Servus — €8 / $10 / £6.50
+          %li
+            %a#buy.button.radius.success.large{ :href => "/buy" }
+              %i.icon-shopping-cart
+              Buy Servus
+            %br
+            %small
+              €8 / $10 / £6.50
 
         %hr
 
