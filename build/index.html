@@ -15,11 +15,30 @@
         else if ( document.location.host !== "servus.io" && document.location.host !== "localhost" ) {
           document.location.href = "https://servus.io";
         }
+        
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-3142618-11']);
+        _gaq.push(['_setDomainName', 'servus.io']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = 'https://ssl.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+        (function() {
+          if ( document.location.host === "localhost" ) {
+            var ga = document.createElement('script'); ga.type = 'text/javascript';
+            ga.src = "http://localhost:35729/livereload.js?snipver=1";
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          }
+        })();
       //]]>
     </script>
     <link href="img/favicon.png" rel="shortcut icon">
-    <link href="css/foundation.min.css" rel="stylesheet" type="text/css">
-    <link href="css/servus.css" rel="stylesheet" type="text/css">
+    <link href="css/foundation.min.css?_=1355442837" rel="stylesheet" type="text/css">
+    <link href="css/servus.css?_=1355442837" rel="stylesheet" type="text/css">
     <link href="//assets.servus.io/2/font-awesome.css" rel="stylesheet" type="text/css">
     <!--[if IE 7 ]>
       <link href="//assets.servus.io/2/font-awesome-ie7.css" rel="stylesheet" type="text/css">
@@ -38,7 +57,7 @@
         <section>
           <ul class="right">
             <li>
-              <a href="/download-trial">Download Servus</a>
+              <a class="download" href="/download-trial">Download Servus</a>
             </li>
             <li>
               <a href="http://blog.servus.io/">Blog</a>
@@ -108,7 +127,7 @@
         </p>
         <ul class="block-grid two-up app-link">
           <li>
-            <a class="button radius success large" href="/download-trial" id="download">
+            <a class="download button radius success large" href="/download-trial">
               <i class="icon-download-alt"></i>
               Download Servus
             </a>
@@ -118,7 +137,7 @@
             </small>
           </li>
           <li>
-            <a class="button radius success large" href="/buy" id="buy">
+            <a class="buy button radius success large" href="/buy">
               <i class="icon-shopping-cart"></i>
               Buy Servus
             </a>
@@ -174,34 +193,25 @@
         </p>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script>
       //<![CDATA[
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-3142618-11']);
-        _gaq.push(['_setDomainName', 'servus.io']);
-        _gaq.push(['_trackPageview']);
+        $(document).on( "click", "a.download", function(evt) {
+          evt.preventDefault();
         
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+          var $elem = $(this);
         
-        (function() {
-          if ( document.location.host === "localhost" ) {
-            var ga = document.createElement('script'); ga.type = 'text/javascript';
-            ga.src = "http://localhost:35729/livereload.js?snipver=1";
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          if ( $elem.hasClass("download") ) {
+            _gaq.push([ "_trackEvent", "Outbound links", "Download", this.href, null, false ]);
           }
-        })();
-      //]]>
-    </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="js/jquery.outbound-analytics.min.js"></script>
-    <script>
-      //<![CDATA[
-        $(document).ready( function() {
-          $.outboundAnalytics();
+          else if ( $elem.hasClass("buy") ) {
+            _gaq.push([ "_trackEvent", "Outbound links", "Store", this.href, null, false ]);
+          }
+          else if ( this.host !== document.location.host ) {
+            _gaq.push([ "_trackEvent", "Outbound links", "Misc", this.href, null, false ]);
+          }
+        
+          setTimeout( function() { document.location = $elem.attr("href"); }, 100 );
         });
       //]]>
     </script>
