@@ -6,7 +6,7 @@
     <meta content="text/html" http-equiv="Content-Type">
     <meta content="width=device-width" name="viewport">
     <meta content="Turn any file on your computer into a branded download page hosted on Dropbox." name="description">
-    <title>Servus for Mac (formerly Droplings)</title>
+    <title>Servus for Mac. Your uploads, your style, on Dropbox.</title>
     <script>
       //<![CDATA[
         if ( top !== self ) {
@@ -22,9 +22,12 @@
         _gaq.push(['_trackPageview']);
         
         (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
           ga.src = 'https://ssl.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
         })();
         
         (function() {
@@ -37,8 +40,8 @@
       //]]>
     </script>
     <link href="img/favicon.png" rel="shortcut icon">
-    <link href="css/foundation.min.css?_=1355442925" rel="stylesheet" type="text/css">
-    <link href="css/servus.css?_=1355442925" rel="stylesheet" type="text/css">
+    <link href="css/foundation.min.css?_=1355445089" rel="stylesheet" type="text/css">
+    <link href="css/servus.css?_=1355445089" rel="stylesheet" type="text/css">
     <link href="//assets.servus.io/2/font-awesome.css" rel="stylesheet" type="text/css">
     <!--[if IE 7 ]>
       <link href="//assets.servus.io/2/font-awesome-ie7.css" rel="stylesheet" type="text/css">
@@ -208,7 +211,7 @@
             _gaq.push([ "_trackEvent", "Outbound links", "Store", this.href, null, false ]);
           }
           else if ( this.host !== document.location.host ) {
-            _gaq.push([ "_trackEvent", "Outbound links", "Misc", this.href, null, false ]);
+            _gaq.push([ "_trackEvent", "Outbound links", this.text, this.href, null, false ]);
           }
         
           setTimeout( function() { document.location = $elem.attr("href"); }, 100 );
