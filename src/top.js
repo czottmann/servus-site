@@ -8,6 +8,7 @@ else if ( document.location.host !== "servus.io" && document.location.host !== "
 var _gaq = _gaq || [];
 _gaq.push(["_setAccount", "UA-3142618-11"]);
 _gaq.push(["_setDomainName", "servus.io"]);
+_gaq.push(["_setAllowLinker", true]);
 _gaq.push(["_trackPageview"]);
 
 (function() {

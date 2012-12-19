@@ -18,13 +18,8 @@ $("a").on( "click", function(evt) {
 
 var GoSquared = { acct: "GSN-208108-B" };
 (function(w) {
-  function gs() {
-    w._gstc_lt = +new Date;
-    var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
-    g.type = "text/javascript"; g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
-    s.parentNode.insertBefore(g, s);
-  }
-  w.addEventListener ?
-    w.addEventListener("load", gs, false) :
-    w.attachEvent("onload", gs);
+  w._gstc_lt = +new Date();
+  var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
+  g.type = "text/javascript"; g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+  s.parentNode.insertBefore(g, s);
 })(window);
