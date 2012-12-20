@@ -80,6 +80,14 @@ h1 {
   }
 }
 
+pre, code {
+  background-color: #eee;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 2px;
+}
+
 .app-link {
   text-align: center;
 
@@ -113,6 +121,11 @@ h1 {
 #content-column {
   background-color: rgba( 255, 255, 255, 0.95 );
   padding: 45px 15px 1px 15px;
+
+  h2 {
+    font-size: 17px;
+    padding-top: 3em;
+  }
 }
 
 p#imprint {

@@ -1,0 +1,213 @@
+!!! 5
+
+- cache_buster = "?_=#{Time.now.to_i}"
+
+%html
+  %head
+    %meta{ :charset => "utf-8" }
+    %meta{ :"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+    %meta{ :"http-equiv" => "Content-Type", :content => "text/html" }
+    %meta{ :name => "viewport", :content => "width=device-width" }
+    %meta{ :name => "description", :content => "Turn any file on your computer into a branded download page hosted on Dropbox." }
+    %title Servus for Mac. &mdash; Frequently Asked Questions
+
+    %script{ :src => "js/top.js#{cache_buster}" }
+
+    %link{ :rel => "shortcut icon", :href => "img/favicon.png" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/2/font-awesome.css" }
+    /[if IE 7 ]
+      %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/2/font-awesome-ie7.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/foundation.min.css#{cache_buster}" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/gh-fork-ribbon.css#{cache_buster}" }
+    /[if IE]
+      %link{ :rel => "stylesheet", :type => "text/css", :href => "css/gh-fork-ribbon.ie.css#{cache_buster}" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/servus.css#{cache_buster}" }
+
+  %body
+    .fixed.contain-to-grid
+      %nav.top-bar
+        %ul
+          %li.name
+            %h1
+              %a{ :href => "/", :itemprop => "url" }
+                %span{ :itemprop => "name" } Servus. For Mac & Dropbox.
+
+        %section
+          %ul.right
+            %li
+              %a.download{ :href => "/download" } Download Servus
+
+            %li
+              %a{ :href => "http://blog.servus.io/" } Blog
+
+            %li
+              %a{ :href => "/faq.html" } FAQ
+
+            %li
+              %a{ :href => "http://twitter.com/servusio" } Twitter
+
+            %li
+              %a{ :href => "https://tinyletter.com/servusio" } Newsletter
+
+
+    #content-column.row
+      .seven.columns.centered
+        %h1
+          Frequently Asked Questions
+
+        %section
+          %h2#q-mas
+            Can I buy Servus on the Mac App Store?
+            %a{ :href => "#q-mas" } #
+
+          %p
+            Short answer: Not at the moment.  Maybe in the future; I won't
+            rule it out.
+
+          %p
+            Long answer: during the development of Servus I've submitted the
+            app to the Mac App Store with the plan of selling it there.  The
+            review process was a) not very transparent and b) taking way too
+            long for my taste.  During the third round of review submissions
+            I kind of lost interest in potentially going through all that
+            hassle for every single update I would post in the future.
+
+          %p
+            It might return at some point down the road, it's entirely
+            possible.
+
+
+        %section
+          %h2#q-license-terms
+            What are the license terms?
+            %a{ :href => "#q-license-terms" } #
+
+          %p
+            Each license is valid for all Macs the license holder personally
+            owns and is the primary user of.  If you yourself have three Macs,
+            one license is enough.  If you have two Macs and your spouse has
+            one, and you both want to use Servus, you'll need two licenses.
+
+          %p
+            If you have a company and technically "own" 500 Macs, I'd
+            appreciate it if you would buy more than just one license, tho.
+            ;)
+
+
+        %section
+          %h2#q-theme-docs
+            Where can I find documentation on how to create my own preview
+            page themes?
+            %a{ :href => "#q-theme-docs" } #
+
+          %p
+            %a{ :href => "/theme-docs" } Look here.
+
+
+        %section
+          %h2#q-theme-selling
+            I've created a custom theme for Servus, and it's great.  May I
+            sell it?
+            %a{ :href => "#q-theme-selling" } #
+
+          %p
+            Yes, please!  Servus needs nice themes… lots of them!  Let me
+            know if you created one.
+
+
+        %section
+          %h2#q-selling-pointers
+            I'd like to sell my custom themes, but I have no idea how.  Any
+            pointers?
+            %a{ :href => "#q-selling-pointers" } #
+
+          %p
+            I've heard good things about
+            %a{ :href => "https://creativemarket.com/" } Creative Market
+            and had good experiences with
+            %a{ :href => "https://gumroad.com/" } Gumroad.
+            Both are super-simple to set up, you don't have to pay anything up
+            front (they work on a commission basis), and they keep the scary
+            payment stuff away from you.  And no, I don't get any kickbacks
+            for telling you.  :)
+
+          %p
+            Just make sure to give me a shout when you're up and running,
+            please!
+
+        %section
+          %h2#q-tracking
+            Do you track what I am sharing?
+            %a{ :href => "#q-tracking" } #
+
+          %p
+            No.  Mostly because a) what you upload is your own business and
+            b) I really don't care.
+
+
+        %section
+          %h2#q-dropbox-path
+            Where are my uploads/shares stored?
+            %a{ :href => "#q-dropbox-path" } #
+
+          %p
+            In your Dropbox, in folder
+            %code Apps/Servus for Mac/
+            \.
+
+
+        %section
+          %h2#q-who
+            Where are Servus' log files stored?
+            %a{ :href => "#q-logs" } #
+
+          %p
+            In
+            %code ~/Library/Logs/de.municode.Servus/
+            \.
+
+        %section
+          %h2#q-who
+            Who are you?
+            %a{ :href => "#q-who" } #
+
+          %p
+            %a{ :href => "http://carlo.zottmann.org/me/" }
+              My name's Carlo Zottmann,
+            I'm a freelance software developer from
+            Munich, Germany.  These days I'm mostly working with Javascript,
+            Objective-C and Ruby.
+            %a{ :href => "http://municode.de" } I'm available for hire.
+
+
+        %section
+          %h2
+            My Q wasn't A'ed here, who can I ask?
+
+          %p
+            No worries!  Just send me
+            %a{ :href => "mailto:carlo@servus.io" } an email
+            or
+            %a{ :href => "https://twitter.com/servusio" } find me on Twitter.
+
+        %hr
+
+        #drop-img
+          %img{ :src => "img/app-icon.png", :alt => "Servus icon", :itemprop => "image" }
+
+        %p#imprint
+          %strong Imprint:
+          %a{ :href => "http://municode.de" } Carlo Zottmann,
+          Zeisigweg 30, 81827 München, Germany
+          \ &middot; carlo@servus.io
+          \ &middot; USt-ID: DE260224054
+          %br
+          Background pattern is "Light Wool" from
+          %a{ :href => "http://subtlepatterns.com/" } Subtle Patterns.
+
+    .github-fork-ribbon-wrapper.right
+      .github-fork-ribbon
+        %a{ :href => "http://blog.servus.io/post/38140138904/announcing-apocalyp-sale-2012" } APOCALYP-SALE 2012
+
+    %script{ :src => "js/ender.min.js#{cache_buster}" }
+    %script{ :src => "js/bottom.js#{cache_buster}" }

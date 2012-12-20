@@ -1,7 +1,5 @@
 !!! 5
 
-- version = "1.1"
-- blog_post = "http://blog.servus.io/post/32809997137/release-0-9-13"
 - cache_buster = "?_=#{Time.now.to_i}"
 
 %html
@@ -45,14 +43,17 @@
                 %a{ :href => "http://blog.servus.io/" } Blog
 
               %li
+                %a{ :href => "/faq.html" } FAQ
+
+              %li
                 %a{ :href => "http://twitter.com/servusio" } Twitter
 
               %li
                 %a{ :href => "https://tinyletter.com/servusio" } Newsletter
 
 
-      .row
-        #content-column.seven.columns.centered
+      #content-column.row
+        .seven.columns.centered
           %h1
             %small This is
             Servus. For Mac & Dropbox.
