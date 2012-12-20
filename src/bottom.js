@@ -15,11 +15,3 @@ $("a").on( "click", function(evt) {
 
   setTimeout( function() { document.location = $elem.attr("href"); }, 100 );
 });
-
-var GoSquared = { acct: "GSN-208108-B" };
-(function(w) {
-  w._gstc_lt = +new Date();
-  var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0];
-  g.type = "text/javascript"; g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
-  s.parentNode.insertBefore(g, s);
-})(window);
