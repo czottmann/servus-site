@@ -134,6 +134,12 @@ p#imprint {
   text-align: center;
 }
 
+.top-bar ul {
+  li:hover, li.active {
+    background: #000;
+  }
+}
+
 .github-fork-ribbon-wrapper {
   position: fixed;
   top: 45px;
