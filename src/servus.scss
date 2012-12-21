@@ -83,6 +83,11 @@ pre, code {
   padding: 2px;
 }
 
+.screenshot {
+  float: right;
+  margin: 0 0 12px 12px;
+}
+
 .app-link {
   text-align: center;
 
@@ -145,4 +150,8 @@ p#imprint {
   font-size: 1px;
   margin: 30px;
   text-align: center;
+
+  span {
+    display: block;
+  }
 }
