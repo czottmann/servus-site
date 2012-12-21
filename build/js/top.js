@@ -67,6 +67,30 @@ $("a").on( "click", function(evt) {
 });
 
 
+// FAQ
+
+$(document).ready( function() {
+  if ( !$("#faq").length ) {
+    return;
+  }
+
+  var $ul = $("<ul>").insertAfter("#content-column h1");
+
+  $("#content-column h2").each( function() {
+    var $elem = $(this),
+      $li = $( "<li>", {
+        html: $( "<a>", {
+          html: $.trim( $elem.text() ).replace( /\s+#\s*$/, "" ),
+          href: "#" + $elem.attr("id")
+        })
+      });
+
+    $ul.append($li);
+  });
+
+});
+
+
 // Development
 
 (function() {

@@ -11,7 +11,7 @@
     %meta{ :name => "description", :content => "Turn any file on your computer into a branded download page hosted on Dropbox." }
     %title Servus for Mac. &mdash; Frequently Asked Questions
 
-    %script{ :src => "js/ender.min.js#{cache_buster}" }
+    %script{ :src => "js/jquery.min.js#{cache_buster}" }
     %script{ :src => "js/top.js#{cache_buster}" }
 
     %link{ :rel => "shortcut icon", :href => "img/favicon.png" }
@@ -53,7 +53,7 @@
 
     #content-column.row
       .seven.columns.centered
-        %h1
+        %h1#faq
           Frequently Asked Questions
 
         %section
@@ -93,6 +93,35 @@
             If you have a company and technically "own" 500 Macs, I'd
             appreciate it if you would buy more than just one license, tho.
             ;)
+
+
+        %section
+          %h2#q-wot
+            I don't understand what this app does.  Why do you suck at
+            explaining?
+            %a{ :href => "#q-wot" } #
+
+          %p
+            It's a gene thing.  Anyways:
+
+          %ol
+            %li
+              You have a file, you'd like to send that file to someone, but
+              you want to have that file embedded in some sort of preview page.
+            %li
+              You drop the file on Servus' menubar icon.
+            %li
+              Servus uploads your file to your Dropbox account.
+            %li
+              Servus builds a preview page for your file and uploads that, too.
+            %li
+              The link to the preview page is copied to your clipboard.
+
+          %p
+            Step 4 will either use Servus' built-in preview page theme, or you
+            can use your own templates for that.
+          %p
+            Does that help?  :)
 
 
         %section
@@ -138,6 +167,23 @@
 
 
         %section
+          %h2#q-bug-dropping
+            The menubar icon doesn't accept my dropped files, nothing happens.
+            What is wrong?
+            %a{ :href => "#q-bug-dropping" } #
+
+          %p
+            Apologies: you've come across a somewhat elusive bug that occurs
+            only for some people — they have to click the menubar icon before
+            it accepts drops again.  I'm aware of the issue but have a really
+            hard time reproducing it.  I'm working on it!
+
+          %p
+            Try clicking the menubar icon once (or restarting the app), and
+            then try again, that usually does the trick.
+
+
+        %section
           %h2#q-cancel-uploads
             Is there a way to cancel a large upload in progress?
             %a{ :href => "#q-cancel-uploads" } #
@@ -168,7 +214,7 @@
 
 
         %section
-          %h2#q-who
+          %h2#q-logs
             Where are Servus' log files stored?
             %a{ :href => "#q-logs" } #
 
@@ -192,8 +238,9 @@
 
 
         %section
-          %h2
+          %h2#q-contact
             My Q wasn't A'ed here, who can I ask?
+            %a{ :href => "#q-contact" } #
 
           %p
             No worries!  Just send me

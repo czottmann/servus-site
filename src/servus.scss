@@ -124,6 +124,7 @@ pre, code {
 
   h2 {
     font-size: 17px;
+    line-height: 1.4;
     padding-top: 3em;
   }
 }
@@ -145,7 +146,8 @@ p#imprint {
   top: 45px;
 }
 
-#microdata {
+#microdata,
+#drop-img {
   color: #fff;
   font-size: 1px;
   margin: 30px;

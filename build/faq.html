@@ -7,19 +7,19 @@
     <meta content="width=device-width" name="viewport">
     <meta content="Turn any file on your computer into a branded download page hosted on Dropbox." name="description">
     <title>Servus for Mac. &mdash; Frequently Asked Questions</title>
-    <script src="js/ender.min.js?_=1356103886"></script>
-    <script src="js/top.js?_=1356103886"></script>
+    <script src="js/jquery.min.js?_=1356124941"></script>
+    <script src="js/top.js?_=1356124941"></script>
     <link href="img/favicon.png" rel="shortcut icon">
     <link href="//assets.servus.io/2/font-awesome.css" rel="stylesheet" type="text/css">
     <!--[if IE 7 ]>
       <link href="//assets.servus.io/2/font-awesome-ie7.css" rel="stylesheet" type="text/css">
     <![endif]-->
-    <link href="css/foundation.min.css?_=1356103886" rel="stylesheet" type="text/css">
-    <link href="css/gh-fork-ribbon.css?_=1356103886" rel="stylesheet" type="text/css">
+    <link href="css/foundation.min.css?_=1356124941" rel="stylesheet" type="text/css">
+    <link href="css/gh-fork-ribbon.css?_=1356124941" rel="stylesheet" type="text/css">
     <!--[if IE]>
-      <link href="css/gh-fork-ribbon.ie.css?_=1356103886" rel="stylesheet" type="text/css">
+      <link href="css/gh-fork-ribbon.ie.css?_=1356124941" rel="stylesheet" type="text/css">
     <![endif]-->
-    <link href="css/servus.css?_=1356103886" rel="stylesheet" type="text/css">
+    <link href="css/servus.css?_=1356124941" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div class="fixed contain-to-grid">
@@ -56,7 +56,7 @@
     </div>
     <div class="row" id="content-column">
       <div class="seven columns centered">
-        <h1>
+        <h1 id="faq">
           Frequently Asked Questions
         </h1>
         <section>
@@ -96,6 +96,41 @@
             If you have a company and technically "own" 500 Macs, I'd
             appreciate it if you would buy more than just one license, tho.
             ;)
+          </p>
+        </section>
+        <section>
+          <h2 id="q-wot">
+            I don't understand what this app does.  Why do you suck at
+            explaining?
+            <a href="#q-wot">#</a>
+          </h2>
+          <p>
+            It's a gene thing.  Anyways:
+          </p>
+          <ol>
+            <li>
+              You have a file, you'd like to send that file to someone, but
+              you want to have that file embedded in some sort of preview page.
+            </li>
+            <li>
+              You drop the file on Servus' menubar icon.
+            </li>
+            <li>
+              Servus uploads your file to your Dropbox account.
+            </li>
+            <li>
+              Servus builds a preview page for your file and uploads that, too.
+            </li>
+            <li>
+              The link to the preview page is copied to your clipboard.
+            </li>
+          </ol>
+          <p>
+            Step 4 will either use Servus' built-in preview page theme, or you
+            can use your own templates for that.
+          </p>
+          <p>
+            Does that help?  :)
           </p>
         </section>
         <section>
@@ -141,6 +176,23 @@
           </p>
         </section>
         <section>
+          <h2 id="q-bug-dropping">
+            The menubar icon doesn't accept my dropped files, nothing happens.
+            What is wrong?
+            <a href="#q-bug-dropping">#</a>
+          </h2>
+          <p>
+            Apologies: you've come across a somewhat elusive bug that occurs
+            only for some people — they have to click the menubar icon before
+            it accepts drops again.  I'm aware of the issue but have a really
+            hard time reproducing it.  I'm working on it!
+          </p>
+          <p>
+            Try clicking the menubar icon once (or restarting the app), and
+            then try again, that usually does the trick.
+          </p>
+        </section>
+        <section>
           <h2 id="q-cancel-uploads">
             Is there a way to cancel a large upload in progress?
             <a href="#q-cancel-uploads">#</a>
@@ -171,7 +223,7 @@
           </p>
         </section>
         <section>
-          <h2 id="q-who">
+          <h2 id="q-logs">
             Where are Servus' log files stored?
             <a href="#q-logs">#</a>
           </h2>
@@ -197,8 +249,9 @@
           </p>
         </section>
         <section>
-          <h2>
+          <h2 id="q-contact">
             My Q wasn't A'ed here, who can I ask?
+            <a href="#q-contact">#</a>
           </h2>
           <p>
             No worries!  Just send me
