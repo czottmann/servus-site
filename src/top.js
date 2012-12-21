@@ -74,7 +74,7 @@ $(document).ready( function() {
     return;
   }
 
-  var $ul = $("<ul>").insertAfter("#content-column h1");
+  var $ul = $("<ul class='square'>").insertAfter("#content-column h1");
 
   $("#content-column h2").each( function() {
     var $elem = $(this),
