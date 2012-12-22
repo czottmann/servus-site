@@ -85,6 +85,15 @@ $(document).ready( function() {
 
     $ul.append($li);
 
+    // Add link to self to headline.
+    $elem.append(
+      $( "<a>", {
+        "href": "#" + $elem.attr("id"),
+        "title": "Link to this FAQ section",
+        "html": "&para;"
+      })
+    );
+
     // Add back-to-top arrows to each section's last paragraph.
     $elem.closest("section").find("p:last").append(
       $("<br>"),
