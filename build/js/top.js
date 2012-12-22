@@ -78,7 +78,7 @@ $(document).ready( function() {
     var $elem = $(this),
       $li = $( "<li>", {
         "html": $( "<a>", {
-          "html": $.trim( $elem.text() ).replace( /\s+¶\s*$/, "" ),
+          "html": $.trim( $elem.text() ),
           "href": "#" + $elem.attr("id")
         })
       });
