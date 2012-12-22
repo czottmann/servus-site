@@ -6,7 +6,6 @@ else if ( document.location.host !== "servus.io" && document.location.host !== "
 }
 
 // Google Analytics
-
 var _gaq = _gaq || [];
 _gaq.push(["_setAccount", "UA-3142618-11"]);
 _gaq.push(["_setDomainName", "servus.io"]);
@@ -18,14 +17,13 @@ _gaq.push(["_trackPageview"]);
     s = document.getElementsByTagName("script")[0];
 
   ga.type = "text/javascript";
-  ga.async = true;
   ga.src = "https://ssl.google-analytics.com/ga.js";
+  ga.async = true;
   s.parentNode.insertBefore(ga, s);
 })();
 
 
 // GoSquared
-
 var GoSquared = { acct: "GSN-208108-B" };
 (function() {
   window._gstc_lt = +new Date();
@@ -34,15 +32,15 @@ var GoSquared = { acct: "GSN-208108-B" };
     g = d.createElement("script"),
     s = d.getElementsByTagName("script")[0];
 
-  g.async = true;
   g.type = "text/javascript";
   g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+  g.async = true;
   s.parentNode.insertBefore(g, s);
 })();
 
 
 // Click tracking
-
+/*
 $("a").on( "click", function(evt) {
   evt.preventDefault();
 
@@ -65,34 +63,43 @@ $("a").on( "click", function(evt) {
     document.location = $elem.attr("href"); }, 100
   );
 });
+*/
 
 
 // FAQ
-
 $(document).ready( function() {
   if ( !$("#faq").length ) {
     return;
   }
 
-  var $ul = $("<ul class='square'>").insertAfter("#content-column h1");
+  var $ul = $("<ul id='faq-toc' class='square'>").insertAfter("#content-column h1");
 
   $("#content-column h2").each( function() {
     var $elem = $(this),
       $li = $( "<li>", {
-        html: $( "<a>", {
-          html: $.trim( $elem.text() ).replace( /\s+#\s*$/, "" ),
-          href: "#" + $elem.attr("id")
+        "html": $( "<a>", {
+          "html": $.trim( $elem.text() ).replace( /\s+¶\s*$/, "" ),
+          "href": "#" + $elem.attr("id")
         })
       });
 
     $ul.append($li);
-  });
 
+    // Add back-to-top arrows to each section's last paragraph.
+    $elem.closest("section").find("p:last").append(
+      $("<br>"),
+      $( "<a>", {
+        "class": "back-to-top",
+        "href": "#",
+        "title": "Back to top",
+        "html": "&uArr;"
+      })
+    );
+  });
 });
 
 
 // Development
-
 (function() {
   if ( document.location.host === "localhost" ) {
     var ga = document.createElement('script'); ga.type = 'text/javascript';

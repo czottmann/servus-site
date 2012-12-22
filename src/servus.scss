@@ -83,6 +83,11 @@ pre, code {
   padding: 2px;
 }
 
+.back-to-top {
+  float: right;
+  font-weight: bold;
+}
+
 .screenshot {
   float: right;
   margin: 0 0 12px 12px;
@@ -126,6 +131,10 @@ pre, code {
     font-size: 17px;
     line-height: 1.4;
     padding-top: 3em;
+
+    a {
+      font-weight: normal;
+    }
   }
 }
 
