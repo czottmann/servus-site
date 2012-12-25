@@ -66,8 +66,12 @@ $("a").on( "click", function(evt) {
 */
 
 
-// FAQ
 $(document).ready( function() {
+  if ( ( new Date() ).getUTCFullYear() > 2012 ) {
+    $(".github-fork-ribbon-wrapper").remove();
+  }
+
+  // FAQ
   if ( !$("#faq").length ) {
     return;
   }
