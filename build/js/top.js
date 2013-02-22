@@ -1,7 +1,7 @@
 if ( top !== self ) {
   top.location = self.location.href;
 }
-else if ( document.location.host !== "servus.io" && document.location.host !== "localhost" ) {
+else if ( document.location.host !== "servus.io" && document.location.hostname !== "localhost" ) {
   document.location.href = "https://servus.io";
 }
 
