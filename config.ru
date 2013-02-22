@@ -10,7 +10,7 @@ use Rack::Rewrite do
   found "/download", "https://updates.servus.io/download"
   found "/buy", "http://sites.fastspring.com/municode/product/servus"
 
-  found "/+", "https://plus.google.com/u/0/b/101996114152007191046/101996114152007191046/posts"
+  found "/+", "https://plus.google.com/101996114152007191046"
   found "/twitter", "https://twitter.com/servusio"
 
   moved_permanently "/download-trial", "/download"
