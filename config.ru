@@ -10,6 +10,9 @@ use Rack::Rewrite do
   found "/download", "https://updates.servus.io/download"
   found "/buy", "http://sites.fastspring.com/municode/product/servus"
 
+  found "/+", "https://plus.google.com/u/0/b/101996114152007191046/101996114152007191046/posts"
+  found "/twitter", "https://twitter.com/servusio"
+
   moved_permanently "/download-trial", "/download"
   moved_permanently %r{.*}, "https://servus.io/", :if => Proc.new {|rack_env|
     rack_env["SERVER_NAME"] != "servus.io"

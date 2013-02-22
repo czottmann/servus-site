@@ -15,9 +15,9 @@
     %script{ :src => "js/top.js#{cache_buster}" }
 
     %link{ :rel => "shortcut icon", :href => "img/favicon.png" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/2/font-awesome.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/3/font-awesome.min.css" }
     /[if IE 7 ]
-      %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/2/font-awesome-ie7.css" }
+      %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/3/font-awesome-ie7.min.css" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "css/foundation.min.css#{cache_buster}" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "css/gh-fork-ribbon.css#{cache_buster}" }
     /[if IE]
@@ -45,10 +45,19 @@
               %a{ :href => "http://blog.servus.io/" } Blog
 
             %li
-              %a{ :href => "http://twitter.com/servusio" } Twitter
+              %a{ :href => "/twitter" }
+                %i.icon-twitter
+                Twitter
 
             %li
-              %a{ :href => "https://tinyletter.com/servusio" } Newsletter
+              %a{ :href => "/+" }
+                %i.icon-google-plus-sign
+                G+
+
+            %li
+              %a{ :href => "https://tinyletter.com/servusio" }
+                %i.icon-envelope
+                Newsletter
 
 
     #content-column.row
@@ -233,7 +242,9 @@
             No worries!  Just send me
             %a{ :href => "mailto:carlo@servus.io" } an email
             or
-            %a{ :href => "https://twitter.com/servusio" } find me on Twitter.
+            %a{ :href => "/twitter" } find me on Twitter
+            or
+            %a{ :href => "/+" } on Google+.
 
         %hr
 
