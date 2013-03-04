@@ -14,8 +14,8 @@ use Rack::Rewrite do
   found "/twitter", "https://twitter.com/servusio"
 
   moved_permanently "/download-trial", "/download"
-  moved_permanently %r{.*}, "https://servus.io/", :if => Proc.new {|rack_env|
-    rack_env["SERVER_NAME"] != "servus.io"
+  moved_permanently %r{.*}, "https://servus.io/", :if => Proc.new { |rack_env|
+    rack_env["SERVER_NAME"] != "servus.io" && rack_env["SERVER_NAME"] != "localhost"
   }
 end
 

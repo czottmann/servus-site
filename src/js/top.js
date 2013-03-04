@@ -39,33 +39,6 @@ var GoSquared = { acct: "GSN-208108-B" };
 })();
 
 
-// Click tracking
-/*
-$("a").on( "click", function(evt) {
-  evt.preventDefault();
-
-  var $elem = $(this);
-
-  if ( $elem.hasClass("download") ) {
-    GoSquared.DefaultTracker.TrackEvent("Clicked 'Download'");
-    _gaq.push([ "_trackEvent", "Outbound links", "Download", this.href, null, false ]);
-  }
-  else if ( $elem.hasClass("buy") ) {
-    GoSquared.DefaultTracker.TrackEvent("Clicked 'Buy'");
-    _gaq.push([ "_trackEvent", "Outbound links", "Store", this.href, null, false ]);
-  }
-  else if ( this.host !== document.location.host ) {
-    GoSquared.DefaultTracker.TrackEvent("Clicked outbound link", this.href);
-    _gaq.push([ "_trackEvent", "Outbound links", this.text, this.href, null, false ]);
-  }
-
-  setTimeout( function() {
-    document.location = $elem.attr("href"); }, 100
-  );
-});
-*/
-
-
 $(document).ready( function() {
   if ( ( new Date() ).getUTCFullYear() > 2012 ) {
     $(".github-fork-ribbon-wrapper").remove();

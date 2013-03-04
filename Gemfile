@@ -1,5 +1,14 @@
 source :rubygems
 
-gem "rack"
-gem "rack-contrib"
-gem "rack-rewrite", "~> 1.3.0"
+group :development do
+  gem "haml", "~> 4.0.0"
+  gem "sass", "~> 3.2.6"
+  gem "stasis", "~> 0.2.0"
+  gem "zurb-foundation", "~> 4.0.0"
+end
+
+group :production, :development do
+  gem "rack"
+  gem "rack-rewrite", "~> 1.3.0"
+  gem "rack-contrib"
+end
