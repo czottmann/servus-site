@@ -1,5 +1,5 @@
-%w( rubygems bundler/setup haml sass ).each do |g|
-  require g
-end
+require "rubygems"
+require "bundler/setup"
+Bundler.require(:development)
 
 layout "layout.html.haml"
