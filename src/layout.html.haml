@@ -20,18 +20,17 @@
     %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/3/font-awesome.min.css" }
     /[if IE 7 ]
       %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/3/font-awesome-ie7.min.css" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/foundation.css#{cache_buster}" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/gh-fork-ribbon.css#{cache_buster}" }
-    /[if IE]
-      %link{ :rel => "stylesheet", :type => "text/css", :href => "css/gh-fork-ribbon.ie.css#{cache_buster}" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "css/servus.css#{cache_buster}" }
+    - # %link{ :rel => "stylesheet", :type => "text/css", :href => "css/gh-fork-ribbon.css#{cache_buster}" }
+    - # /[if IE]
+    - #   %link{ :rel => "stylesheet", :type => "text/css", :href => "css/gh-fork-ribbon.ie.css#{cache_buster}" }
 
     /[if lt IE 9]
       %script{ :src => "js/html5shiv.js#{cache_buster}" }
 
 
   %body
-    #main-nav.contain-to-grid.sticky
+    #main-nav.contain-to-grid.fixed
       %nav.top-bar
         %ul.title-area
           %li.name
@@ -46,7 +45,7 @@
             %li
               /.active
               %a.download{ :href => "/download" } Download Servus
-            %li.divider
+
             %li.has-dropdown
               %a{ :href => "#" } Getting started
               %ul.dropdown
@@ -56,13 +55,13 @@
                   %a{ :href => "#" } Creating a theme
                 %li
                   %a{ :href => "#" } Scripting support
-            %li.divider
+
             %li
               %a{ :href => "/faq.html" } FAQ
-            %li.divider
+
             %li
               %a{ :href => "/extras.html" } Extras
-            %li.divider
+
             %li.has-dropdown
               %a{ :href => "#" } News & Contact
               %ul.dropdown

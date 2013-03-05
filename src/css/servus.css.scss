@@ -1,87 +1,74 @@
-@mixin border-radius($radius) {
-  -moz-border-radius: $radius;
-  -khtml-border-radius: $radius;
-  -ms-border-radius: $radius;
-  -o-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  border-radius: $radius;
-}
+// Dependencies
 
-@mixin box-shadow( $shdw1, $shdw2 ) {
-  -moz-box-shadow: $shdw1,$shdw2;
-  -o-box-shadow: $shdw1,$shdw2;
-  -webkit-box-shadow: $shdw1,$shdw2;
-  box-shadow: $shdw1,$shdw2;
-}
+@import "foundation";
 
-@mixin bg-gradient( $from, $to ) {
-  background-image: -moz-linear-gradient(top, $from, $to);
-  background-image: -ms-linear-gradient(top, $from, $to);
-  background-image: -o-linear-gradient(top, $from, $to);
-  background-image: -webkit-linear-gradient(top, $from, $to);
-  background-image: linear-gradient(top, $from, $to);
+@import url("http://fonts.googleapis.com/css?family=Asap:400,700");
+@import url("http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two");
+
+
+// Mixins
+
+@mixin box-shadow($shdw1) {
+  -moz-box-shadow: $shdw1;
+  -o-box-shadow: $shdw1;
+  -webkit-box-shadow: $shdw1;
+  box-shadow: $shdw1;
 }
 
 
-html {
-  background-color: #f8f8fc;
-}
-
-body {
-  color: #333;
-}
-
-a {
-  color: #2ba6cb;
-
-  &:hover {
-    color: #2795b6;
-  }
-
-  &:focus {
-    color: #2ba6cb;
-  }
-}
-
-p {
-  line-height: 1.8;
-
-  img {
-    @include border-radius(7px);
-    @include box-shadow( 0 1px 4px rgba( 0, 0, 0, 0.5 ), inset 0 0 #fff );
-    margin: 0;
-  }
-
-  small {
-    color: #888;
-    font-size: 12px;
-  }
-
-  strong {
-    color: #222;
-  }
-}
-
-h1 {
-  font-size: 27px;
-  margin-top: 30px;
-
-  small {
-    margin: 14px 0;
-    font-weight: normal;
-  }
-}
+// Site styles
 
 pre, code {
   background-color: #eee;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 12px;
-  font-weight: normal;
+  font-size: emCalc(14px);
   padding: 2px;
 }
 
 #main-nav {
-  @include box-shadow( 0 5px 10px rgba( 0, 0, 0, 0.25 ), inset 0 0 #fff );
+  @include box-shadow( 0 5px 10px rgba( 0, 0, 0, 0.25 ) );
+
+  ul.dropdown {
+    @include box-shadow( 0 5px 10px rgba( 0, 0, 0, 0.25 ) );
+  }
+}
+
+#content-column {
+  padding-top: 5em;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+#callout-buttons {
+  margin: 1em auto;
+
+  small {
+    color: #888;
+  }
+
+  ul {
+    margin-bottom: 0;
+
+    li {
+      padding-bottom: 0;
+    }
+  }
+
+  .button-download {
+    @include button-style($bg:#27AE60);
+
+  }
+
+  .button-buy {
+    @include button-style($bg:#3498db);
+  }
+}
+
+.button {
+  @include box-shadow( 0 2px 5px rgba( 50, 50, 50, 0.45 ) );
+  text-decoration: none !important;
+  text-shadow: 0 -1px 1px rgba( 0, 0, 0, 0.33 );
 }
 
 .back-to-top {
@@ -94,61 +81,11 @@ pre, code {
   margin: 0 0 12px 12px;
 }
 
-.app-link {
-  text-align: center;
-
-  a.button {
-    text-shadow: -1px -1px 2px rgba( 0, 0, 0, 0.5 );
-    width: 240px;
-
-    &.download {
-      @include bg-gradient( #0d0, #0a0 );
-
-      &:hover {
-        @include bg-gradient( #0d0, #080 );
-      }
-    }
-
-    &.buy {
-      @include bg-gradient( #6666ff, #3333bb );
-
-      &:hover {
-        @include bg-gradient( #4444ee, #1111aa );
-      }
-    }
-  }
-
-  small {
-    color: #888;
-    font-size: 12px;
-  }
-}
-
-#content-column {
-  background-color: rgba( 255, 255, 255, 0.95 );
-  padding: 45px 15px 1px 15px;
-
-  h2 {
-    font-size: 17px;
-    line-height: 1.4;
-    padding-top: 3em;
-
-    a {
-      font-weight: normal;
-    }
-  }
-}
 
 p#imprint {
   color: #666;
   font-size: 9px;
   text-align: center;
-}
-
-.top-bar ul {
-  li:hover, li.active {
-    background: #000;
-  }
 }
 
 .github-fork-ribbon-wrapper {
