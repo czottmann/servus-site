@@ -20,49 +20,78 @@
     %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/3/font-awesome.min.css" }
     /[if IE 7 ]
       %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/3/font-awesome-ie7.min.css" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/foundation.min.css#{cache_buster}" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/foundation.css#{cache_buster}" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "css/gh-fork-ribbon.css#{cache_buster}" }
     /[if IE]
       %link{ :rel => "stylesheet", :type => "text/css", :href => "css/gh-fork-ribbon.ie.css#{cache_buster}" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "css/servus.css#{cache_buster}" }
 
+    /[if lt IE 9]
+      %script{ :src => "js/html5shiv.js#{cache_buster}" }
+
+
   %body
-    .fixed.contain-to-grid
+    #main-nav.contain-to-grid.sticky
       %nav.top-bar
-        %ul
+        %ul.title-area
           %li.name
             %h1
               %a{ :href => "/" } Servus. For Mac & Dropbox.
+          %li.toggle-topbar.menu-icon
+            %a{ :href => "#" }
+              %span Menu
 
-        %section
+        %section.top-bar-section
           %ul.right
             %li
+              /.active
               %a.download{ :href => "/download" } Download Servus
-
+            %li.divider
+            %li.has-dropdown
+              %a{ :href => "#" } Getting started
+              %ul.dropdown
+                %li
+                  %a{ :href => "/theme-docs" } Theme docs
+                %li
+                  %a{ :href => "#" } Creating a theme
+                %li
+                  %a{ :href => "#" } Scripting support
+            %li.divider
             %li
               %a{ :href => "/faq.html" } FAQ
-
+            %li.divider
             %li
-              %a{ :href => "http://blog.servus.io/" } Blog
-
-            %li
-              %a{ :href => "/twitter" }
-                %i.icon-twitter
-                Twitter
-
-            %li
-              %a{ :href => "/+" }
-                %i.icon-google-plus-sign
-                G+
-
-            %li
-              %a{ :href => "https://tinyletter.com/servusio" }
-                %i.icon-envelope
-                Newsletter
+              %a{ :href => "/extras.html" } Extras
+            %li.divider
+            %li.has-dropdown
+              %a{ :href => "#" } News & Contact
+              %ul.dropdown
+                %li
+                  %a{ :href => "http://blog.servus.io/" }
+                    %i.icon-align-left
+                    Blog
+                %li
+                  %a{ :href => "https://tinyletter.com/servusio" }
+                    %i.icon-envelope-alt
+                    Newsletter
+                %li
+                  %a{ :href => "/twitter" }
+                    %i.icon-twitter
+                    Twitter
+                %li
+                  %a{ :href => "/+" }
+                    %i.icon-google-plus-sign
+                    Google+
+                %li.divider
+                %li
+                  %a{ :href => "mailto:carlo@servus.io" }
+                    %i.icon-envelope
+                    Contact Carlo
 
 
     = yield
 
-    .github-fork-ribbon-wrapper.right
-      .github-fork-ribbon
-        %a{ :href => "http://blog.servus.io/post/38140138904/announcing-apocalyp-sale-2012" } APOCALYP-SALE 2012
+    /
+      .github-fork-ribbon-wrapper.right
+        .github-fork-ribbon
+          %a{ :href => "http://blog.servus.io/post/38140138904/announcing-apocalyp-sale-2012" } APOCALYP-SALE 2012
