@@ -1,11 +1,15 @@
-// Dependencies
+// Dependencies ==============================================================
 
 @import "foundation";
+
+
+// Fonts =====================================================================
 
 @import url("//fonts.googleapis.com/css?family=Asap:400,700");
 @import url("//f.fontdeck.com/s/css/iJFpt+/SjdP+SMIzrI3wni4/vsc/servus.io/30421.css");
 
-// Mixins
+
+// Mixins ====================================================================
 
 @mixin box-shadow($shdw1) {
   -moz-box-shadow: $shdw1;
@@ -15,13 +19,16 @@
 }
 
 
-// Site styles
+// Site styles ===============================================================
 
 pre, code {
   background-color: #eee;
   font-size: emCalc(14px);
   padding: 2px;
 }
+
+
+// Navigation / Top bar ------------------------------------------------------
 
 #main-nav {
   // Overwrite the background; the original background is applied to the %div.
@@ -36,6 +43,9 @@ pre, code {
     @include box-shadow( 0 5px 10px rgba( 0, 0, 0, 0.25 ) );
   }
 }
+
+
+// Content -------------------------------------------------------------------
 
 #content-column {
   padding-top: 5em;
