@@ -2,9 +2,8 @@
 
 @import "foundation";
 
-@import url("http://fonts.googleapis.com/css?family=Asap:400,700");
-@import url("http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two");
-
+@import url("//fonts.googleapis.com/css?family=Asap:400,700");
+@import url("//f.fontdeck.com/s/css/iJFpt+/SjdP+SMIzrI3wni4/vsc/servus.io/30421.css");
 
 // Mixins
 
@@ -25,7 +24,13 @@ pre, code {
 }
 
 #main-nav {
-  @include box-shadow( 0 5px 10px rgba( 0, 0, 0, 0.25 ) );
+  // Overwrite the background; the original background is applied to the %div.
+  background: url(/img/shadow-top-bar.png) center 45px no-repeat;
+  padding-bottom: 32px;
+
+  &>div {
+    background: $topbar-bg;
+  }
 
   ul.dropdown {
     @include box-shadow( 0 5px 10px rgba( 0, 0, 0, 0.25 ) );
@@ -38,30 +43,30 @@ pre, code {
   a {
     text-decoration: underline;
   }
-}
 
-#callout-buttons {
-  margin: 1em auto;
+  #callout-buttons {
+    margin: 1em auto;
 
-  small {
-    color: #888;
-  }
-
-  ul {
-    margin-bottom: 0;
-
-    li {
-      padding-bottom: 0;
+    small {
+      color: #888;
+      text-shadow: 1px 1px 1px rgba( 255, 255, 255, 1 );
     }
-  }
 
-  .button-download {
-    @include button-style($bg:#27AE60);
+    ul {
+      margin-bottom: 0;
 
-  }
+      li {
+        padding-bottom: 0;
+      }
+    }
 
-  .button-buy {
-    @include button-style($bg:#3498db);
+    .button-download {
+      @include button-style($bg:#27ae60);
+    }
+
+    .button-buy {
+      @include button-style($bg:#3498db);
+    }
   }
 }
 
