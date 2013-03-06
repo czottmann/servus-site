@@ -14,8 +14,8 @@
     <!--[if IE 7 ]>
       <link href='//assets.servus.io/3/font-awesome-ie7.min.css' rel='stylesheet' type='text/css'>
     <![endif]-->
-    <link href='css/servus.css?_=1362599990' rel='stylesheet' type='text/css'>
-    <script src='js/vendor/custom.modernizr.js?_=1362599990'></script>
+    <link href='css/servus.css?_=1362609925' rel='stylesheet' type='text/css'>
+    <script src='js/vendor/custom.modernizr.js?_=1362609925'></script>
   </head>
   <body>
     <div class='contain-to-grid fixed' id='main-nav'>
@@ -23,7 +23,7 @@
         <nav class='top-bar'>
           <ul class='title-area'>
             <li class='name'>
-              <h1>
+              <h1 class='display-font'>
                 <a href='/'>Servus. For Mac & Dropbox.</a>
               </h1>
             </li>
@@ -103,24 +103,25 @@
     <div id='content-column'>
       <div class='page-faq'>
   <div class='row'>
-    <div class='seven columns centered'>
-      <h1 id='faq'>
+    <div class='large-12 columns'>
+      <h2>
         Frequently Asked Questions
-      </h1>
-      <section>
-        <h2 id='q-filesize'>
+      </h2>
+      <div class='panel' id='toc'></div>
+      <section id='q-filesize'>
+        <h3>
           What is the maximum file size for the things I can share with Servus?
-        </h2>
+        </h3>
         <p>
           The size of the files you share is only restricted by the size of
           your Dropbox account.  If your account has 1.5GB free space left,
           then that's your upper file size limit.
         </p>
       </section>
-      <section>
-        <h2 id='q-mas'>
+      <section id='q-mas'>
+        <h3>
           Can I buy Servus on the Mac App Store?
-        </h2>
+        </h3>
         <p>
           Short answer: Not at the moment.  Maybe in the future; I won't
           rule it out.
@@ -138,10 +139,10 @@
           possible.
         </p>
       </section>
-      <section>
-        <h2 id='q-license-terms'>
+      <section id='q-license-terms'>
+        <h3>
           What are the license terms?
-        </h2>
+        </h3>
         <p>
           Each license is valid for all Macs the license holder personally
           owns and is the primary user of.  If you yourself have three Macs,
@@ -154,11 +155,11 @@
           ;)
         </p>
       </section>
-      <section>
-        <h2 id='q-wot'>
+      <section id='q-wot'>
+        <h3>
           I don't understand what this app does.  Why do you suck at
           explaining?
-        </h2>
+        </h3>
         <p>
           It's a congenital thing.  Anyways:
         </p>
@@ -188,10 +189,10 @@
           Does that help?  :)
         </p>
       </section>
-      <section>
-        <h2 id='q-scripting'>
+      <section id='q-scripting'>
+        <h3>
           Does Servus have scripting support?
-        </h2>
+        </h3>
         <p>
           Yes, it does.  When the app is running it is listening for URLs
           with the scheme
@@ -205,30 +206,30 @@
           .
         </p>
       </section>
-      <section>
-        <h2 id='q-theme-docs'>
+      <section id='q-theme-docs'>
+        <h3>
           Where can I find documentation on how to create my own preview
           page themes?
-        </h2>
+        </h3>
         <p>
           <a href='/theme-docs'>Look here.</a>
         </p>
       </section>
-      <section>
-        <h2 id='q-theme-selling'>
+      <section id='q-theme-selling'>
+        <h3>
           I've created a custom theme for Servus, and it's great.  May I
           sell it?
-        </h2>
+        </h3>
         <p>
           Yes, please!  Servus needs nice themes… lots of them!  Let me
           know if you created one.
         </p>
       </section>
-      <section>
-        <h2 id='q-selling-pointers'>
+      <section id='q-selling-pointers'>
+        <h3>
           I'd like to sell my custom themes, but I have no idea how.  Any
           pointers?
-        </h2>
+        </h3>
         <p>
           I've heard good things about
           <a href='https://creativemarket.com/'>Creative Market</a>
@@ -244,11 +245,11 @@
           please!
         </p>
       </section>
-      <section>
-        <h2 id='q-bug-dropping'>
+      <section id='q-bug-dropping'>
+        <h3>
           The menubar icon doesn't accept my dropped files, nothing happens.
           What is wrong?
-        </h2>
+        </h3>
         <p>
           Apologies: you've come across a somewhat elusive bug that occurs
           only for some people — they have to click the menubar icon before
@@ -260,47 +261,39 @@
           then try again, that usually does the trick.
         </p>
       </section>
-      <section>
-        <h2 id='q-cancel-uploads'>
-          Is there a way to cancel a large upload in progress?
-        </h2>
-        <p>
-          Not yet, no.  Sorry.  That's a feature on my todo list, tho.
-        </p>
-      </section>
-      <section>
-        <h2 id='q-tracking'>
+      <section id='q-tracking'>
+        <h3>
           Do you track what I am sharing?
-        </h2>
+        </h3>
         <p>
           No.  Mostly because a) what you upload is your own business and
           b) I really don't care.
         </p>
       </section>
-      <section>
-        <h2 id='q-dropbox-path'>
+      <section id='q-dropbox-path'>
+        <h3>
           Where are my uploads/shares stored?
-        </h2>
+        </h3>
         <p>
           In your Dropbox, in folder
           <code>Apps/Servus for Mac/</code>
           .
         </p>
       </section>
-      <section>
-        <h2 id='q-logs'>
+      <section id='q-logs'>
+        <h3>
           Where are Servus' log files stored?
-        </h2>
+        </h3>
         <p>
           In
           <code>~/Library/Logs/de.municode.Servus/</code>
           .
         </p>
       </section>
-      <section>
-        <h2 id='q-who'>
+      <section id='q-who'>
+        <h3>
           Who are you?
-        </h2>
+        </h3>
         <p>
           <a href='http://carlo.zottmann.org/me/'>
             My name's Carlo Zottmann,
@@ -311,10 +304,10 @@
           <a href='http://municode.de'>I'm available for hire.</a>
         </p>
       </section>
-      <section>
-        <h2 id='q-contact'>
+      <section id='q-contact'>
+        <h3>
           My Q wasn't A'ed here, who can I ask?
-        </h2>
+        </h3>
         <p>
           No worries!  Just send me
           <a href='mailto:carlo@servus.io'>an email</a>
@@ -324,26 +317,13 @@
           <a href='/+'>on Google+.</a>
         </p>
       </section>
-      <hr>
-      <div id='drop-img'>
-        <img alt='Servus icon' itemprop='image' src='img/app-icon.png'>
-      </div>
-      <p id='imprint'>
-        <strong>Imprint:</strong>
-        <a href='http://municode.de'>Carlo Zottmann,</a>
-        Zeisigweg 30, 81827 München, Germany
-         &middot; carlo@servus.io
-         &middot; USt-ID: DE260224054
-        <br>
-        Background pattern is "Light Wool" from
-        <a href='http://subtlepatterns.com/'>Subtle Patterns.</a>
-      </p>
     </div>
   </div>
 </div>
     </div>
     <div class='row'>
       <div class='large-12 text-center columns'>
+        <hr>
         <div id='microdata' itemscope='' itemtype='http://schema.org/Product'>
           <span itemprop='name'>Servus for Mac</span>
           <img alt='Servus icon' itemprop='image' src='img/app-icon.png'>
@@ -363,7 +343,7 @@
         </p>
       </div>
     </div>
-    <script src='js/vendor/jquery.min.js?_=1362599990'></script>
-    <script src='js/all.js?_=1362599990'></script>
+    <script src='js/vendor/jquery.min.js?_=1362609925'></script>
+    <script src='js/all.js?_=1362609925'></script>
   </body>
 </html>

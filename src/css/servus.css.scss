@@ -12,7 +12,6 @@
 
 
 
-
 // Mixins ====================================================================
 
 @mixin box-shadow($shdw1) {
@@ -29,7 +28,7 @@
 
 pre, code {
   background-color: #eee;
-  font-size: emCalc(14px);
+  font-size: 0.9em;
   padding: 2px;
 }
 
@@ -54,6 +53,19 @@ pre, code {
     }
   }
 }
+
+.display-font {
+  font-family: "Joyful Juliana Pro Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-color: #333;
+  line-height: 1em;
+}
+
+h1.display-font { @extend .display-font; font-size: 3.44em; }
+h2.display-font { @extend .display-font; font-size: 2.89em; }
+h3.display-font { @extend .display-font; font-size: 2.11em; }
+h4.display-font { @extend .display-font; font-size: 1.8em; }
+h5.display-font { @extend .display-font; font-size: 1.4em; }
+h6.display-font { @extend .display-font; font-size: 1.25em; }
 
 
 
@@ -98,8 +110,9 @@ pre, code {
 
 #content-column {
   padding-top: 5em;
+  text-shadow: 1px 1px 1px rgba( 255, 255, 255, 1 );
 
-  a {
+  a:hover {
     text-decoration: underline;
   }
 
@@ -138,13 +151,33 @@ button.button {
   }
 }
 
-.back-to-top {
-  float: right;
+
+// Frontpage -----------------------------------------------------------------
+
+.faq-marker {
+  display: inline-block;
+  font-size: 0.95em;
   font-weight: bold;
 }
 
 
+// FAQ -----------------------------------------------------------------------
+
 .page-frontpage {
+  h2.display-font {
+    font-size: 3.44em;
+  }
+}
+
+
+.page-faq {
+  section {
+    padding-top: 3.5em;
+
+    h3 {
+      font-size: $h4-font-size;
+    }
+  }
 }
 
 

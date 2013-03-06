@@ -1,11 +1,13 @@
 .page-faq
   .row
-    .seven.columns.centered
-      %h1#faq
+    .large-12.columns
+      %h2
         Frequently Asked Questions
 
-      %section
-        %h2#q-filesize
+      #toc.panel
+
+      %section#q-filesize
+        %h3
           What is the maximum file size for the things I can share with Servus?
 
         %p
@@ -14,8 +16,8 @@
           then that's your upper file size limit.
 
 
-      %section
-        %h2#q-mas
+      %section#q-mas
+        %h3
           Can I buy Servus on the Mac App Store?
 
         %p
@@ -35,8 +37,8 @@
           possible.
 
 
-      %section
-        %h2#q-license-terms
+      %section#q-license-terms
+        %h3
           What are the license terms?
 
         %p
@@ -51,8 +53,8 @@
           ;)
 
 
-      %section
-        %h2#q-wot
+      %section#q-wot
+        %h3
           I don't understand what this app does.  Why do you suck at
           explaining?
 
@@ -79,8 +81,8 @@
           Does that help?  :)
 
 
-      %section
-        %h2#q-scripting
+      %section#q-scripting
+        %h3
           Does Servus have scripting support?
 
         %p
@@ -96,8 +98,8 @@
           \.
 
 
-      %section
-        %h2#q-theme-docs
+      %section#q-theme-docs
+        %h3
           Where can I find documentation on how to create my own preview
           page themes?
 
@@ -105,8 +107,8 @@
           %a{ :href => "/theme-docs" } Look here.
 
 
-      %section
-        %h2#q-theme-selling
+      %section#q-theme-selling
+        %h3
           I've created a custom theme for Servus, and it's great.  May I
           sell it?
 
@@ -115,8 +117,8 @@
           know if you created one.
 
 
-      %section
-        %h2#q-selling-pointers
+      %section#q-selling-pointers
+        %h3
           I'd like to sell my custom themes, but I have no idea how.  Any
           pointers?
 
@@ -135,8 +137,8 @@
           please!
 
 
-      %section
-        %h2#q-bug-dropping
+      %section#q-bug-dropping
+        %h3
           The menubar icon doesn't accept my dropped files, nothing happens.
           What is wrong?
 
@@ -151,16 +153,8 @@
           then try again, that usually does the trick.
 
 
-      %section
-        %h2#q-cancel-uploads
-          Is there a way to cancel a large upload in progress?
-
-        %p
-          Not yet, no.  Sorry.  That's a feature on my todo list, tho.
-
-
-      %section
-        %h2#q-tracking
+      %section#q-tracking
+        %h3
           Do you track what I am sharing?
 
         %p
@@ -168,8 +162,8 @@
           b) I really don't care.
 
 
-      %section
-        %h2#q-dropbox-path
+      %section#q-dropbox-path
+        %h3
           Where are my uploads/shares stored?
 
         %p
@@ -178,8 +172,8 @@
           \.
 
 
-      %section
-        %h2#q-logs
+      %section#q-logs
+        %h3
           Where are Servus' log files stored?
 
         %p
@@ -187,8 +181,8 @@
           %code ~/Library/Logs/de.municode.Servus/
           \.
 
-      %section
-        %h2#q-who
+      %section#q-who
+        %h3
           Who are you?
 
         %p
@@ -200,8 +194,8 @@
           %a{ :href => "http://municode.de" } I'm available for hire.
 
 
-      %section
-        %h2#q-contact
+      %section#q-contact
+        %h3
           My Q wasn't A'ed here, who can I ask?
 
         %p
@@ -211,18 +205,3 @@
           %a{ :href => "/twitter" } find me on Twitter
           or
           %a{ :href => "/+" } on Google+.
-
-      %hr
-
-      #drop-img
-        %img{ :src => "img/app-icon.png", :alt => "Servus icon", :itemprop => "image" }
-
-      %p#imprint
-        %strong Imprint:
-        %a{ :href => "http://municode.de" } Carlo Zottmann,
-        Zeisigweg 30, 81827 München, Germany
-        \ &middot; carlo@servus.io
-        \ &middot; USt-ID: DE260224054
-        %br
-        Background pattern is "Light Wool" from
-        %a{ :href => "http://subtlepatterns.com/" } Subtle Patterns.

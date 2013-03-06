@@ -31,7 +31,7 @@
         %nav.top-bar
           %ul.title-area
             %li.name
-              %h1
+              %h1.display-font
                 %a{ :href => "/" } Servus. For Mac & Dropbox.
             %li.toggle-topbar.menu-icon
               %a{ :href => "#" }
@@ -91,6 +91,8 @@
 
     .row
       .large-12.text-center.columns
+        %hr
+
         #microdata{ :itemscope => "", :itemtype => "http://schema.org/Product" }
           %span{ :itemprop => "name" } Servus for Mac
           %img{ :itemprop => "image", :src => "img/app-icon.png", :alt => "Servus icon" }

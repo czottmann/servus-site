@@ -755,7 +755,7 @@ p.lead {
 
 .subheader {
   line-height: 1.4;
-  color: gray;
+  color: #6f6f6f;
   font-weight: 300;
   margin-top: 0.2em;
   margin-bottom: 0.5em; }
@@ -808,36 +808,36 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Joyful Juliana Pro Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Asap, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-style: normal;
-  color: #333333;
+  color: #222222;
   text-rendering: optimizeLegibility;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
-  line-height: 0.8125em; }
+  line-height: 1.2125em; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 80%;
-    color: gray;
+    color: #6f6f6f;
     line-height: 0; }
 
 h1 {
-  font-size: 2.815em; }
+  font-size: 2.125em; }
 
 h2 {
-  font-size: 2.265em; }
+  font-size: 1.6875em; }
 
 h3 {
-  font-size: 1.7975em; }
+  font-size: 1.375em; }
 
 h4 {
-  font-size: 1.4875em; }
+  font-size: 1.125em; }
 
 h5 {
-  font-size: 1.4em; }
+  font-size: 1.125em; }
 
 h6 {
-  font-size: 1.25em; }
+  font-size: 1em; }
 
 hr {
   border: solid #dddddd;
@@ -862,9 +862,9 @@ small {
   line-height: inherit; }
 
 code {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: Menlo, Monaco, Consolas, Courier, "Courier New", monospace;
   font-weight: normal;
-  color: #7f0a0c; }
+  color: #333333; }
 
 /* Lists */
 ul,
@@ -930,17 +930,17 @@ blockquote {
   blockquote cite {
     display: block;
     font-size: 0.8125em;
-    color: #666666; }
+    color: #555555; }
     blockquote cite:before {
       content: "\2014 \0020"; }
     blockquote cite a,
     blockquote cite a:visited {
-      color: #666666; }
+      color: #555555; }
 
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: gray; }
+  color: #6f6f6f; }
 
 /* Microformats */
 .vcard {
@@ -966,19 +966,19 @@ blockquote p {
 
 @media only screen and (min-width: 48em) {
   h1, h2, h3, h4, h5, h6 {
-    line-height: 1em; }
+    line-height: 1.4; }
 
   h1 {
-    font-size: 3.44em; }
+    font-size: 2.75em; }
 
   h2 {
-    font-size: 2.89em; }
+    font-size: 2.3125em; }
 
   h3 {
-    font-size: 2.11em; }
+    font-size: 1.6875em; }
 
   h4 {
-    font-size: 1.8em; } }
+    font-size: 1.4375em; } }
 /*
  * Print styles.
  *
@@ -2257,7 +2257,7 @@ kbd {
 
 pre, code {
   background-color: #eee;
-  font-size: 0.875em;
+  font-size: 0.9em;
   padding: 2px; }
 
 .visuallyhidden {
@@ -2276,6 +2276,29 @@ pre, code {
     overflow: visible;
     position: static;
     width: auto; }
+
+.display-font, h1.display-font, h2.display-font, h3.display-font, h4.display-font, h5.display-font, h6.display-font {
+  font-family: "Joyful Juliana Pro Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-color: #333;
+  line-height: 1em; }
+
+h1.display-font {
+  font-size: 3.44em; }
+
+h2.display-font {
+  font-size: 2.89em; }
+
+h3.display-font {
+  font-size: 2.11em; }
+
+h4.display-font {
+  font-size: 1.8em; }
+
+h5.display-font {
+  font-size: 1.4em; }
+
+h6.display-font {
+  font-size: 1.25em; }
 
 #main-nav {
   text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.25);
@@ -2296,8 +2319,9 @@ pre, code {
     line-height: inherit; }
 
 #content-column {
-  padding-top: 5em; }
-  #content-column a {
+  padding-top: 5em;
+  text-shadow: 1px 1px 1px white; }
+  #content-column a:hover {
     text-decoration: underline; }
   #content-column #callout-buttons {
     margin: 1em auto 1.5em auto;
@@ -2337,9 +2361,18 @@ button.button.small {
   padding-bottom: 0.75em;
   padding-top: 0.75em; }
 
-.back-to-top {
-  float: right;
+.faq-marker {
+  display: inline-block;
+  font-size: 0.95em;
   font-weight: bold; }
+
+.page-frontpage h2.display-font {
+  font-size: 3.44em; }
+
+.page-faq section {
+  padding-top: 3.5em; }
+  .page-faq section h3 {
+    font-size: 1.4375em; }
 
 #microdata {
   color: #fff;
