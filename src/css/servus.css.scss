@@ -61,6 +61,9 @@ pre, code {
 // Navigation / Top bar ======================================================
 
 #main-nav {
+  // Make the text recessed a wee bit.
+  text-shadow: 0px -1px 1px rgba( 0, 0, 0, 0.25 );
+
   // Overwrite the background; the original background is applied to the %div.
   background: url(/img/shadow-top-bar.png) center 45px no-repeat;
   padding-bottom: 32px;
@@ -73,6 +76,12 @@ pre, code {
     @include box-shadow( 0 5px 10px rgba( 0, 0, 0, 0.25 ) );
   }
 
+  // Without this, the site name will be cropped on smaller screens.
+  .title-area {
+    white-space: nowrap;
+  }
+
+  // Fixing the "back" link style on smaller screens.
   .top-bar-section {
     h5 {
       font-family: $body-font-family;
