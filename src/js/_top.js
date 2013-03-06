@@ -42,6 +42,10 @@ _gaq.push(["_trackPageview"]);
 })( document.location.hostname === "localhost" );
 
 
+// Initialize Foundation.
+$(document).foundation();
+
+
 // Frontpage
 $(document).ready( function() {
   if ( !$(".page-frontpage").length ) {

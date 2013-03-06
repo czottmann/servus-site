@@ -26,25 +26,22 @@
         %img{ :src => "http://placehold.it/550x310", :title => "Screenshot Menubar" }
 
 
-  .row#callout-buttons
-    %ul.large-block-grid-2.panel.centered
-      %li.right
-        .text-center
-          %a.button-download.large.button{ :href => "/download" }
-            %i.icon-download-alt
-            Download Servus
-          %br
-          %small
-            Try Servus for free for 2 weeks!
+  .row.panel#callout-buttons
+    .small-12.large-6.columns
+      %p.text-center
+        %a.button-download.large.button{ :href => "/download" }
+          %i.icon-download-alt
+          Download Servus
+        %small
+          Try Servus for free for 2 weeks!
 
-      %li.left
-        .text-center
-          %a.button-buy.large.button{ :href => "/buy" }
-            %i.icon-shopping-cart
-            Buy Servus
-          %br
-          %small
-            €8 / $10 / £6.50
+    .small-12.large-6.columns
+      %p.text-center
+        %a.button-buy.large.button{ :href => "/buy" }
+          %i.icon-shopping-cart
+          Buy Servus
+        %small
+          €8 / $10 / £6.50
 
 
   .row
