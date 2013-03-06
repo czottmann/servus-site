@@ -1,4 +1,4 @@
-#content-column
+.page-frontpage
   .row
     .large-5.columns
       %h1
@@ -12,9 +12,13 @@
         It can turn any file on your computer into a branded download page
         hosted on Dropbox.
 
-      %p
+      %p#claim
         %strong
-          Add some personal/professional touch to the files you share with your customers/clients/posse/fans.
+          Add some
+          %span.adjective{ :"data-words" => "personal touch,style,professional touch,sparkle,love,context,brand reminders,meaning,pzazz" } personal touch
+          %br
+          to the files you share with your
+          %span.target-demographic{ :"data-words" => "customers,friends,clients,readers,fans,audience,followers,posse" } customers.
 
 
     .large-7.columns
@@ -59,9 +63,11 @@
 
       %p
         Servus comes with a
-        %a{ :href => "https://dl.dropbox.com/s/vqlos2avs6fp6x8/index.html" } clean built-in preview page theme
-        but you can create
-        %strong your own custom themes, too.
+        clean built-in preview page theme
+        %a{ :href => "https://dl.dropbox.com/s/vqlos2avs6fp6x8/index.html", :target => "_blank" } (click for an example)
+        but you can
+        %strong create your own custom themes,
+        too.
 
 
     .large-4.columns
@@ -70,8 +76,8 @@
         Why it exists
 
       %p
-        I created Servus because I'm a freelancer myself.  Quite often I need
-        to send files to my clients.  I feel that embedding those files in
+        I created Servus because I'm a freelancer.  Quite often I need to send
+        files to my clients.  I feel that embedding those files in
         %strong a preview page of my own brand
         makes for a more professional appearance.
 
@@ -94,74 +100,46 @@
         %a{ :href => "http://db.tt/T84kkEv" } Dropbox account.
 
   .row
-    %p{ :style => "display: block; height: 200px" }
+    .large-12.columns
+      %hr
 
   .row
-    .large-8.columns.large-centered
-
-      %p<
-        %a{ :href => "https://dl.dropbox.com/s/vqlos2avs6fp6x8/index.html" }
-          %img.screenshot{ :src => "img/screenshot_example.png", :width => 200, :height => 147, :alt => "Screenshot preview page" }
-        Servus comes with a
-        %a{ :href => "https://dl.dropbox.com/s/vqlos2avs6fp6x8/index.html" }
-          clean built-in preview page theme
-        but you can use your own
-        %strong custom themes.
-        (Here's
-        %a{ :href => "http://documentup.com/carlo/servus-theme-boilerplate" } a theme boilerplate kit with documentation
-        to get you started.)
-        %br{ :style => "clear: both"}
+    .large-6.large-centered.columns
+      %h3
+        %i.icon-comments
+        Why hello there
 
       %p
-        The
-        %strong maximum size
-        of the files you share is only restricted by the size of your
-        Dropbox account.  If your account has 1.5GB free space left, then
-        that's your upper file size limit.
-
-      %p
-
-
-
-      %p
-        If you want to be informed of what's going on with Servus,
-        %a{ :href => "/twitter" }
-          follow @servusio on Twitter
+        Do you have questions, suggestions, anything else?  Send me
+        %a{ :href => "mailto:carlo@servus.io" } an email
+        or look me up
+        %a{ :href => "/twitter" } on Twitter (@servusio)
         or
-        %a{ :href => "http://blog.servus.io/" }
-          read the Servus blog
-        or sign up for the Servus Updates newsletter:
+        %a{ :href => "/+" } on Google+.
+        I don't bite, so don't be shy. :)
 
-      %form{ :action => "https://tinyletter.com/servusio", :method => "post", :onsubmit => "window.open('https://tinyletter.com/servusio', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true", :target => "popupwindow" }
+      %p
+        And if you want to stay informed about what's going on with Servus,
+        %a{ :href => "http://blog.servus.io/" } check out the Servus blog
+        or subscribe to the Servus Updates newsletter.
+        No spam,
+        %strike no marketing bullshit
+        no
+        %i "exciting news from our partners"
+        — I promise.
+
+      %form#tl-subscribe{ :action => "https://tinyletter.com/servusio", :method => "post", :target => "tl-window" }
         %input{ :name => "embed", :type => "hidden", :value => "1" }
 
-        .row
-          .four.mobile-one.columns
-            %label.right.inline{ :for => "tlemail" } Your email address
-          .eight.mobile-three.columns
-            %input#tlemail{ :name => "email", :placeholder => "you@example.com", :type => "email" }
-
-          .eight.mobile-three.columns
-            %input.small.secondary.button{ :type => "submit", :value => "Subscribe" }
-
-      %p
-        If you need to contact me, Carlo Zottmann, feel free to send me
-        %a{ :href => "mailto:carlo@servus.io" } an email.
+        .row.collapse
+          .small-1.columns
+            %span.prefix
+              %i.icon-envelope-alt
+          .small-8.columns
+            %label.visuallyhidden{ :for => "tl-email" } Your email address
+            %input#tl-email{ :name => "email", :placeholder => "you@example.com", :type => "email" }
+          .small-3.columns
+            %input.small.success.button{ :type => "submit", :value => "Subscribe" }
 
       %hr
 
-      #microdata{ :itemscope => "", :itemtype => "http://schema.org/Product" }
-        %span{ :itemprop => "name" } Servus for Mac
-        %img{ :itemprop => "image", :src => "img/app-icon.png", :alt => "Servus icon" }
-        %a{ :itemprop => "url", :href => "https://servus.io" } Servus for Mac
-        %span{ :itemprop => "description" }
-          A Dropbox-powered sharing app for Mac. It's a menubar icon. Drop a
-          file on it, and it'll build a preview page for it (custom themes!),
-          upload it to your Dropbox, and copy the link for you.
-
-      %p#imprint
-        %strong Imprint:
-        %a{ :href => "http://municode.de" } Carlo Zottmann,
-        Zeisigweg 30, 81827 München, Germany
-        \ &middot; carlo@servus.io
-        \ &middot; USt-ID: DE260224054

@@ -3,10 +3,14 @@
 @import "foundation";
 
 
+
+
 // Fonts =====================================================================
 
 @import url("//fonts.googleapis.com/css?family=Asap:400,700");
 @import url("//f.fontdeck.com/s/css/iJFpt+/SjdP+SMIzrI3wni4/vsc/servus.io/30421.css");
+
+
 
 
 // Mixins ====================================================================
@@ -19,6 +23,8 @@
 }
 
 
+
+
 // Site styles ===============================================================
 
 pre, code {
@@ -27,8 +33,32 @@ pre, code {
   padding: 2px;
 }
 
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 
-// Navigation / Top bar ------------------------------------------------------
+  &.focusable {
+    &:active, &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+
+
+
+// Navigation / Top bar ======================================================
 
 #main-nav {
   // Overwrite the background; the original background is applied to the %div.
@@ -45,7 +75,9 @@ pre, code {
 }
 
 
-// Content -------------------------------------------------------------------
+
+
+// Content ===================================================================
 
 #content-column {
   padding-top: 5em;
@@ -86,16 +118,37 @@ pre, code {
   text-shadow: 0 -1px 1px rgba( 0, 0, 0, 0.33 );
 }
 
+input.button,
+button.button {
+  &.small {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+  }
+}
+
 .back-to-top {
   float: right;
   font-weight: bold;
 }
 
-.screenshot {
-  float: right;
-  margin: 0 0 12px 12px;
+
+.page-frontpage {
 }
 
+
+
+// Footer ====================================================================
+
+#microdata {
+  color: #fff;
+  display: inline-block;
+  font-size: emCalc(1px);
+  margin: 20px;
+
+  span {
+    display: block;
+  }
+}
 
 p#imprint {
   color: #666;
@@ -103,19 +156,3 @@ p#imprint {
   text-align: center;
 }
 
-.github-fork-ribbon-wrapper {
-  position: fixed;
-  top: 45px;
-}
-
-#microdata,
-#drop-img {
-  color: #fff;
-  font-size: 1px;
-  margin: 30px;
-  text-align: center;
-
-  span {
-    display: block;
-  }
-}

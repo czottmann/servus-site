@@ -8,17 +8,17 @@
     <meta content='Turn any file on your computer into a branded download page hosted on Dropbox.' name='description'>
     <meta content='05ae9fe22b8e' name='bitly-verification'>
     <title>Servus for Mac. Your uploads, your style, on Dropbox.</title>
-    <script src='js/jquery.min.js?_=1362585128'></script>
-    <script src='js/top.js?_=1362585128'></script>
+    <script src='js/jquery.min.js?_=1362591536'></script>
+    <script src='js/top.js?_=1362591536'></script>
     <link href='https://plus.google.com/101996114152007191046' rel='publisher'>
     <link href='img/favicon.png' rel='shortcut icon'>
     <link href='//assets.servus.io/3/font-awesome.min.css' rel='stylesheet' type='text/css'>
     <!--[if IE 7 ]>
       <link href='//assets.servus.io/3/font-awesome-ie7.min.css' rel='stylesheet' type='text/css'>
     <![endif]-->
-    <link href='css/servus.css?_=1362585128' rel='stylesheet' type='text/css'>
+    <link href='css/servus.css?_=1362591536' rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]>
-      <script src='js/html5shiv.js?_=1362585128'></script>
+      <script src='js/html5shiv.js?_=1362591536'></script>
     <![endif]-->
   </head>
   <body>
@@ -105,6 +105,7 @@
       </div>
     </div>
     <div id='content-column'>
+      <div class='page-frontpage'>
   <div class='row'>
     <div class='large-5 columns'>
       <h1>
@@ -118,9 +119,13 @@
         It can turn any file on your computer into a branded download page
         hosted on Dropbox.
       </p>
-      <p>
+      <p id='claim'>
         <strong>
-          Add some personal/professional touch to the files you share with your customers/clients/posse/fans.
+          Add some
+          <span class='adjective' data-words='personal touch,style,professional touch,sparkle,love,context,brand reminders,meaning,pzazz'>personal touch</span>
+          <br>
+          to the files you share with your
+          <span class='target-demographic' data-words='customers,friends,clients,readers,fans,audience,followers,posse'>customers.</span>
         </strong>
       </p>
     </div>
@@ -174,9 +179,11 @@
       </p>
       <p>
         Servus comes with a
-        <a href='https://dl.dropbox.com/s/vqlos2avs6fp6x8/index.html'>clean built-in preview page theme</a>
-        but you can create
-        <strong>your own custom themes, too.</strong>
+        clean built-in preview page theme
+        <a href='https://dl.dropbox.com/s/vqlos2avs6fp6x8/index.html' target='_blank'>(click for an example)</a>
+        but you can
+        <strong>create your own custom themes,</strong>
+        too.
       </p>
     </div>
     <div class='large-4 columns'>
@@ -185,8 +192,8 @@
         Why it exists
       </h3>
       <p>
-        I created Servus because I'm a freelancer myself.  Quite often I need
-        to send files to my clients.  I feel that embedding those files in
+        I created Servus because I'm a freelancer.  Quite often I need to send
+        files to my clients.  I feel that embedding those files in
         <strong>a preview page of my own brand</strong>
         makes for a more professional appearance.
       </p>
@@ -212,87 +219,77 @@
     </div>
   </div>
   <div class='row'>
-    <p style='display: block; height: 200px'></p>
+    <div class='large-12 columns'>
+      <hr>
+    </div>
   </div>
   <div class='row'>
-    <div class='large-8 columns large-centered'>
-      <p><a href='https://dl.dropbox.com/s/vqlos2avs6fp6x8/index.html'>
-        <img alt='Screenshot preview page' class='screenshot' height='147' src='img/screenshot_example.png' width='200'>
-      </a>
-      Servus comes with a
-      <a href='https://dl.dropbox.com/s/vqlos2avs6fp6x8/index.html'>
-        clean built-in preview page theme
-      </a>
-      but you can use your own
-      <strong>custom themes.</strong>
-      (Here's
-      <a href='http://documentup.com/carlo/servus-theme-boilerplate'>a theme boilerplate kit with documentation</a>
-      to get you started.)
-      <br style='clear: both'></p>
+    <div class='large-6 large-centered columns'>
+      <h3>
+        <i class='icon-comments'></i>
+        Why hello there
+      </h3>
       <p>
-        The
-        <strong>maximum size</strong>
-        of the files you share is only restricted by the size of your
-        Dropbox account.  If your account has 1.5GB free space left, then
-        that's your upper file size limit.
-      </p>
-      <p></p>
-      <p>
-        If you want to be informed of what's going on with Servus,
-        <a href='/twitter'>
-          follow @servusio on Twitter
-        </a>
+        Do you have questions, suggestions, anything else?  Send me
+        <a href='mailto:carlo@servus.io'>an email</a>
+        or look me up
+        <a href='/twitter'>on Twitter (@servusio)</a>
         or
-        <a href='http://blog.servus.io/'>
-          read the Servus blog
-        </a>
-        or sign up for the Servus Updates newsletter:
+        <a href='/+'>on Google+.</a>
+        I don't bite, so don't be shy. :)
       </p>
-      <form action='https://tinyletter.com/servusio' method='post' onsubmit="window.open('https://tinyletter.com/servusio', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true" target='popupwindow'>
+      <p>
+        And if you want to stay informed about what's going on with Servus,
+        <a href='http://blog.servus.io/'>check out the Servus blog</a>
+        or subscribe to the Servus Updates newsletter.
+        No spam,
+        <strike>no marketing bullshit</strike>
+        no
+        <i>"exciting news from our partners"</i>
+        — I promise.
+      </p>
+      <form action='https://tinyletter.com/servusio' id='tl-subscribe' method='post' target='tl-window'>
         <input name='embed' type='hidden' value='1'>
-        <div class='row'>
-          <div class='four mobile-one columns'>
-            <label class='right inline' for='tlemail'>Your email address</label>
+        <div class='row collapse'>
+          <div class='small-1 columns'>
+            <span class='prefix'>
+              <i class='icon-envelope-alt'></i>
+            </span>
           </div>
-          <div class='eight mobile-three columns'>
-            <input id='tlemail' name='email' placeholder='you@example.com' type='email'>
+          <div class='small-8 columns'>
+            <label class='visuallyhidden' for='tl-email'>Your email address</label>
+            <input id='tl-email' name='email' placeholder='you@example.com' type='email'>
           </div>
-          <div class='eight mobile-three columns'>
-            <input class='small secondary button' type='submit' value='Subscribe'>
+          <div class='small-3 columns'>
+            <input class='small success button' type='submit' value='Subscribe'>
           </div>
         </div>
       </form>
-      <p>
-        If you need to contact me, Carlo Zottmann, feel free to send me
-        <a href='mailto:carlo@servus.io'>an email.</a>
-      </p>
       <hr>
-      <div id='microdata' itemscope='' itemtype='http://schema.org/Product'>
-        <span itemprop='name'>Servus for Mac</span>
-        <img alt='Servus icon' itemprop='image' src='img/app-icon.png'>
-        <a href='https://servus.io' itemprop='url'>Servus for Mac</a>
-        <span itemprop='description'>
-          A Dropbox-powered sharing app for Mac. It's a menubar icon. Drop a
-          file on it, and it'll build a preview page for it (custom themes!),
-          upload it to your Dropbox, and copy the link for you.
-        </span>
-      </div>
-      <p id='imprint'>
-        <strong>Imprint:</strong>
-        <a href='http://municode.de'>Carlo Zottmann,</a>
-        Zeisigweg 30, 81827 München, Germany
-         &middot; carlo@servus.io
-         &middot; USt-ID: DE260224054
-      </p>
     </div>
   </div>
 </div>
-    <!--
-      <div class='github-fork-ribbon-wrapper right'>
-        <div class='github-fork-ribbon'>
-          <a href='http://blog.servus.io/post/38140138904/announcing-apocalyp-sale-2012'>APOCALYP-SALE 2012</a>
+    </div>
+    <div class='row'>
+      <div class='large-12 text-center columns'>
+        <div id='microdata' itemscope='' itemtype='http://schema.org/Product'>
+          <span itemprop='name'>Servus for Mac</span>
+          <img alt='Servus icon' itemprop='image' src='img/app-icon.png'>
+          <a href='https://servus.io' itemprop='url'>Servus for Mac</a>
+          <span itemprop='description'>
+            A Dropbox-powered sharing app for Mac. It's a menubar icon. Drop a
+            file on it, and it'll build a preview page for it (custom themes!),
+            upload it to your Dropbox, and copy the link for you.
+          </span>
         </div>
+        <p id='imprint'>
+          <strong>Imprint:</strong>
+          <a href='http://municode.de'>Carlo Zottmann,</a>
+          Zeisigweg 30, 81827 München, Germany
+           &middot; carlo@servus.io
+           &middot; USt-ID: DE260224054
+        </p>
       </div>
-    -->
+    </div>
   </body>
 </html>

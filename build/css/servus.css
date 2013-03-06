@@ -1222,6 +1222,207 @@ button.button {
 @media only screen and (min-width: 48em) {
   .button {
     display: inline-block; } }
+/* Standard Forms */
+form {
+  margin: 0 0 1em; }
+
+/* Using forms within rows, we need to set some defaults */
+form .row .row {
+  margin: -0.5em; }
+  form .row .row .column,
+  form .row .row .columns {
+    padding: 0 0.5em; }
+  form .row .row.collapse {
+    margin: 0; }
+    form .row .row.collapse .column,
+    form .row .row.collapse .columns {
+      padding: 0; }
+form .row input.column,
+form .row input.columns {
+  padding-left: 0.5em; }
+
+form .row .row {
+  margin: 0; }
+
+/* Label Styles */
+label {
+  font-size: 0.875em;
+  color: #4d4d4d;
+  cursor: pointer;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.1875em; }
+  label.right {
+    float: none;
+    text-align: right; }
+  label.inline {
+    margin: 0 0 1em 0;
+    padding: 0.625em 0; }
+
+/* Attach elements to the beginning or end of an input */
+.prefix,
+.postfix {
+  display: block;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  font-size: 0.875em;
+  height: 2.3125em;
+  line-height: 2.3125em; }
+
+/* Adjust padding, alignment and radius if pre/post element is a button */
+.postfix.button {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  line-height: 2.125em; }
+
+.prefix.button {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  line-height: 2.125em; }
+
+.prefix.button.radius {
+  -webkit-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0; }
+
+.postfix.button.radius {
+  -webkit-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0; }
+
+/* Separate prefix and postfix styles when on span so buttons keep their own */
+span.prefix {
+  background: #f2f2f2;
+  border-color: #d9d9d9;
+  border-right: none;
+  color: #333333; }
+  span.prefix.radius {
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0; }
+
+span.postfix {
+  background: #f2f2f2;
+  border-color: #cccccc;
+  border-left: none;
+  color: #333333; }
+  span.postfix.radius {
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0; }
+
+/* We use this to get basic styling on all basic form elements */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  height: 2.3125em;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear; }
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  textarea:focus {
+    background: #fafafa;
+    border-color: #999999;
+    outline: none; }
+  input[type="text"][disabled],
+  input[type="password"][disabled],
+  input[type="date"][disabled],
+  input[type="datetime"][disabled],
+  input[type="datetime-local"][disabled],
+  input[type="month"][disabled],
+  input[type="week"][disabled],
+  input[type="email"][disabled],
+  input[type="number"][disabled],
+  input[type="search"][disabled],
+  input[type="tel"][disabled],
+  input[type="time"][disabled],
+  input[type="url"][disabled],
+  textarea[disabled] {
+    background-color: #dddddd; }
+
+/* We add basic fieldset styling */
+fieldset {
+  border: solid 1px #dddddd;
+  padding: 1.25em;
+  margin: 1.125em 0; }
+  fieldset legend {
+    font-weight: bold;
+    background: white;
+    padding: 0 0.1875em;
+    margin: 0;
+    margin-left: -0.1875em; }
+
+/* Error Handling */
+.error input,
+input.error,
+.error textarea,
+textarea.error {
+  border-color: #c60f13;
+  background-color: rgba(198, 15, 19, 0.1); }
+  .error input:focus,
+  input.error:focus,
+  .error textarea:focus,
+  textarea.error:focus {
+    background: #fafafa;
+    border-color: #999999; }
+
+.error label,
+label.error {
+  color: #c60f13; }
+
+.error small,
+small.error {
+  display: block;
+  padding: 0.375em 0.25em;
+  margin-top: -1.3125em;
+  margin-bottom: 1em;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: #c60f13;
+  color: white; }
+
 /* Sections */
 .section-container {
   width: 100%;
@@ -1834,7 +2035,7 @@ kbd {
 
 /* Labels */
 .label {
-  font-weight: bold;
+  font-weight: 500;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -2059,6 +2260,23 @@ pre, code {
   font-size: 0.875em;
   padding: 2px; }
 
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
 #main-nav {
   background: url(/img/shadow-top-bar.png) center 45px no-repeat;
   padding-bottom: 32px; }
@@ -2108,29 +2326,24 @@ pre, code {
   text-decoration: none !important;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.33); }
 
+input.button.small,
+button.button.small {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em; }
+
 .back-to-top {
   float: right;
   font-weight: bold; }
 
-.screenshot {
-  float: right;
-  margin: 0 0 12px 12px; }
+#microdata {
+  color: #fff;
+  display: inline-block;
+  font-size: 0.0625em;
+  margin: 20px; }
+  #microdata span {
+    display: block; }
 
 p#imprint {
   color: #666;
   font-size: 9px;
   text-align: center; }
-
-.github-fork-ribbon-wrapper {
-  position: fixed;
-  top: 45px; }
-
-#microdata,
-#drop-img {
-  color: #fff;
-  font-size: 1px;
-  margin: 30px;
-  text-align: center; }
-  #microdata span,
-  #drop-img span {
-    display: block; }

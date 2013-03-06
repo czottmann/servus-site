@@ -89,9 +89,24 @@
                       Contact Carlo
 
 
-    = yield
+    #content-column
+      = yield
 
-    /
-      .github-fork-ribbon-wrapper.right
-        .github-fork-ribbon
-          %a{ :href => "http://blog.servus.io/post/38140138904/announcing-apocalyp-sale-2012" } APOCALYP-SALE 2012
+
+    .row
+      .large-12.text-center.columns
+        #microdata{ :itemscope => "", :itemtype => "http://schema.org/Product" }
+          %span{ :itemprop => "name" } Servus for Mac
+          %img{ :itemprop => "image", :src => "img/app-icon.png", :alt => "Servus icon" }
+          %a{ :itemprop => "url", :href => "https://servus.io" } Servus for Mac
+          %span{ :itemprop => "description" }
+            A Dropbox-powered sharing app for Mac. It's a menubar icon. Drop a
+            file on it, and it'll build a preview page for it (custom themes!),
+            upload it to your Dropbox, and copy the link for you.
+
+        %p#imprint
+          %strong Imprint:
+          %a{ :href => "http://municode.de" } Carlo Zottmann,
+          Zeisigweg 30, 81827 München, Germany
+          \ &middot; carlo@servus.io
+          \ &middot; USt-ID: DE260224054
