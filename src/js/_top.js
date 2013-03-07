@@ -53,7 +53,7 @@ $(document).ready( function() {
   }
 
   $("#main-nav a[href^='" + location.pathname + "']")
-    .closest("ul.has-dropdown, li")
+    .closest("li")
     .addClass("active");
 });
 
@@ -90,10 +90,10 @@ $(document).ready( function() {
     );
 
     // Add back-to-top arrows to each section's last paragraph.
-    $elem.closest("section").find("p:last, li:last").append(
+    $elem.closest("section").find("li, p").last().append(
       "&nbsp;",
       $( "<a>", {
-        "class": "nav-marker",
+        "class": "nav-marker back-to-top",
         "href": "#",
         "title": "Back to top",
         "html": "&uArr;"

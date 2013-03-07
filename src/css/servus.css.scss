@@ -67,6 +67,10 @@ h4.display-font { @extend .display-font; font-size: 1.8em; }
 h5.display-font { @extend .display-font; font-size: 1.4em; }
 h6.display-font { @extend .display-font; font-size: 1.25em; }
 
+.clearing-thumbs {
+  list-style: none;
+}
+
 
 
 
@@ -129,6 +133,19 @@ h6.display-font { @extend .display-font; font-size: 1.25em; }
     display: inline-block;
     font-size: 0.95em;
     font-weight: bold;
+
+    &.back-to-top {
+      margin-left: 0.5em;
+      opacity: 0.75;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .clearing-container {
+    text-shadow: none;
   }
 }
 
@@ -188,6 +205,16 @@ button.button {
 
 .page-faq {
 }
+
+
+// FAQ -----------------------------------------------------------------------
+
+.page-extras {
+  .screenshot {
+    @extend p;
+  }
+}
+
 
 
 

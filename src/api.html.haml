@@ -1,0 +1,89 @@
+.page-extras
+  .row
+    .large-8.large-centered.columns
+      %h2 API &amp; Scripting
+
+      %p
+        Dragging files and folders onto Servus' menubar icon is just half the
+        fun.  I like scripting and automation, so naturally I wanted a way to
+        tell the app to upload things without me using the trackpad.
+
+      #toc.panel
+
+
+      %section
+        %h3 The API in general
+
+        %p
+          The API is URL-based, meaning Servus is listening for calls to URLs
+          with the
+          %em scheme
+          = succeed "." do
+            %code servus
+          The scheme is followed by the name of the desired
+          = succeed "," do
+            %em endpoint
+          for example
+          = succeed "," do
+            %code upload
+          which in turn is followed by the
+          = succeed "," do
+            %em argument
+          i.e. the file path
+          you're passing to the endpoint.  So the syntax of the API calls is
+          = succeed "." do
+            %code [scheme]://[endpoint]/[argument]
+
+        %p
+          Right now there's just one endpoint but I'll add new ones when it
+          makes sense.  See below for more information.
+
+
+      %section
+        %h3 How to call an API endpoint
+
+        %p
+          You can use the OS&nbsp;X' built-in shell command
+          %code open
+          to call an endpoint.  Additionally, you may use AppleScript.
+
+        %p
+          An example: Let's say your OS&nbsp;X username is "adenauer", and on
+          your desktop there is a file named
+          %code important.pdf
+          which you want to pass to Servus for upload.  Therefore that file's
+          full path —i.e. the
+          %em argument
+          you'll need to pass to the endpoint— is
+          = succeed "." do
+            %code /Users/adenauer/Desktop/important.pdf
+
+        %p
+          %strong Using the shell:
+          %br
+          %code open&nbsp;servus://upload/Users/adenauer/Desktop/important.pdf
+          %br
+
+        %p
+          %strong Using AppleScript:
+          %br
+          %code
+            tell application "Finder" to open location
+            "servus://upload/Users/adenauer/Desktop/important.pdf"
+
+      %section
+        %h3
+          Endpoint:
+          %code upload
+
+        %p
+          Uploads a file.  This is the scripting equivalent of dragging a file
+          onto the app's menubar icon.
+
+        %dl
+          %dt Argument
+          %dd
+            The absolute path of the file/folder to upload.
+          %dt Example
+          %dd
+            %code servus://upload/Users/adenauer/Desktop/important.pdf

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='text/html' http-equiv='Content-Type'>
+    <meta content='width=device-width' name='viewport'>
+    <meta content='Turn any file on your computer into a branded download page hosted on Dropbox.' name='description'>
+    <meta content='05ae9fe22b8e' name='bitly-verification'>
+    <title>Servus for Mac. Your uploads, your style, on Dropbox.</title>
+    <script src='/js/vendor/custom.modernizr.js?_=1362677156'></script>
+    <link href='/css/servus.css?_=1362677156' rel='stylesheet' type='text/css'>
+    <link href='//assets.servus.io/3/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <!--[if IE 7 ]>
+      <link href='//assets.servus.io/3/font-awesome-ie7.min.css' rel='stylesheet' type='text/css'>
+    <![endif]-->
+    <link href='https://plus.google.com/101996114152007191046' rel='publisher'>
+    <link href='/img/favicon.png' rel='shortcut icon'>
+  </head>
+  <body>
+    <div class='contain-to-grid fixed' id='main-nav'>
+      <div>
+        <nav class='top-bar'>
+          <ul class='title-area'>
+            <li class='name'>
+              <h1 class='display-font'>
+                <a href='/'>Servus. For Mac & Dropbox.</a>
+              </h1>
+            </li>
+            <li class='toggle-topbar menu-icon'>
+              <a href='#'>
+                <span>Menu</span>
+              </a>
+            </li>
+          </ul>
+          <section class='top-bar-section'>
+            <ul class='right'>
+              <li>
+                <!-- .active -->
+                <a class='download' href='/download'>Download Servus</a>
+              </li>
+              <li>
+                <a href='/faq.html'>FAQ</a>
+              </li>
+              <li>
+                <a href='/theme-docs.html'>Theme docs</a>
+              </li>
+              <li class='has-dropdown'>
+                <a href='#'>Extras</a>
+                <ul class='dropdown'>
+                  <li>
+                    <a href='/extras.html'>Helpers</a>
+                  </li>
+                  <li>
+                    <a href='/api.html'>API</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='has-dropdown'>
+                <a href='#'>News & Contact</a>
+                <ul class='dropdown'>
+                  <li>
+                    <a href='http://blog.servus.io/'>
+                      <i class='icon-align-left'></i>
+                      Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a href='https://tinyletter.com/servusio'>
+                      <i class='icon-envelope-alt'></i>
+                      Newsletter
+                    </a>
+                  </li>
+                  <li>
+                    <a href='/twitter'>
+                      <i class='icon-twitter'></i>
+                      Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a href='/+'>
+                      <i class='icon-google-plus-sign'></i>
+                      Google+
+                    </a>
+                  </li>
+                  <li class='divider'></li>
+                  <li>
+                    <a href='mailto:carlo@servus.io'>
+                      <i class='icon-envelope'></i>
+                      Contact Carlo
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+    </div>
+    <div id='content-column'>
+      <div class='page-extras'>
+  <div class='row'>
+    <div class='large-8 large-centered columns'>
+      <h2>API &amp; Scripting</h2>
+      <p>
+        Dragging files and folders onto Servus' menubar icon is just half the
+        fun.  I like scripting and automation, so naturally I wanted a way to
+        tell the app to upload things without me using the trackpad.
+      </p>
+      <div class='panel' id='toc'></div>
+      <section>
+        <h3>The API in general</h3>
+        <p>
+          The API is URL-based, meaning Servus is listening for calls to URLs
+          with the
+          <em>scheme</em>
+          <code>servus</code>.
+          The scheme is followed by the name of the desired
+          <em>endpoint</em>,
+          for example
+          <code>upload</code>,
+          which in turn is followed by the
+          <em>argument</em>,
+          i.e. the file path
+          you're passing to the endpoint.  So the syntax of the API calls is
+          <code>[scheme]://[endpoint]/[argument]</code>.
+        </p>
+        <p>
+          Right now there's just one endpoint but I'll add new ones when it
+          makes sense.  See below for more information.
+        </p>
+      </section>
+      <section>
+        <h3>How to call an API endpoint</h3>
+        <p>
+          You can use the OS&nbsp;X' built-in shell command
+          <code>open</code>
+          to call an endpoint.  Additionally, you may use AppleScript.
+        </p>
+        <p>
+          An example: Let's say your OS&nbsp;X username is "adenauer", and on
+          your desktop there is a file named
+          <code>important.pdf</code>
+          which you want to pass to Servus for upload.  Therefore that file's
+          full path —i.e. the
+          <em>argument</em>
+          you'll need to pass to the endpoint— is
+          <code>/Users/adenauer/Desktop/important.pdf</code>.
+        </p>
+        <p>
+          <strong>Using the shell:</strong>
+          <br>
+          <code>open&nbsp;servus://upload/Users/adenauer/Desktop/important.pdf</code>
+          <br>
+        </p>
+        <p>
+          <strong>Using AppleScript:</strong>
+          <br>
+          <code>tell application "Finder" to open location
+          "servus://upload/Users/adenauer/Desktop/important.pdf"</code>
+        </p>
+      </section>
+      <section>
+        <h3>
+          Endpoint:
+          <code>upload</code>
+        </h3>
+        <p>
+          Uploads a file.  This is the scripting equivalent of dragging a file
+          onto the app's menubar icon.
+        </p>
+        <dl>
+          <dt>Argument</dt>
+          <dd>
+            The absolute path of the file/folder to upload.
+          </dd>
+          <dt>Example</dt>
+          <dd>
+            <code>servus://upload/Users/adenauer/Desktop/important.pdf</code>
+          </dd>
+        </dl>
+      </section>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class='row'>
+      <div class='large-12 text-center columns'>
+        <hr>
+        <div id='microdata' itemscope='' itemtype='http://schema.org/Product'>
+          <span itemprop='name'>Servus for Mac</span>
+          <img alt='Servus icon' itemprop='image' src='img/app-icon.png'>
+          <a href='https://servus.io' itemprop='url'>Servus for Mac</a>
+          <span itemprop='description'>
+            A Dropbox-powered sharing app for Mac. It's a menubar icon. Drop a
+            file on it, and it'll build a preview page for it (custom themes!),
+            upload it to your Dropbox, and copy the link for you.
+          </span>
+        </div>
+        <p id='imprint'>
+          <strong>Imprint:</strong>
+          <a href='http://municode.de'>Carlo Zottmann,</a>
+          Zeisigweg 30, 81827 München, Germany
+           &middot; carlo@servus.io
+           &middot; USt-ID: DE260224054
+        </p>
+      </div>
+    </div>
+    <script src='js/vendor/jquery.min.js?_=1362677156'></script>
+    <script src='js/all.js?_=1362677156'></script>
+  </body>
+</html>

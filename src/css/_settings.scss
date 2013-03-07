@@ -26,6 +26,18 @@ $button-margin-bottom: 0.2em;
 $shiny-edge-size: 0;
 $shiny-edge-color: transparent;
 
+// Lightbox
+$clearing-bg: rgba( 16, 16, 16, 0.75 );
+$clearing-carousel-bg: $clearing-bg;
+$clearing-active-img-height: 100%;
+$clearing-carousel-height: 0;
+$clearing-carousel-thumb-width: 0;
+$clearing-carousel-thumb-active-border: 0;
+$clearing-arrow-size: 0;
+$clearing-arrow-color: $clearing-bg;
+$clearing-caption-padding: 1em 2em;
+
+
 // ----------------
 
 $display-font: "Joyful Juliana Pro Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;

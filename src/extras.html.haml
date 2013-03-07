@@ -1,0 +1,79 @@
+.page-extras
+  .row
+    .large-8.large-centered.columns
+      %h2 Extras
+
+      %p
+        Here you'll find some external helpers and supplements that are not
+        part of the core application.
+
+      #toc.panel
+
+
+      %section#section-alfred-extension
+        %h3
+          Alfred extension
+
+        %p
+          An extension for the beloved app launcher / productivity tool
+          %a{ :href => "http://alfredapp.com" } Alfred
+          that enables you to share a file or folder via Servus right from
+          within the tool.
+
+        .screenshot
+          %ul.clearing-thumbs{ :"data-clearing" => true }
+            %li
+              - caption = "Screenshot of the Alfred extension in action"
+              %a{ :href => "/img/ss_alfred_extension.jpg" }
+                %img{ :src => "/img/ss_alfred_extension-thumb.jpg", :alt => caption, :"data-caption" => caption }
+
+        %ul
+          %li
+            %strong Download:
+            %a{ :href => "http://servi.re/alfred-extension" }<
+              Alfred extension: Share with Servus
+
+          %li
+            %a{ :href => "http://blog.servus.io/post/2013-02-21-alfred-extension" }<
+              Related blog post
+            (contains detailed information on installation etc.)
+
+
+      %section#section-osx-service
+        %h3
+          OS&nbsp;X Service
+
+        %p
+          An addition to the OS&nbsp;X service menu to pass the current Finder
+          selection to Servus.
+
+        .screenshot
+          %ul.clearing-thumbs{ :"data-clearing" => true }
+            %li
+              - caption = "Screenshot of the OS&nbsp;X service submenu in Finder"
+              %a{ :href => "/img/ss_service_context_menu.jpg" }
+                %img{ :src => "/img/ss_service_context_menu-thumb.jpg", :alt => caption, :"data-caption" => caption }
+
+        %ul
+          %li
+            %strong Download:
+            %a{ :href => "http://servi.re/osx-service" }<
+              OS X Service: Share with Servus
+
+          %li
+            %a{ :href => "http://blog.servus.io/post/2013-03-04-osx-service" }<
+              Related blog post
+            (contains detailed information on installation etc.)
+
+
+      %section
+        %p
+          Did you write a script, a doodad or possibly a whatsit that makes
+          use of Servus?  Let me know via
+          = succeed "," do
+            %a{:href => "/twitter"} Twitter
+          an
+          %a{:href => "mailto:carlo@servus.io"} email
+          or on
+          = succeed "!" do
+            %a{:href => "/+"} Google+
