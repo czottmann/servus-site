@@ -11,8 +11,8 @@ $code-color: $body-font-color;
 
 $small-font-size: 80%;
 
-$topbar-bg: #2c3e50;
-$topbar-dropdown-bg: #34495e;
+$topbar-bg: #34495E;
+$topbar-dropdown-bg: darken( $topbar-bg, 5% );
 $topbar-title-font-size: 1.5em;
 
 $primary-color: #3498db;
@@ -25,3 +25,7 @@ $button-border-width: 0;
 $button-margin-bottom: 0.2em;
 $shiny-edge-size: 0;
 $shiny-edge-color: transparent;
+
+// ----------------
+
+$display-font: "Joyful Juliana Pro Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;

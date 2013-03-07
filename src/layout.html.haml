@@ -12,17 +12,15 @@
     %meta{ :name => "bitly-verification", :content => "05ae9fe22b8e" }
     %title Servus for Mac. Your uploads, your style, on Dropbox.
 
-    %link{ :rel => "publisher", :href => "https://plus.google.com/101996114152007191046" }
-    %link{ :rel => "shortcut icon", :href => "img/favicon.png" }
+    %script{ :src => "/js/vendor/custom.modernizr.js#{cache_buster}" }
+
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "/css/servus.css#{cache_buster}" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/3/font-awesome.min.css" }
     /[if IE 7 ]
       %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/3/font-awesome-ie7.min.css" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "css/servus.css#{cache_buster}" }
-    - # %link{ :rel => "stylesheet", :type => "text/css", :href => "css/gh-fork-ribbon.css#{cache_buster}" }
-    - # /[if IE]
-    - #   %link{ :rel => "stylesheet", :type => "text/css", :href => "css/gh-fork-ribbon.ie.css#{cache_buster}" }
+    %link{ :rel => "publisher", :href => "https://plus.google.com/101996114152007191046" }
+    %link{ :rel => "shortcut icon", :href => "/img/favicon.png" }
 
-    %script{ :src => "js/vendor/custom.modernizr.js#{cache_buster}" }
 
 
   %body
@@ -43,21 +41,19 @@
                 /.active
                 %a.download{ :href => "/download" } Download Servus
 
-              %li.has-dropdown
-                %a{ :href => "#" } Getting started
-                %ul.dropdown
-                  %li
-                    %a{ :href => "/theme-docs" } Theme docs
-                  %li
-                    %a{ :href => "#" } Creating a theme
-                  %li
-                    %a{ :href => "#" } Scripting support
-
               %li
                 %a{ :href => "/faq.html" } FAQ
 
               %li
+                %a{ :href => "/theme-docs.html" } Theme docs
+
+              %li.has-dropdown
                 %a{ :href => "/extras.html" } Extras
+                %ul.dropdown
+                  %li
+                    %a{ :href => "/extras.html" } Extras
+                  %li
+                    %a{ :href => "/extras.html#scripting" } Scripting
 
               %li.has-dropdown
                 %a{ :href => "#" } News & Contact

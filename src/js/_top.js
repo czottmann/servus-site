@@ -44,3 +44,60 @@ _gaq.push(["_trackPageview"]);
 
 // Initialize Foundation.
 $(document).foundation();
+
+
+// Highlighting the right menu section.
+$(document).ready( function() {
+  if ( location.pathname === "/" ) {
+    return;
+  }
+
+  $("#main-nav a[href^='" + location.pathname + "']")
+    .closest("ul.has-dropdown, li")
+    .addClass("active");
+});
+
+
+// TOC generation
+$(document).ready( function() {
+  if ( !$("#toc").length ) {
+    return;
+  }
+
+  var $ul = $("<ul id='faq-toc' class='square'>").appendTo("#toc");
+
+  $("#content-column h3").each( function() {
+    var $elem = $(this),
+      sectionID = "#" + $elem.closest("section").attr("id"),
+      $li = $( "<li>", {
+        "html": $( "<a>", {
+          "html": $.trim( $elem.text() ),
+          "href": sectionID
+        })
+      });
+
+    $ul.append($li);
+
+    // Append link back to TOC to headline.
+    $elem.append(
+      "&nbsp;",
+      $( "<a>", {
+        "class": "nav-marker",
+        "href": sectionID,
+        "title": "Link to this section",
+        "html": "&para;"
+      })
+    );
+
+    // Add back-to-top arrows to each section's last paragraph.
+    $elem.closest("section").find("p:last, li:last").append(
+      "&nbsp;",
+      $( "<a>", {
+        "class": "nav-marker",
+        "href": "#",
+        "title": "Back to top",
+        "html": "&uArr;"
+      })
+    );
+  });
+});

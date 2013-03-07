@@ -586,9 +586,21 @@ _gaq.push(["_trackPageview"]);
 $(document).foundation();
 
 
-// FAQ
+// Highlighting the right menu section.
 $(document).ready( function() {
-  if ( !$(".page-faq").length ) {
+  if ( location.pathname === "/" ) {
+    return;
+  }
+
+  $("#main-nav a[href^='" + location.pathname + "']")
+    .closest("ul.has-dropdown, li")
+    .addClass("active");
+});
+
+
+// TOC generation
+$(document).ready( function() {
+  if ( !$("#toc").length ) {
     return;
   }
 
@@ -608,19 +620,20 @@ $(document).ready( function() {
 
     // Append link back to TOC to headline.
     $elem.append(
+      "&nbsp;",
       $( "<a>", {
-        "class": "faq-marker",
+        "class": "nav-marker",
         "href": sectionID,
-        "title": "Link to this FAQ section",
+        "title": "Link to this section",
         "html": "&para;"
       })
     );
 
     // Add back-to-top arrows to each section's last paragraph.
-    $elem.closest("section").find("p:last").append(
+    $elem.closest("section").find("p:last, li:last").append(
       "&nbsp;",
       $( "<a>", {
-        "class": "faq-marker",
+        "class": "nav-marker",
         "href": "#",
         "title": "Back to top",
         "html": "&uArr;"
