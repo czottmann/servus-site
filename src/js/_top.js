@@ -11,11 +11,7 @@
 if ( top !== self ) {
   top.location = self.location.href;
 }
-else if (
-  document.location.host !== "servus.io"
-  && document.location.hostname !== "localhost"
-  && document.location.hostname !== "virmire.local"
-) {
+else if ( document.location.host !== "servus.io" && document.location.hostname !== "localhost" ) {
   document.location.href = "https://servus.io";
 }
 
@@ -103,7 +99,7 @@ $(document).ready( function() {
     );
 
     // Add back-to-top arrows to each section's last paragraph.
-    $elem.closest("section").find("li, p").last().append(
+    $elem.closest("section").find("li, p, dl").last().append(
       "&nbsp;",
       $( "<a>", {
         "class": "nav-marker back-to-top",
