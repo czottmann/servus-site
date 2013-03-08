@@ -21,6 +21,9 @@
     %link{ :rel => "publisher", :href => "https://plus.google.com/101996114152007191046" }
     %link{ :rel => "shortcut icon", :href => "/img/favicon.png" }
 
+    %script{ :src => "//use.typekit.net/lvn0xvt.js" }
+    :javascript
+      try{Typekit.load();}catch(e){}
 
 
   %body
@@ -29,7 +32,7 @@
         %nav.top-bar
           %ul.title-area
             %li.name
-              %h1.display-font
+              %h1
                 %a{ :href => "/" } Servus. For Mac & Dropbox.
             %li.toggle-topbar.menu-icon
               %a{ :href => "#" }
@@ -38,7 +41,6 @@
           %section.top-bar-section
             %ul.right
               %li
-                /.active
                 %a.download{ :href => "/download" } Download Servus
 
               %li
@@ -105,6 +107,6 @@
           \ &middot; carlo@servus.io
           \ &middot; USt-ID: DE260224054
 
-    %script{ :src => "js/vendor/jquery.min.js#{cache_buster}" }
-    %script{ :src => "js/all.js#{cache_buster}" }
+
+    %script{ :src => "/js/all.js#{cache_buster}" }
 

@@ -5,13 +5,6 @@
 
 
 
-// Fonts =====================================================================
-
-@import url("//fonts.googleapis.com/css?family=Asap:400,700");
-@import url("//f.fontdeck.com/s/css/iJFpt+/SjdP+SMIzrI3wni4/vsc/servus.io/30421.css");
-
-
-
 // Mixins ====================================================================
 
 @mixin box-shadow($shdw1) {
@@ -28,7 +21,7 @@
 
 pre, code {
   background-color: #eee;
-  font-size: 0.9em;
+  font-size: 1.05em;
   padding: 2px;
 }
 
@@ -54,21 +47,17 @@ pre, code {
   }
 }
 
-.display-font {
-  font-family: $display-font;
-  font-color: #333;
-  line-height: 1em;
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
 }
-
-h1.display-font { @extend .display-font; font-size: 3.44em; }
-h2.display-font { @extend .display-font; font-size: 2.89em; }
-h3.display-font { @extend .display-font; font-size: 2.11em; }
-h4.display-font { @extend .display-font; font-size: 1.8em; }
-h5.display-font { @extend .display-font; font-size: 1.4em; }
-h6.display-font { @extend .display-font; font-size: 1.25em; }
 
 .clearing-thumbs {
   list-style: none;
+}
+
+// Typekit suggestion to prevent flash of unstyled content during load.
+.wf-loading {
+  visibility: hidden;
 }
 
 
@@ -94,14 +83,15 @@ h6.display-font { @extend .display-font; font-size: 1.25em; }
   }
 
   // Without this, the site name will be cropped on smaller screens.
-  .title-area {
+  .title-area a {
+    font-size: 0.75em;
+    font-weight: 100;
     white-space: nowrap;
   }
 
   // Fixing the "back" link style on smaller screens.
   .top-bar-section {
     h5 {
-      font-family: $body-font-family;
       font-size: 1.25em;
       line-height: inherit;
     }
@@ -152,14 +142,20 @@ h6.display-font { @extend .display-font; font-size: 1.25em; }
 .button {
   @include box-shadow( 0 2px 5px rgba( 50, 50, 50, 0.45 ) );
   text-decoration: none !important;
+  font-family: $header-font-family;
+  font-weight: 100;
   text-shadow: 0 -1px 1px rgba( 0, 0, 0, 0.33 );
+  text-transform: uppercase;
 }
 
 input.button,
 button.button {
-  &.small {
-    padding-bottom: 0.75em;
-    padding-top: 0.75em;
+  &.small.prefix {
+    // The fracture is a hack to get the same height in FF & Webkit
+    height: emCalc(15.8px) + ($form-spacing * 1.5);
+    border: 0;
+    padding-bottom: 0.35em;
+    padding-top: 0.2em;
   }
 }
 
@@ -167,16 +163,23 @@ button.button {
 // Frontpage -----------------------------------------------------------------
 
 .page-frontpage {
-  h2.display-font {
-    font-size: 3.44em;
+  h2 {
+    line-height: 120%;
+
+    small {
+      color: #aaa;
+      font-size: 100%;
+    }
   }
 
   p#claim span {
     color: #777;
-    font-family: $display-font;
-    font-size: 1.6em;
+    font-family: $header-font-family;
+    font-size: 1.2em;
+    font-weight: 100;
     line-height: 1;
     padding: 0 0.15em;
+    text-transform: uppercase;
   }
 
   #callout-buttons {

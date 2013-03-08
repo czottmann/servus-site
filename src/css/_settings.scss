@@ -1,11 +1,13 @@
 $body-bg: #fafafc;
 
-$body-font-family: Asap, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$body-font-color: #333;
+$body-font-family: adelle, Georgia, serif;
+$body-font-color: #444;
 
-$header-font-family: $body-font-family;
+$header-font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$header-font-weight: 100;
+$header-font-color: #111;
 
-$code-font-family: Menlo, Monaco, Consolas, Courier, "Courier New", monospace;
+$code-font-family: inconsolata, monospace;
 $code-font-weight: normal;
 $code-color: $body-font-color;
 
@@ -13,6 +15,8 @@ $small-font-size: 80%;
 
 $topbar-bg: #34495E;
 $topbar-dropdown-bg: darken( $topbar-bg, 5% );
+$topbar-link-font-size: 0.9em;
+$topbar-link-weight: normal;
 $topbar-title-font-size: 1.5em;
 
 $primary-color: #3498db;
@@ -36,8 +40,3 @@ $clearing-carousel-thumb-active-border: 0;
 $clearing-arrow-size: 0;
 $clearing-arrow-color: $clearing-bg;
 $clearing-caption-padding: 1em 2em;
-
-
-// ----------------
-
-$display-font: "Joyful Juliana Pro Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;

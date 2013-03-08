@@ -1,7 +1,7 @@
 .page-frontpage
   .row
     .large-5.columns
-      %h2.display-font.hide-for-small
+      %h2.hide-for-small
         %small This is
         Servus.
         %br
@@ -46,7 +46,7 @@
 
   .row
     .large-4.columns
-      %h3.display-font
+      %h3
         %i.icon-info-sign
         What it is
 
@@ -68,7 +68,7 @@
 
 
     .large-4.columns
-      %h3.display-font
+      %h3
         %i.icon-lightbulb
         Why it exists
 
@@ -80,7 +80,7 @@
 
 
     .large-4.columns
-      %h3.display-font
+      %h3
         %i.icon-user
         Who it is for
       %p
@@ -102,7 +102,7 @@
 
   .row
     .large-6.large-centered.columns
-      %h3.display-font
+      %h3
         %i.icon-comments
         Why hello there
 
@@ -119,10 +119,9 @@
         And if you want to stay informed about what's going on with Servus,
         %a{ :href => "http://blog.servus.io/" } check out the Servus blog
         or subscribe to the Servus Updates newsletter.
-        No spam,
-        %strike no marketing bullshit
-        no
-        %i "exciting news from our partners"
+        No spam, no
+        %strike "exciting news from our partners"
+        marketing bullshit
         — I promise.
 
       %form#tl-subscribe{ :action => "https://tinyletter.com/servusio", :method => "post", :target => "tl-window" }
@@ -136,4 +135,4 @@
             %label.visuallyhidden{ :for => "tl-email" } Your email address
             %input#tl-email{ :name => "email", :placeholder => "you@example.com", :type => "email" }
           .small-3.columns
-            %input.small.success.button{ :type => "submit", :value => "Subscribe" }
+            %input.small.success.button.prefix{ :type => "submit", :value => "Subscribe" }

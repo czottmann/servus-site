@@ -1,5 +1,3 @@
-@import url("//fonts.googleapis.com/css?family=Asap:400,700");
-@import url("//f.fontdeck.com/s/css/iJFpt+/SjdP+SMIzrI3wni4/vsc/servus.io/30421.css");
 *,
 *:before,
 *:after {
@@ -13,10 +11,10 @@ body {
 
 body {
   background: #fafafc;
-  color: #333333;
+  color: #444444;
   padding: 0;
   margin: 0;
-  font-family: Asap, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: adelle, Georgia, serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -755,7 +753,7 @@ p.lead, .page-extras .lead.screenshot {
 
 .subheader {
   line-height: 1.4;
-  color: #6f6f6f;
+  color: #5e5e5e;
   font-weight: 300;
   margin-top: 0.2em;
   margin-bottom: 0.5em; }
@@ -809,17 +807,17 @@ p, .page-extras .screenshot {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: Asap, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
   font-style: normal;
-  color: #222222;
+  color: #111111;
   text-rendering: optimizeLegibility;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
   line-height: 1.2125em; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 80%;
-    color: #6f6f6f;
+    color: #5e5e5e;
     line-height: 0; }
 
 h1 {
@@ -863,9 +861,9 @@ small {
   line-height: inherit; }
 
 code {
-  font-family: Menlo, Monaco, Consolas, Courier, "Courier New", monospace;
+  font-family: inconsolata, monospace;
   font-weight: normal;
-  color: #333333; }
+  color: #444444; }
 
 /* Lists */
 ul,
@@ -916,7 +914,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #333333;
+  color: #444444;
   border-bottom: 1px dotted #dddddd;
   cursor: help; }
 
@@ -931,19 +929,19 @@ blockquote {
   blockquote cite {
     display: block;
     font-size: 0.8125em;
-    color: #555555; }
+    color: #444444; }
     blockquote cite:before {
       content: "\2014 \0020"; }
     blockquote cite a,
     blockquote cite a:visited {
-      color: #555555; }
+      color: #444444; }
 
 blockquote,
 blockquote p,
 blockquote .page-extras .screenshot,
 .page-extras blockquote .screenshot {
   line-height: 1.6;
-  color: #6f6f6f; }
+  color: #5e5e5e; }
 
 /* Microformats */
 .vcard {
@@ -1656,14 +1654,14 @@ small.error {
     width: 100%;
     padding: 12px 0 12px 15px;
     color: white;
-    font-size: 0.8125em;
-    font-weight: bold;
+    font-size: 0.9em;
+    font-weight: normal;
     background: #2b3c4e; }
     .top-bar-section ul li > a:hover {
       background: #253544; }
     .top-bar-section ul li > a.button {
       background: #3498db;
-      font-size: 0.8125em; }
+      font-size: 0.9em; }
       .top-bar-section ul li > a.button:hover {
         background: #217dbb; }
     .top-bar-section ul li > a.button.secondary {
@@ -2260,7 +2258,7 @@ kbd {
 
 pre, code {
   background-color: #eee;
-  font-size: 0.9em;
+  font-size: 1.05em;
   padding: 2px; }
 
 .visuallyhidden {
@@ -2280,31 +2278,14 @@ pre, code {
     position: static;
     width: auto; }
 
-.display-font, h1.display-font, h2.display-font, h3.display-font, h4.display-font, h5.display-font, h6.display-font {
-  font-family: "Joyful Juliana Pro Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-color: #333;
-  line-height: 1em; }
-
-h1.display-font {
-  font-size: 3.44em; }
-
-h2.display-font {
-  font-size: 2.89em; }
-
-h3.display-font {
-  font-size: 2.11em; }
-
-h4.display-font {
-  font-size: 1.8em; }
-
-h5.display-font {
-  font-size: 1.4em; }
-
-h6.display-font {
-  font-size: 1.25em; }
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase; }
 
 .clearing-thumbs {
   list-style: none; }
+
+.wf-loading {
+  visibility: hidden; }
 
 #main-nav {
   text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.25);
@@ -2318,10 +2299,11 @@ h6.display-font {
     -o-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25); }
-  #main-nav .title-area {
+  #main-nav .title-area a {
+    font-size: 0.75em;
+    font-weight: 100;
     white-space: nowrap; }
   #main-nav .top-bar-section h5 {
-    font-family: Asap, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.25em;
     line-height: inherit; }
 
@@ -2352,21 +2334,31 @@ h6.display-font {
   -webkit-box-shadow: 0 2px 5px rgba(50, 50, 50, 0.45);
   box-shadow: 0 2px 5px rgba(50, 50, 50, 0.45);
   text-decoration: none !important;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.33); }
+  font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.33);
+  text-transform: uppercase; }
 
-input.button.small,
-button.button.small {
-  padding-bottom: 0.75em;
-  padding-top: 0.75em; }
+input.button.small.prefix,
+button.button.small.prefix {
+  height: 2.4875em;
+  border: 0;
+  padding-bottom: 0.35em;
+  padding-top: 0.2em; }
 
-.page-frontpage h2.display-font {
-  font-size: 3.44em; }
+.page-frontpage h2 {
+  line-height: 120%; }
+  .page-frontpage h2 small {
+    color: #aaa;
+    font-size: 100%; }
 .page-frontpage p#claim span, .page-frontpage .page-extras #claim.screenshot span, .page-extras .page-frontpage #claim.screenshot span {
   color: #777;
-  font-family: "Joyful Juliana Pro Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.6em;
+  font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: 100;
   line-height: 1;
-  padding: 0 0.15em; }
+  padding: 0 0.15em;
+  text-transform: uppercase; }
 .page-frontpage #callout-buttons {
   margin: 1em auto 1.5em auto;
   padding-bottom: 0; }
