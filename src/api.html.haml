@@ -48,20 +48,19 @@
           to call an endpoint.  Additionally, you may use AppleScript.
 
         %p
-          An example: Let's say your OS&nbsp;X username is "adenauer", and on
-          your desktop there is a file named
+          An example: my OS&nbsp;X username is "carlo", and on my desktop
+          there is a file named
           %code important.pdf
-          which you want to pass to Servus for upload.  Therefore that file's
-          full path —i.e. the
+          which I want Servus to upload.  That file's full path —i.e. the
           %em argument
-          you'll need to pass to the endpoint— is
+          I'll need to pass to the endpoint— is
           = succeed "." do
-            %code /Users/adenauer/Desktop/important.pdf
+            %code /Users/carlo/Desktop/important.pdf
 
         %p
           %strong Using the shell:
           %br
-          %code open&nbsp;servus://upload/Users/adenauer/Desktop/important.pdf
+          %code open&nbsp;servus://upload/Users/carlo/Desktop/important.pdf
           %br
 
         %p
@@ -69,7 +68,20 @@
           %br
           %code
             tell application "Finder" to open location
-            "servus://upload/Users/adenauer/Desktop/important.pdf"
+            "servus://upload/Users/carlo/Desktop/important.pdf"
+
+        %p
+          If the file path contains a space, handle it as you would in the
+          shell, i.e. either by putting the API URL in quotes or by escaping
+          the space using a backslash.  The following two shell-based examples
+          yield the same result:
+
+        %p
+          %code
+            open&nbsp;servus://upload/Users/carlo/Important\ Files/important.pdf;
+            %br
+            open&nbsp;"servus://upload/Users/carlo/Important Files/important.pdf";
+
 
       %section#section-endpoint-upload
         %h3
@@ -86,4 +98,4 @@
             The absolute path of the file/folder to upload.
           %dt Example
           %dd
-            %code servus://upload/Users/adenauer/Desktop/important.pdf
+            %code servus://upload/Users/carlo/Desktop/important.pdf

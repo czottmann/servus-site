@@ -8,18 +8,14 @@
     <meta content='Turn any file on your computer into a branded download page hosted on Dropbox.' name='description'>
     <meta content='05ae9fe22b8e' name='bitly-verification'>
     <title>Servus for Mac. Your uploads, your style, on Dropbox.</title>
-    <script src='/js/vendor/custom.modernizr.js?_=1362740238'></script>
-    <link href='/css/servus.css?_=1362740238' rel='stylesheet' type='text/css'>
+    <script src='/js/vendor/custom.modernizr.js?_=1362754244'></script>
+    <link href='/css/servus.css?_=1362754244' rel='stylesheet' type='text/css'>
     <link href='//assets.servus.io/3/font-awesome.min.css' rel='stylesheet' type='text/css'>
     <!--[if IE 7 ]>
       <link href='//assets.servus.io/3/font-awesome-ie7.min.css' rel='stylesheet' type='text/css'>
     <![endif]-->
     <link href='https://plus.google.com/101996114152007191046' rel='publisher'>
     <link href='/img/favicon.png' rel='shortcut icon'>
-    <script src='//use.typekit.net/lvn0xvt.js'></script>
-    <script>
-      try{Typekit.load();}catch(e){}
-    </script>
   </head>
   <body>
     <div class='contain-to-grid fixed' id='main-nav'>
@@ -141,26 +137,36 @@
           to call an endpoint.  Additionally, you may use AppleScript.
         </p>
         <p>
-          An example: Let's say your OS&nbsp;X username is "adenauer", and on
-          your desktop there is a file named
+          An example: my OS&nbsp;X username is "carlo", and on my desktop
+          there is a file named
           <code>important.pdf</code>
-          which you want to pass to Servus for upload.  Therefore that file's
-          full path —i.e. the
+          which I want Servus to upload.  That file's full path —i.e. the
           <em>argument</em>
-          you'll need to pass to the endpoint— is
-          <code>/Users/adenauer/Desktop/important.pdf</code>.
+          I'll need to pass to the endpoint— is
+          <code>/Users/carlo/Desktop/important.pdf</code>.
         </p>
         <p>
           <strong>Using the shell:</strong>
           <br>
-          <code>open&nbsp;servus://upload/Users/adenauer/Desktop/important.pdf</code>
+          <code>open&nbsp;servus://upload/Users/carlo/Desktop/important.pdf</code>
           <br>
         </p>
         <p>
           <strong>Using AppleScript:</strong>
           <br>
           <code>tell application "Finder" to open location
-          "servus://upload/Users/adenauer/Desktop/important.pdf"</code>
+          "servus://upload/Users/carlo/Desktop/important.pdf"</code>
+        </p>
+        <p>
+          If the file path contains a space, handle it as you would in the
+          shell, i.e. either by putting the API URL in quotes or by escaping
+          the space using a backslash.  The following two shell-based examples
+          yield the same result:
+        </p>
+        <p>
+          <code>open&nbsp;servus://upload/Users/carlo/Important\ Files/important.pdf;
+          <br>
+          open&nbsp;"servus://upload/Users/carlo/Important Files/important.pdf";</code>
         </p>
       </section>
       <section id='section-endpoint-upload'>
@@ -179,7 +185,7 @@
           </dd>
           <dt>Example</dt>
           <dd>
-            <code>servus://upload/Users/adenauer/Desktop/important.pdf</code>
+            <code>servus://upload/Users/carlo/Desktop/important.pdf</code>
           </dd>
         </dl>
       </section>
@@ -209,6 +215,10 @@
         </p>
       </div>
     </div>
-    <script src='/js/all.js?_=1362740238'></script>
+    <script src='/js/all.js?_=1362754244'></script>
+    <script src='//use.typekit.net/lvn0xvt.js'></script>
+    <script>
+      try{Typekit.load();}catch(e){}
+    </script>
   </body>
 </html>
