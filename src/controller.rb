@@ -8,7 +8,7 @@ ignore /\/_.*\.(scss|js)/
 ignore /\/js\/foundation.*/
 
 before /.*html\.haml/ do
-  @page_title = ""
+  @page_title = nil
 end
 
 # Concatenate all relevant JS files into `js/all.js`
