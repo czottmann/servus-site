@@ -7,6 +7,10 @@ layout "_layout.html.haml"
 ignore /\/_.*\.(scss|js)/
 ignore /\/js\/foundation.*/
 
+before /.*html\.haml/ do
+  @page_title = ""
+end
+
 # Concatenate all relevant JS files into `js/all.js`
 before 'js/all.js' do |f|
   js_files = %w(
