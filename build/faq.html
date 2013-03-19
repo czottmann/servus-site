@@ -8,296 +8,358 @@
     <meta content='Turn any file on your computer into a branded download page hosted on Dropbox.' name='description'>
     <meta content='05ae9fe22b8e' name='bitly-verification'>
     <title>Servus for Mac. Your uploads, your style, on Dropbox.</title>
-    <script src='js/jquery.min.js?_=1362426039'></script>
-    <script src='js/top.js?_=1362426039'></script>
-    <link href='https://plus.google.com/101996114152007191046' rel='publisher'>
-    <link href='img/favicon.png' rel='shortcut icon'>
+    <script src='/js/vendor/custom.modernizr.js?_=1363654116'></script>
+    <link href='/css/servus.css?_=1363654116' rel='stylesheet' type='text/css'>
     <link href='//assets.servus.io/3/font-awesome.min.css' rel='stylesheet' type='text/css'>
     <!--[if IE 7 ]>
       <link href='//assets.servus.io/3/font-awesome-ie7.min.css' rel='stylesheet' type='text/css'>
     <![endif]-->
-    <link href='css/foundation.min.css?_=1362426039' rel='stylesheet' type='text/css'>
-    <link href='css/gh-fork-ribbon.css?_=1362426039' rel='stylesheet' type='text/css'>
-    <!--[if IE]>
-      <link href='css/gh-fork-ribbon.ie.css?_=1362426039' rel='stylesheet' type='text/css'>
-    <![endif]-->
-    <link href='css/servus.css?_=1362426039' rel='stylesheet' type='text/css'>
+    <link href='https://plus.google.com/101996114152007191046' rel='publisher'>
+    <link href='/img/favicon.png' rel='shortcut icon'>
   </head>
   <body>
-    <div class='fixed contain-to-grid'>
-      <nav class='top-bar'>
-        <ul>
-          <li class='name'>
-            <h1>
-              <a href='/'>Servus. For Mac & Dropbox.</a>
-            </h1>
-          </li>
-        </ul>
-        <section>
-          <ul class='right'>
-            <li>
-              <a class='download' href='/download'>Download Servus</a>
+    <div class='contain-to-grid fixed' id='main-nav'>
+      <div>
+        <nav class='top-bar'>
+          <ul class='title-area'>
+            <li class='name'>
+              <h1>
+                <a href='/'>Servus. For Mac & Dropbox.</a>
+              </h1>
             </li>
-            <li>
-              <a href='/faq.html'>FAQ</a>
-            </li>
-            <li>
-              <a href='http://blog.servus.io/'>Blog</a>
-            </li>
-            <li>
-              <a href='/twitter'>
-                <i class='icon-twitter'></i>
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a href='/+'>
-                <i class='icon-google-plus-sign'></i>
-                G+
-              </a>
-            </li>
-            <li>
-              <a href='https://tinyletter.com/servusio'>
-                <i class='icon-envelope'></i>
-                Newsletter
+            <li class='toggle-topbar menu-icon'>
+              <a href='#'>
+                <span>Menu</span>
               </a>
             </li>
           </ul>
-        </section>
-      </nav>
-    </div>
-    <div class='row' id='content-column'>
-  <div class='seven columns centered'>
-    <h1 id='faq'>
-      Frequently Asked Questions
-    </h1>
-    <section>
-      <h2 id='q-mas'>
-        Can I buy Servus on the Mac App Store?
-      </h2>
-      <p>
-        Short answer: Not at the moment.  Maybe in the future; I won't
-        rule it out.
-      </p>
-      <p>
-        Long answer: during the development of Servus I've submitted the
-        app to the Mac App Store with the plan of selling it there.  The
-        review process was a) not very transparent and b) taking way too
-        long for my taste.  During the third round of review submissions
-        I kind of lost interest in potentially going through all that
-        hassle for every single update I would post in the future.
-      </p>
-      <p>
-        It might return at some point down the road, it's entirely
-        possible.
-      </p>
-    </section>
-    <section>
-      <h2 id='q-license-terms'>
-        What are the license terms?
-      </h2>
-      <p>
-        Each license is valid for all Macs the license holder personally
-        owns and is the primary user of.  If you yourself have three Macs,
-        one license is enough.  If you have two Macs and your spouse has
-        one, and you both want to use Servus, you'll need two licenses.
-      </p>
-      <p>
-        If you have a company and technically "own" 500 Macs, I'd
-        appreciate it if you would buy more than just one license, tho.
-        ;)
-      </p>
-    </section>
-    <section>
-      <h2 id='q-wot'>
-        I don't understand what this app does.  Why do you suck at
-        explaining?
-      </h2>
-      <p>
-        It's a congenital thing.  Anyways:
-      </p>
-      <ol>
-        <li>
-          You have a file, you'd like to send that file to someone, but
-          you want to have that file embedded in some sort of preview page.
-        </li>
-        <li>
-          You drop the file on Servus' menubar icon.
-        </li>
-        <li>
-          Servus uploads your file to your Dropbox account.
-        </li>
-        <li>
-          Servus builds a preview page for your file and uploads that, too.
-        </li>
-        <li>
-          The link to the preview page is copied to your clipboard.
-        </li>
-      </ol>
-      <p>
-        Step 4 will either use Servus' built-in preview page theme, or you
-        can use your own templates for that.
-      </p>
-      <p>
-        Does that help?  :)
-      </p>
-    </section>
-    <section>
-      <h2 id='q-scripting'>
-        Does Servus have scripting support?
-      </h2>
-      <p>
-        Yes, it does.  When the app is running it is listening for URLs
-        with the scheme
-        <code>servus://</code>
-        — to trigger an upload you'd call
-        <code>servus://upload/[absolute&nbsp;filepath]</code>
-        .  From your Terminal, you could do a
-        <code>open&nbsp;servus://upload/Users/carlo/Desktop/important.txt</code>
-        , from AppleScript you'd run
-        <code>tell&nbsp;application&nbsp;"Finder"&nbsp;to&nbsp;open&nbsp;location&nbsp;servus://upload/…</code>
-        .
-      </p>
-    </section>
-    <section>
-      <h2 id='q-theme-docs'>
-        Where can I find documentation on how to create my own preview
-        page themes?
-      </h2>
-      <p>
-        <a href='/theme-docs'>Look here.</a>
-      </p>
-    </section>
-    <section>
-      <h2 id='q-theme-selling'>
-        I've created a custom theme for Servus, and it's great.  May I
-        sell it?
-      </h2>
-      <p>
-        Yes, please!  Servus needs nice themes… lots of them!  Let me
-        know if you created one.
-      </p>
-    </section>
-    <section>
-      <h2 id='q-selling-pointers'>
-        I'd like to sell my custom themes, but I have no idea how.  Any
-        pointers?
-      </h2>
-      <p>
-        I've heard good things about
-        <a href='https://creativemarket.com/'>Creative Market</a>
-        and had good experiences with
-        <a href='https://gumroad.com/'>Gumroad.</a>
-        Both are super-simple to set up, you don't have to pay anything up
-        front (they work on a commission basis), and they keep the scary
-        payment stuff away from you.  And no, I don't get any kickbacks
-        for telling you.  :)
-      </p>
-      <p>
-        Just make sure to give me a shout when you're up and running,
-        please!
-      </p>
-    </section>
-    <section>
-      <h2 id='q-bug-dropping'>
-        The menubar icon doesn't accept my dropped files, nothing happens.
-        What is wrong?
-      </h2>
-      <p>
-        Apologies: you've come across a somewhat elusive bug that occurs
-        only for some people — they have to click the menubar icon before
-        it accepts drops again.  I'm aware of the issue but have a really
-        hard time reproducing it.  I'm working on it!
-      </p>
-      <p>
-        Try clicking the menubar icon once (or restarting the app), and
-        then try again, that usually does the trick.
-      </p>
-    </section>
-    <section>
-      <h2 id='q-cancel-uploads'>
-        Is there a way to cancel a large upload in progress?
-      </h2>
-      <p>
-        Not yet, no.  Sorry.  That's a feature on my todo list, tho.
-      </p>
-    </section>
-    <section>
-      <h2 id='q-tracking'>
-        Do you track what I am sharing?
-      </h2>
-      <p>
-        No.  Mostly because a) what you upload is your own business and
-        b) I really don't care.
-      </p>
-    </section>
-    <section>
-      <h2 id='q-dropbox-path'>
-        Where are my uploads/shares stored?
-      </h2>
-      <p>
-        In your Dropbox, in folder
-        <code>Apps/Servus for Mac/</code>
-        .
-      </p>
-    </section>
-    <section>
-      <h2 id='q-logs'>
-        Where are Servus' log files stored?
-      </h2>
-      <p>
-        In
-        <code>~/Library/Logs/de.municode.Servus/</code>
-        .
-      </p>
-    </section>
-    <section>
-      <h2 id='q-who'>
-        Who are you?
-      </h2>
-      <p>
-        <a href='http://carlo.zottmann.org/me/'>
-          My name's Carlo Zottmann,
-        </a>
-        I'm a freelance software developer from
-        Munich, Germany.  These days I'm mostly working with Javascript,
-        Objective-C and Ruby.
-        <a href='http://municode.de'>I'm available for hire.</a>
-      </p>
-    </section>
-    <section>
-      <h2 id='q-contact'>
-        My Q wasn't A'ed here, who can I ask?
-      </h2>
-      <p>
-        No worries!  Just send me
-        <a href='mailto:carlo@servus.io'>an email</a>
-        or
-        <a href='/twitter'>find me on Twitter</a>
-        or
-        <a href='/+'>on Google+.</a>
-      </p>
-    </section>
-    <hr>
-    <div id='drop-img'>
-      <img alt='Servus icon' itemprop='image' src='img/app-icon.png'>
-    </div>
-    <p id='imprint'>
-      <strong>Imprint:</strong>
-      <a href='http://municode.de'>Carlo Zottmann,</a>
-      Zeisigweg 30, 81827 München, Germany
-       &middot; carlo@servus.io
-       &middot; USt-ID: DE260224054
-      <br>
-      Background pattern is "Light Wool" from
-      <a href='http://subtlepatterns.com/'>Subtle Patterns.</a>
-    </p>
-  </div>
-</div>
-    <div class='github-fork-ribbon-wrapper right'>
-      <div class='github-fork-ribbon'>
-        <a href='http://blog.servus.io/post/38140138904/announcing-apocalyp-sale-2012'>APOCALYP-SALE 2012</a>
+          <section class='top-bar-section'>
+            <ul class='right'>
+              <li>
+                <a class='download' href='/download'>Download Servus</a>
+              </li>
+              <li>
+                <a href='/faq.html'>FAQ</a>
+              </li>
+              <li>
+                <a href='/theme-docs.html'>Theme docs</a>
+              </li>
+              <li class='has-dropdown'>
+                <a href='#'>Extras</a>
+                <ul class='dropdown'>
+                  <li>
+                    <a href='/extras.html'>Helpers</a>
+                  </li>
+                  <li>
+                    <a href='/api.html'>API</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='has-dropdown'>
+                <a href='#'>News & Contact</a>
+                <ul class='dropdown'>
+                  <li>
+                    <a href='http://blog.servus.io/'>
+                      <i class='icon-align-left'></i>
+                      Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a href='https://tinyletter.com/servusio'>
+                      <i class='icon-envelope-alt'></i>
+                      Newsletter
+                    </a>
+                  </li>
+                  <li>
+                    <a href='/twitter'>
+                      <i class='icon-twitter'></i>
+                      Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a href='/+'>
+                      <i class='icon-google-plus-sign'></i>
+                      Google+
+                    </a>
+                  </li>
+                  <li class='divider'></li>
+                  <li>
+                    <a href='mailto:carlo@servus.io'>
+                      <i class='icon-envelope'></i>
+                      Contact Carlo
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </nav>
       </div>
     </div>
+    <div id='content-column'>
+      <div class='page-faq'>
+  <div class='row'>
+    <div class='large-8 large-centered columns'>
+      <h2>
+        Frequently Asked Questions
+      </h2>
+      <div class='panel' id='toc'></div>
+      <section id='q-filesize'>
+        <h3>
+          What is the maximum file size for the things I can share with Servus?
+        </h3>
+        <p>
+          The size of the files you share is only restricted by the size of
+          your Dropbox account.  If your account has 1.5GB free space left,
+          then that's your upper file size limit.
+        </p>
+      </section>
+      <section id='q-mas'>
+        <h3>
+          Can I buy Servus on the Mac App Store?
+        </h3>
+        <p>
+          Short answer: Not at the moment.  Maybe in the future; I won't
+          rule it out.
+        </p>
+        <p>
+          Long answer: during the development of Servus I've submitted the
+          app to the Mac App Store with the plan of selling it there.  The
+          review process was a) not very transparent and b) taking way too
+          long for my taste.  During the third round of review submissions
+          I kind of lost interest in potentially going through all that
+          hassle for every single update I would post in the future.
+        </p>
+        <p>
+          It might return at some point down the road, it's entirely
+          possible.
+        </p>
+      </section>
+      <section id='q-license-terms'>
+        <h3>
+          What are the license terms?
+        </h3>
+        <p>
+          Each license is valid for all Macs the license holder personally
+          owns and is the primary user of.  If you yourself have three Macs,
+          one license is enough.  If you have two Macs and your spouse has
+          one, and you both want to use Servus, you'll need two licenses.
+        </p>
+        <p>
+          If you have a company and technically "own" 500 Macs, I'd
+          appreciate it if you would buy more than just one license, tho.
+          ;)
+        </p>
+      </section>
+      <section id='q-wot'>
+        <h3>
+          I don't understand what this app does.  Why do you suck at
+          explaining?
+        </h3>
+        <p>
+          It's a congenital thing.  Anyways:
+        </p>
+        <ol>
+          <li>
+            You have a file, you'd like to send that file to someone, but
+            you want to have that file embedded in some sort of preview page.
+          </li>
+          <li>
+            You drop the file on Servus' menubar icon.
+          </li>
+          <li>
+            Servus uploads your file to your Dropbox account.
+          </li>
+          <li>
+            Servus builds a preview page for your file and uploads that, too.
+          </li>
+          <li>
+            The link to the preview page is copied to your clipboard.
+          </li>
+        </ol>
+        <p>
+          Step 4 will either use Servus' built-in preview page theme, or you
+          can use your own templates for that.
+        </p>
+        <p>
+          Does that help?  :)
+        </p>
+      </section>
+      <section id='q-scripting'>
+        <h3>
+          Does Servus have scripting support?
+        </h3>
+        <p>
+          Yes!
+          <a href='/api.html'>Look here.</a>
+        </p>
+      </section>
+      <section id='q-modifiers-drop'>
+        <h3>
+          I want the app to automatically copy the direct link to my file to
+          the clipboard instead of the link to the preview page.
+        </h3>
+        <p>
+          No problem!  There's a setting in the Preferences for that.  Also,
+          you may just hold
+          <kbd>Shift</kbd>
+          while dropping the file on Servus' menubar icon.
+        </p>
+      </section>
+      <section id='q-modifiers-menu'>
+        <h3>
+          The submenus for my uploaded files only let me copy the links to the
+          preview page, what's up with that?
+        </h3>
+        <p>
+          While the menu is open, hold down the
+          <kbd>Option</kbd>
+          /
+          <kbd>⌥</kbd>
+          key — and all menu options will use the direct URL.
+        </p>
+      </section>
+      <section id='q-theme-docs'>
+        <h3>
+          Where can I find documentation on how to create my own preview
+          page themes?
+        </h3>
+        <p>
+          <a href='/theme-docs.html'>Look here.</a>
+        </p>
+      </section>
+      <section id='q-theme-selling'>
+        <h3>
+          I've created a custom theme for Servus, and it's great.  May I
+          sell it?
+        </h3>
+        <p>
+          Yes, please!  Servus needs nice themes… lots of them!  Let me
+          know if you created one.
+        </p>
+      </section>
+      <section id='q-selling-pointers'>
+        <h3>
+          I'd like to sell my custom themes, but I have no idea how.  Any
+          pointers?
+        </h3>
+        <p>
+          I've heard good things about
+          <a href='https://creativemarket.com/'>Creative Market</a>
+          and had good experiences with
+          <a href='https://gumroad.com/'>Gumroad.</a>
+          Both are super-simple to set up, you don't have to pay anything up
+          front (they work on a commission basis), and they keep the scary
+          payment stuff away from you.  And no, I don't get any kickbacks
+          for telling you.  :)
+        </p>
+        <p>
+          Just make sure to give me a shout when you're up and running,
+          please!
+        </p>
+      </section>
+      <section id='q-bug-dropping'>
+        <h3>
+          The menubar icon doesn't accept my dropped files, nothing happens.
+          What is wrong?
+        </h3>
+        <p>
+          Apologies: you've come across a somewhat elusive bug that occurs
+          only for some people — they have to click the menubar icon before
+          it accepts drops again.  I'm aware of the issue but have a really
+          hard time reproducing it.  I'm working on it!
+        </p>
+        <p>
+          Try clicking the menubar icon once (or restarting the app), and
+          then try again, that usually does the trick.
+        </p>
+      </section>
+      <section id='q-tracking'>
+        <h3>
+          Do you track what I am sharing?
+        </h3>
+        <p>
+          No.  Mostly because a) what you upload is your own business and
+          b) I really don't care.
+        </p>
+      </section>
+      <section id='q-dropbox-path'>
+        <h3>
+          Where are my uploads/shares stored?
+        </h3>
+        <p>
+          In your Dropbox, in folder
+          <code>Apps/Servus for Mac/</code>
+          .
+        </p>
+      </section>
+      <section id='q-logs'>
+        <h3>
+          Where are Servus' log files stored?
+        </h3>
+        <p>
+          In
+          <code>~/Library/Logs/de.municode.Servus/</code>
+          .
+        </p>
+      </section>
+      <section id='q-who'>
+        <h3>
+          Who are you?
+        </h3>
+        <p>
+          <a href='http://carlo.zottmann.org/me/'>
+            My name's Carlo Zottmann,
+          </a>
+          I'm a freelance software developer from
+          Munich, Germany.  These days I'm mostly working with Javascript,
+          Objective-C and Ruby.
+          <a href='http://municode.de'>I'm available for hire.</a>
+        </p>
+      </section>
+      <section id='q-contact'>
+        <h3>
+          My Q wasn't A'ed here, who can I ask?
+        </h3>
+        <p>
+          No worries!  Just send me
+          <a href='mailto:carlo@servus.io'>an email</a>
+          or
+          <a href='/twitter'>find me on Twitter</a>
+          or
+          <a href='/+'>on Google+.</a>
+        </p>
+      </section>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class='row'>
+      <div class='large-12 text-center columns'>
+        <hr>
+        <div id='microdata' itemscope='' itemtype='http://schema.org/Product'>
+          <span itemprop='name'>Servus for Mac</span>
+          <img alt='Servus icon' itemprop='image' src='img/app-icon.png'>
+          <a href='https://servus.io' itemprop='url'>Servus for Mac</a>
+          <span itemprop='description'>
+            A Dropbox-powered sharing app for Mac. It's a menubar icon. Drop a
+            file on it, and it'll build a preview page for it (custom themes!),
+            upload it to your Dropbox, and copy the link for you.
+          </span>
+        </div>
+        <p id='imprint'>
+          <strong>Imprint:</strong>
+          <a href='http://municode.de'>Carlo Zottmann,</a>
+          Zeisigweg 30, 81827 München, Germany
+           &middot; carlo@servus.io
+           &middot; USt-ID: DE260224054
+        </p>
+      </div>
+    </div>
+    <script src='/js/all.js?_=1363654116'></script>
+    <script src='//use.typekit.net/lvn0xvt.js'></script>
+    <script>
+      try{Typekit.load();}catch(e){}
+    </script>
   </body>
 </html>

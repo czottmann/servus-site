@@ -1,140 +1,228 @@
-@mixin border-radius($radius) {
-  -moz-border-radius: $radius;
-  -khtml-border-radius: $radius;
-  -ms-border-radius: $radius;
-  -o-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  border-radius: $radius;
-}
+// Dependencies ==============================================================
 
-@mixin box-shadow( $shdw1, $shdw2 ) {
-  -moz-box-shadow: $shdw1,$shdw2;
-  -o-box-shadow: $shdw1,$shdw2;
-  -webkit-box-shadow: $shdw1,$shdw2;
-  box-shadow: $shdw1,$shdw2;
-}
+@import "foundation";
 
-@mixin bg-gradient( $from, $to ) {
-  background-image: -moz-linear-gradient(top, $from, $to);
-  background-image: -ms-linear-gradient(top, $from, $to);
-  background-image: -o-linear-gradient(top, $from, $to);
-  background-image: -webkit-linear-gradient(top, $from, $to);
-  background-image: linear-gradient(top, $from, $to);
+
+
+
+// Mixins ====================================================================
+
+@mixin box-shadow($shdw1) {
+  -moz-box-shadow: $shdw1;
+  -o-box-shadow: $shdw1;
+  -webkit-box-shadow: $shdw1;
+  box-shadow: $shdw1;
 }
 
 
-html {
-  background-color: #f8f8fc;
-}
 
-body {
-  background-image: url(../img/light_wool.png);
-  background-position: initial initial;
-  background-repeat: initial initial;
-  color: #333;
-}
 
-a {
-  color: #2ba6cb;
-
-  &:hover {
-    color: #2795b6;
-  }
-
-  &:focus {
-    color: #2ba6cb;
-  }
-}
-
-p {
-  line-height: 1.8;
-
-  img {
-    @include border-radius(7px);
-    @include box-shadow( 0 1px 4px rgba( 0, 0, 0, 0.5 ), inset 0 0 #fff );
-    margin: 0;
-  }
-
-  small {
-    color: #888;
-    font-size: 12px;
-  }
-
-  strong {
-    color: #222;
-  }
-}
-
-h1 {
-  font-size: 27px;
-  margin-top: 30px;
-
-  small {
-    margin: 14px 0;
-    font-weight: normal;
-  }
-}
+// Site styles ===============================================================
 
 pre, code {
   background-color: #eee;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 12px;
-  font-weight: normal;
+  font-size: 1.05em;
   padding: 2px;
 }
 
-.back-to-top {
-  float: right;
-  font-weight: bold;
-}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 
-.screenshot {
-  float: right;
-  margin: 0 0 12px 12px;
-}
-
-.app-link {
-  text-align: center;
-
-  a.button {
-    text-shadow: -1px -1px 2px rgba( 0, 0, 0, 0.5 );
-    width: 240px;
-
-    &.download {
-      @include bg-gradient( #0d0, #0a0 );
-
-      &:hover {
-        @include bg-gradient( #0d0, #080 );
-      }
-    }
-
-    &.buy {
-      @include bg-gradient( #6666ff, #3333bb );
-
-      &:hover {
-        @include bg-gradient( #4444ee, #1111aa );
-      }
+  &.focusable {
+    &:active, &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
     }
   }
+}
 
-  small {
-    color: #888;
-    font-size: 12px;
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+.clearing-thumbs {
+  list-style: none;
+}
+
+// Typekit suggestion to prevent flash of unstyled content during load.
+.wf-loading {
+  visibility: hidden;
+}
+
+
+
+
+// Navigation / Top bar ======================================================
+
+#main-nav {
+  @include box-shadow( 0 5px 10px rgba( 0, 0, 0, 0.33 ) );
+  // Make the text recessed a wee bit.
+  text-shadow: 0px -1px 1px rgba( 0, 0, 0, 0.25 );
+
+  ul.dropdown {
+    @include box-shadow( 0 5px 10px rgba( 0, 0, 0, 0.33 ) );
+  }
+
+  // Without this, the site name will be cropped on smaller screens.
+  .title-area a {
+    font-size: 0.75em;
+    font-weight: 100;
+    white-space: nowrap;
+  }
+
+  // Fixing the "back" link style on smaller screens.
+  .top-bar-section {
+    h5 {
+      font-size: 1.25em;
+      line-height: inherit;
+    }
   }
 }
+
+
+
+
+// Content ===================================================================
 
 #content-column {
-  background-color: rgba( 255, 255, 255, 0.95 );
-  padding: 45px 15px 1px 15px;
+  padding-top: 5em;
+  text-shadow: 1px 1px 1px rgba( 255, 255, 255, 0.75 );
 
-  h2 {
-    font-size: 17px;
-    line-height: 1.4;
-    padding-top: 3em;
+  a:hover {
+    text-decoration: underline;
+  }
 
-    a {
-      font-weight: normal;
+  section {
+    padding-top: 3.5em;
+
+    h3 {
+      font-size: $h4-font-size;
     }
+  }
+
+  .nav-marker {
+    display: inline-block;
+    font-size: 0.95em;
+    font-weight: bold;
+
+    &.back-to-top {
+      margin-left: 0.5em;
+      opacity: 0.75;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .clearing-container {
+    text-shadow: none;
+  }
+}
+
+.button {
+  @include box-shadow( 0 2px 5px rgba( 50, 50, 50, 0.45 ) );
+  text-decoration: none !important;
+  font-family: $header-font-family;
+  font-weight: 100;
+  text-shadow: 0 -1px 1px rgba( 0, 0, 0, 0.33 );
+  text-transform: uppercase;
+}
+
+input.button,
+button.button {
+  &.small.prefix {
+    // The fracture is a hack to get the same height in FF & Webkit
+    height: emCalc(15.8px) + ($form-spacing * 1.5);
+    border: 0;
+    padding-bottom: 0.35em;
+    padding-top: 0.2em;
+  }
+}
+
+
+// Frontpage -----------------------------------------------------------------
+
+.page-frontpage {
+  h2 {
+    line-height: 120%;
+
+    small {
+      color: #aaa;
+      font-size: 100%;
+    }
+  }
+
+  p#claim span {
+    color: #777;
+    font-family: $header-font-family;
+    font-size: 1.2em;
+    font-weight: 100;
+    line-height: 1;
+    padding: 0 0.15em;
+    text-transform: uppercase;
+  }
+
+  #callout-buttons {
+    margin: 1em auto 1.5em auto;
+    padding-bottom: 0;
+
+    small {
+      color: #888;
+      display: block;
+      margin: 0.5em 0;
+      text-shadow: 1px 1px 1px rgba( 255, 255, 255, 1 );
+    }
+
+    .button-download {
+      @include button-style($bg:$success-color);
+    }
+
+    .button-buy {
+      @include button-style($bg:#3498db);
+    }
+  }
+}
+
+
+// FAQ -----------------------------------------------------------------------
+
+.page-faq {
+}
+
+
+// FAQ -----------------------------------------------------------------------
+
+.page-extras {
+  .screenshot {
+    @extend p;
+  }
+}
+
+
+
+
+// Footer ====================================================================
+
+#microdata {
+  color: #fff;
+  display: inline-block;
+  font-size: emCalc(1px);
+  margin: 20px;
+
+  span {
+    display: block;
   }
 }
 
@@ -144,25 +232,3 @@ p#imprint {
   text-align: center;
 }
 
-.top-bar ul {
-  li:hover, li.active {
-    background: #000;
-  }
-}
-
-.github-fork-ribbon-wrapper {
-  position: fixed;
-  top: 45px;
-}
-
-#microdata,
-#drop-img {
-  color: #fff;
-  font-size: 1px;
-  margin: 30px;
-  text-align: center;
-
-  span {
-    display: block;
-  }
-}

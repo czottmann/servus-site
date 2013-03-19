@@ -1,0 +1,44 @@
+$body-bg: #fafafc;
+
+$body-font-family: adelle, Georgia, serif;
+$body-font-color: #444;
+
+$header-font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$header-font-weight: 100;
+$header-font-color: #111;
+
+$code-font-family: inconsolata, monospace;
+$code-font-weight: normal;
+$code-color: $body-font-color;
+
+$small-font-size: 80%;
+
+$topbar-bg: #34495E;
+$topbar-dropdown-bg: darken( $topbar-bg, 5% );
+$topbar-link-font-size: 0.9em;
+$topbar-link-weight: normal;
+$topbar-title-font-size: 1.5em;
+
+$primary-color: #3498db;
+// Color was generated from app icon
+$success-color: #62a307;
+
+$global-radius: 0;
+
+$button-border-width: 0;
+$button-margin-bottom: 0.2em;
+$shiny-edge-size: 0;
+$shiny-edge-color: transparent;
+
+// Lightbox
+$clearing-bg: rgba( 16, 16, 16, 0.75 );
+$clearing-carousel-bg: $clearing-bg;
+$clearing-active-img-height: 100%;
+$clearing-carousel-height: 0;
+$clearing-carousel-thumb-width: 0;
+$clearing-carousel-thumb-active-border: 0;
+$clearing-arrow-size: 0;
+$clearing-arrow-color: $clearing-bg;
+$clearing-caption-padding: 1em 2em;
+
+$flex-video-padding-bottom: 70%;

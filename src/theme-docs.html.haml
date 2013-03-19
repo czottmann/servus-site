@@ -1,0 +1,254 @@
+.page-theme-docs
+  .row
+    .large-8.large-centered.columns
+      %h2 Theme Documentation
+
+      %p
+        This page is an shorter version of the
+        %code README
+        file in the
+        = succeed "." do
+          %a{ :href => "https://github.com/carlo/servus-theme-boilerplate" }<
+            official Servus boilerplate repository
+        It exists to give you a rough overview over the app's templates and
+        templating workflow.
+
+      %p
+        In a nutshell, the boilerplate repository is a bare-bones theme
+        starter kit: it contains nothing but a
+        %code index.html
+        with all the placeholders available to Servus templates.  It's
+        aimed at being a starting point for your own custom themes.
+
+      #toc.panel
+
+
+      %section#section-get-started
+        %h3 How to get started
+
+        %ol
+          %li
+            Either
+            %a{:href => "https://github.com/carlo/servus-theme-boilerplate/zipball/master"}<
+              download the boilerplate as ZIP file
+            %strong or
+            = succeed "." do
+              %a{:href => "https://github.com/carlo/servus-theme-boilerplate"}<
+                fork the repository on Github
+            Store the resulting folder somewhere on the Mac that has Servus
+            installed.
+
+          %li
+            Tell Servus to use that starter kit folder as custom theme.  To do
+            that, open Servus' Preferences window, go to the
+            %em Theme
+            section and tick the box labelled
+            = succeed "," do
+              %em "Use custom theme…"
+            then set the theme folder by pressing the
+            %em "Select theme path"
+            button.
+
+          %li
+            Now when you drop a file onto the Servus icon, the app will get
+            its theme files from that starter kit folder.
+
+          %li
+            To edit your theme, open the starter kit folder and edit the
+            %code index.html
+            as you see fit.  If you want to add new elements like CSS files or
+            background images, drop them into that same folder and reference
+            them in your HTML and CSS files as usual.  (See the section
+            "Important!" below.  It's important!)
+
+          %li
+            Drop any file onto the Servus menubar icon to see your theme
+            changes.
+
+
+      %section#section-templating-engine
+        %h3 Templating Engine
+
+        %p
+          Instead of re-inventing the wheel, Servus is using
+          = succeed "," do
+            %a{:href => "http://mustache.github.com/"} Mustache
+          a well-known logic-less templating engine.  You can find all you
+          need to know about its syntax on the
+          = succeed "." do
+            %a{:href => "http://mustache.github.com/"} Mustache website
+
+
+      %section#section-workflow
+        %h3 Theme Workflow
+
+        %p The templating process works like this:
+
+        %ol
+          %li
+            The contents of your local theme folder will be copied to a
+            temporary folder.
+
+          %li
+            All asset files in that folder are uploaded.  (Asset files are
+            images, Javascript files, etc. — basically everything that's
+            neither a CSS file nor the
+            = succeed ".)" do
+              %code index.html
+
+          %li
+            Shareable links for those files are requested from the Dropbox
+            API.
+
+          %li
+            In the CSS files and
+            %code index.html
+            the original references to the local asset files are replaced with
+            their respective shareable counterparts gathered in step 3. As an
+            example, let's assume in your CSS file you reference a local theme
+            file
+            = succeed "." do
+              %code background-image.jpg
+            Since each file shared via Dropbox gets its own unpredictable path
+            name by the Dropbox API, your local reference to that file won't
+            work anymore, so Servus is replacing it with the file's shareable
+            URL
+            = succeed "." do
+              %code
+                https://dl.dropbox.com/s/1234567890abcde/background-image.jpg
+
+          %li
+            The CSS files are uploaded, their references are replaced in the
+            = succeed "." do
+              %code index.html
+
+          %li The HTML file is uploaded.
+
+
+      %section#section-important
+        %h3 Important!
+
+        %ul
+          %li
+            Your theme
+            %strong must
+            contain an
+            = succeed "." do
+              %code index.html
+
+          %li
+            Your theme can contain more than one CSS file and many JS files
+            but only
+            %em one
+            = succeed "." do
+              %code index.html
+            The templating engine won't replace placeholders in JS files, tho,
+            so if you want to set JS variables, do so in a
+            %code &lt;script&gt;
+            block in the HTML file prior to loading your external JS file.
+
+          %li
+            Servus will ignore subfolders.  Only files in the root folder of
+            your theme are recognized and processed.
+
+          %li The templating engine expects UTF-8 encoded files.
+
+          %li
+            All your external assets should be served via HTTPS.  (Servus 1.2
+            introduced a HTTP/HTTPS toggle, and your assets host should
+            reflect its setting.)
+
+
+      %section#section-placeholders
+        %h3 Template Placeholders
+
+        %p
+          Here's a list of available template keys/variables with their
+          meaning.
+
+        %ul
+          %li
+            %code> file_link
+            \: the relative path to the shared file as seen from
+            %code> index.html
+            \.
+
+          %li
+            %code> file_ext
+            \: the normalized file extension (trimmed &amp; lowercase).
+
+          %li
+            %code> file_size
+            \: the file size in readable format, eg. "2.70 KB",
+            "5.12 GB".
+
+          %li
+            %code> original_filename
+            \: The name of the file as it was when the file
+            was shared.
+
+          %li
+            %code> is_archive
+            \: the file is an archive (zip, tgz, rar etc.)
+
+          %li
+            %code> is_audio
+            \: the file is an audio file (mp3, m4a, wav etc.)
+
+          %li
+            %code> is_contact
+            \: the file is a vcard file
+
+          %li
+            %code> is_image
+            \: the file is an image (png, jpg, tiff, gif etc.)
+
+          %li
+            %code> is_message
+            \: the file is a recognized message (email, IM, and so
+            on)
+
+          %li
+            %code> is_pdf
+            \: the file is a mixed content file, i.e. a PDF.
+
+          %li
+            %code> is_text
+            \: the file is text document (html, rtf, mdown etc.)
+
+          %li
+            %code> is_video
+            \: the file is a video (mov, mpg etc.)
+
+          %li
+            %code> is_unknown_type
+            \: the file wasn't recognized as one of the files
+            listed above
+
+          %li
+            %code> is_ext_*
+            \: a "dynamic" placeholder — for example, if the shared
+            file is a GIF then the placeholder
+            %code is_ext_gif
+            would be set.
+
+          %li
+            %code> dropbox_preview_link
+            \: the URL to Dropbox' original preview page for the shared file.
+            (Servus 1.0+)
+
+          %li
+            %code> json_data
+            \: all available keys/variables as JSON object.
+            Naturally, this is what you want to use when writing Javascript.
+            (Servus 1.2+)
+
+
+      %section#section-changelog
+        %h3 Changelog
+
+        %p
+          As Servus is evolving, so are its templating capabilities and the
+          list of its placeholders.  For a list of historical changes
+          %a{ :href => "https://github.com/carlo/servus-theme-boilerplate#changelog" }<
+            please see the boilerplate repository's changelog.

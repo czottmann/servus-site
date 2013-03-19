@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='text/html' http-equiv='Content-Type'>
+    <meta content='width=device-width' name='viewport'>
+    <meta content='Turn any file on your computer into a branded download page hosted on Dropbox.' name='description'>
+    <meta content='05ae9fe22b8e' name='bitly-verification'>
+    <title>Servus for Mac. Your uploads, your style, on Dropbox.</title>
+    <script src='/js/vendor/custom.modernizr.js?_=1363654116'></script>
+    <link href='/css/servus.css?_=1363654116' rel='stylesheet' type='text/css'>
+    <link href='//assets.servus.io/3/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <!--[if IE 7 ]>
+      <link href='//assets.servus.io/3/font-awesome-ie7.min.css' rel='stylesheet' type='text/css'>
+    <![endif]-->
+    <link href='https://plus.google.com/101996114152007191046' rel='publisher'>
+    <link href='/img/favicon.png' rel='shortcut icon'>
+  </head>
+  <body>
+    <div class='contain-to-grid fixed' id='main-nav'>
+      <div>
+        <nav class='top-bar'>
+          <ul class='title-area'>
+            <li class='name'>
+              <h1>
+                <a href='/'>Servus. For Mac & Dropbox.</a>
+              </h1>
+            </li>
+            <li class='toggle-topbar menu-icon'>
+              <a href='#'>
+                <span>Menu</span>
+              </a>
+            </li>
+          </ul>
+          <section class='top-bar-section'>
+            <ul class='right'>
+              <li>
+                <a class='download' href='/download'>Download Servus</a>
+              </li>
+              <li>
+                <a href='/faq.html'>FAQ</a>
+              </li>
+              <li>
+                <a href='/theme-docs.html'>Theme docs</a>
+              </li>
+              <li class='has-dropdown'>
+                <a href='#'>Extras</a>
+                <ul class='dropdown'>
+                  <li>
+                    <a href='/extras.html'>Helpers</a>
+                  </li>
+                  <li>
+                    <a href='/api.html'>API</a>
+                  </li>
+                </ul>
+              </li>
+              <li class='has-dropdown'>
+                <a href='#'>News & Contact</a>
+                <ul class='dropdown'>
+                  <li>
+                    <a href='http://blog.servus.io/'>
+                      <i class='icon-align-left'></i>
+                      Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a href='https://tinyletter.com/servusio'>
+                      <i class='icon-envelope-alt'></i>
+                      Newsletter
+                    </a>
+                  </li>
+                  <li>
+                    <a href='/twitter'>
+                      <i class='icon-twitter'></i>
+                      Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a href='/+'>
+                      <i class='icon-google-plus-sign'></i>
+                      Google+
+                    </a>
+                  </li>
+                  <li class='divider'></li>
+                  <li>
+                    <a href='mailto:carlo@servus.io'>
+                      <i class='icon-envelope'></i>
+                      Contact Carlo
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+    </div>
+    <div id='content-column'>
+      <div class='page-theme-docs'>
+  <div class='row'>
+    <div class='large-8 large-centered columns'>
+      <h2>Theme Documentation</h2>
+      <p>
+        This page is an shorter version of the
+        <code>README</code>
+        file in the
+        <a href='https://github.com/carlo/servus-theme-boilerplate'>official Servus boilerplate repository</a>.
+        It exists to give you a rough overview over the app's templates and
+        templating workflow.
+      </p>
+      <p>
+        In a nutshell, the boilerplate repository is a bare-bones theme
+        starter kit: it contains nothing but a
+        <code>index.html</code>
+        with all the placeholders available to Servus templates.  It's
+        aimed at being a starting point for your own custom themes.
+      </p>
+      <div class='panel' id='toc'></div>
+      <section id='section-get-started'>
+        <h3>How to get started</h3>
+        <ol>
+          <li>
+            Either
+            <a href='https://github.com/carlo/servus-theme-boilerplate/zipball/master'>download the boilerplate as ZIP file</a>
+            <strong>or</strong>
+            <a href='https://github.com/carlo/servus-theme-boilerplate'>fork the repository on Github</a>.
+            Store the resulting folder somewhere on the Mac that has Servus
+            installed.
+          </li>
+          <li>
+            Tell Servus to use that starter kit folder as custom theme.  To do
+            that, open Servus' Preferences window, go to the
+            <em>Theme</em>
+            section and tick the box labelled
+            <em>"Use custom theme…"</em>,
+            then set the theme folder by pressing the
+            <em>"Select theme path"</em>
+            button.
+          </li>
+          <li>
+            Now when you drop a file onto the Servus icon, the app will get
+            its theme files from that starter kit folder.
+          </li>
+          <li>
+            To edit your theme, open the starter kit folder and edit the
+            <code>index.html</code>
+            as you see fit.  If you want to add new elements like CSS files or
+            background images, drop them into that same folder and reference
+            them in your HTML and CSS files as usual.  (See the section
+            "Important!" below.  It's important!)
+          </li>
+          <li>
+            Drop any file onto the Servus menubar icon to see your theme
+            changes.
+          </li>
+        </ol>
+      </section>
+      <section id='section-templating-engine'>
+        <h3>Templating Engine</h3>
+        <p>
+          Instead of re-inventing the wheel, Servus is using
+          <a href='http://mustache.github.com/'>Mustache</a>,
+          a well-known logic-less templating engine.  You can find all you
+          need to know about its syntax on the
+          <a href='http://mustache.github.com/'>Mustache website</a>.
+        </p>
+      </section>
+      <section id='section-workflow'>
+        <h3>Theme Workflow</h3>
+        <p>The templating process works like this:</p>
+        <ol>
+          <li>
+            The contents of your local theme folder will be copied to a
+            temporary folder.
+          </li>
+          <li>
+            All asset files in that folder are uploaded.  (Asset files are
+            images, Javascript files, etc. — basically everything that's
+            neither a CSS file nor the
+            <code>index.html</code>.)
+          </li>
+          <li>
+            Shareable links for those files are requested from the Dropbox
+            API.
+          </li>
+          <li>
+            In the CSS files and
+            <code>index.html</code>
+            the original references to the local asset files are replaced with
+            their respective shareable counterparts gathered in step 3. As an
+            example, let's assume in your CSS file you reference a local theme
+            file
+            <code>background-image.jpg</code>.
+            Since each file shared via Dropbox gets its own unpredictable path
+            name by the Dropbox API, your local reference to that file won't
+            work anymore, so Servus is replacing it with the file's shareable
+            URL
+            <code>https://dl.dropbox.com/s/1234567890abcde/background-image.jpg</code>.
+          </li>
+          <li>
+            The CSS files are uploaded, their references are replaced in the
+            <code>index.html</code>.
+          </li>
+          <li>The HTML file is uploaded.</li>
+        </ol>
+      </section>
+      <section id='section-important'>
+        <h3>Important!</h3>
+        <ul>
+          <li>
+            Your theme
+            <strong>must</strong>
+            contain an
+            <code>index.html</code>.
+          </li>
+          <li>
+            Your theme can contain more than one CSS file and many JS files
+            but only
+            <em>one</em>
+            <code>index.html</code>.
+            The templating engine won't replace placeholders in JS files, tho,
+            so if you want to set JS variables, do so in a
+            <code>&lt;script&gt;</code>
+            block in the HTML file prior to loading your external JS file.
+          </li>
+          <li>
+            Servus will ignore subfolders.  Only files in the root folder of
+            your theme are recognized and processed.
+          </li>
+          <li>The templating engine expects UTF-8 encoded files.</li>
+          <li>
+            All your external assets should be served via HTTPS.  (Servus 1.2
+            introduced a HTTP/HTTPS toggle, and your assets host should
+            reflect its setting.)
+          </li>
+        </ul>
+      </section>
+      <section id='section-placeholders'>
+        <h3>Template Placeholders</h3>
+        <p>
+          Here's a list of available template keys/variables with their
+          meaning.
+        </p>
+        <ul>
+          <li><code>file_link</code>: the relative path to the shared file as seen from<code>index.html</code>.
+          </li>
+          <li><code>file_ext</code>: the normalized file extension (trimmed &amp; lowercase).
+          </li>
+          <li><code>file_size</code>: the file size in readable format, eg. "2.70 KB",
+            "5.12 GB".
+          </li>
+          <li><code>original_filename</code>: The name of the file as it was when the file
+            was shared.
+          </li>
+          <li><code>is_archive</code>: the file is an archive (zip, tgz, rar etc.)
+          </li>
+          <li><code>is_audio</code>: the file is an audio file (mp3, m4a, wav etc.)
+          </li>
+          <li><code>is_contact</code>: the file is a vcard file
+          </li>
+          <li><code>is_image</code>: the file is an image (png, jpg, tiff, gif etc.)
+          </li>
+          <li><code>is_message</code>: the file is a recognized message (email, IM, and so
+            on)
+          </li>
+          <li><code>is_pdf</code>: the file is a mixed content file, i.e. a PDF.
+          </li>
+          <li><code>is_text</code>: the file is text document (html, rtf, mdown etc.)
+          </li>
+          <li><code>is_video</code>: the file is a video (mov, mpg etc.)
+          </li>
+          <li><code>is_unknown_type</code>: the file wasn't recognized as one of the files
+            listed above
+          </li>
+          <li><code>is_ext_*</code>: a "dynamic" placeholder — for example, if the shared
+            file is a GIF then the placeholder
+            <code>is_ext_gif</code>
+            would be set.
+          </li>
+          <li><code>dropbox_preview_link</code>: the URL to Dropbox' original preview page for the shared file.
+            (Servus 1.0+)
+          </li>
+          <li><code>json_data</code>: all available keys/variables as JSON object.
+            Naturally, this is what you want to use when writing Javascript.
+            (Servus 1.2+)
+          </li>
+        </ul>
+      </section>
+      <section id='section-changelog'>
+        <h3>Changelog</h3>
+        <p>
+          As Servus is evolving, so are its templating capabilities and the
+          list of its placeholders.  For a list of historical changes
+          <a href='https://github.com/carlo/servus-theme-boilerplate#changelog'>please see the boilerplate repository's changelog.</a>
+        </p>
+      </section>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class='row'>
+      <div class='large-12 text-center columns'>
+        <hr>
+        <div id='microdata' itemscope='' itemtype='http://schema.org/Product'>
+          <span itemprop='name'>Servus for Mac</span>
+          <img alt='Servus icon' itemprop='image' src='img/app-icon.png'>
+          <a href='https://servus.io' itemprop='url'>Servus for Mac</a>
+          <span itemprop='description'>
+            A Dropbox-powered sharing app for Mac. It's a menubar icon. Drop a
+            file on it, and it'll build a preview page for it (custom themes!),
+            upload it to your Dropbox, and copy the link for you.
+          </span>
+        </div>
+        <p id='imprint'>
+          <strong>Imprint:</strong>
+          <a href='http://municode.de'>Carlo Zottmann,</a>
+          Zeisigweg 30, 81827 München, Germany
+           &middot; carlo@servus.io
+           &middot; USt-ID: DE260224054
+        </p>
+      </div>
+    </div>
+    <script src='/js/all.js?_=1363654116'></script>
+    <script src='//use.typekit.net/lvn0xvt.js'></script>
+    <script>
+      try{Typekit.load();}catch(e){}
+    </script>
+  </body>
+</html>
