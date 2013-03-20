@@ -6,7 +6,7 @@ use Rack::ResponseHeaders do |headers|
 end
 
 use Rack::Rewrite do
-  found "/theme-docs", "http://documentup.com/carlo/servus-theme-boilerplate"
+  found "/theme-docs", "/theme-docs.html"
   found "/download", "https://updates.servus.io/download"
   found "/buy", "http://sites.fastspring.com/municode/product/servus"
 
