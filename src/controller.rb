@@ -13,8 +13,8 @@ end
 
 # Concatenate all relevant JS files into `js/all.js`
 before 'js/all.js' do |f|
+#      vendor/jquery.min.js
   js_files = %w(
-      vendor/jquery.min.js
       foundation/foundation.js
       foundation/foundation.topbar.js
       foundation/foundation.clearing.js
