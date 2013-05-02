@@ -6,9 +6,10 @@ use Rack::ResponseHeaders do |headers|
 end
 
 use Rack::Rewrite do
-  found "/theme-docs", "/theme-docs.html"
-  found "/download", "https://updates.servus.io/download"
+  found "/beta", "https://rink.hockeyapp.net/apps/bf33ffe8d7ef7387daaf9d947b6af0a6"
   found "/buy", "http://sites.fastspring.com/municode/product/servus"
+  found "/download", "https://updates.servus.io/download"
+  found "/theme-docs", "/theme-docs.html"
 
   found "/+", "https://plus.google.com/101996114152007191046"
   found "/twitter", "https://twitter.com/servusio"
