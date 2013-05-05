@@ -6,8 +6,7 @@ namespace :dev do
 
   desc "Generate the site in ./build/ from the files in ./src/."
   task :generate do
-    stasis = Stasis.new("src/", "../build/")
-    stasis.render
+    system("cd src; stasis -p ../build/; cd ..")
   end
 
 
