@@ -25,7 +25,6 @@
     :javascript
       try{Typekit.load();}catch(e){}
 
-
   %body
     #main-nav.contain-to-grid.fixed
       %div
@@ -35,8 +34,8 @@
               %h1
                 %a{ :href => "/" } Servus. For Mac & Dropbox.
             %li.toggle-topbar.menu-icon
-              %a{ :href => "#" }
-                %span Menu
+              %a{ :href => "#", :title => "Open navigational menu" }
+                %span
 
           %section.top-bar-section
             %ul.right
@@ -92,10 +91,10 @@
         %hr
 
         #microdata{ :itemscope => "", :itemtype => "http://schema.org/Product" }
-          %span{ :itemprop => "name" } Servus for Mac
+          %span.visuallyhidden{ :itemprop => "name" } Servus for Mac
           %img{ :itemprop => "image", :src => "img/app-icon.png", :alt => "Servus icon" }
-          %a{ :itemprop => "url", :href => "https://servus.io" } Servus for Mac
-          %span{ :itemprop => "description" }
+          %a.visuallyhidden{ :itemprop => "url", :href => "https://servus.io" } Servus for Mac
+          %span.visuallyhidden{ :itemprop => "description" }
             A Dropbox-powered sharing app for Mac. It's a menubar icon. Drop a
             file on it, and it'll build a preview page for it (custom themes!),
             upload it to your Dropbox, and copy the link for you.
