@@ -6,6 +6,9 @@ use Rack::ResponseHeaders do |headers|
 end
 
 use Rack::Rewrite do
+  # Campaigns
+  found "/~fb1", "https://servus.io/?utm_campaign=fb1"
+
   found "/beta", "https://rink.hockeyapp.net/apps/bf33ffe8d7ef7387daaf9d947b6af0a6"
   found "/buy", "http://sites.fastspring.com/municode/product/servus"
   found "/download", "https://updates.servus.io/download"
