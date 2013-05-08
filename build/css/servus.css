@@ -1916,7 +1916,7 @@ small.error {
   line-height: 45px;
   position: relative;
   background: #34495e;
-  margin-bottom: 1.875em; }
+  margin-bottom: 0; }
   .top-bar ul {
     margin-bottom: 0;
     list-style: none; }
@@ -1939,7 +1939,7 @@ small.error {
     font-size: 16px; }
     .top-bar .name h1 {
       line-height: 45px;
-      font-size: 1.5em;
+      font-size: 1.45em;
       margin: 0; }
       .top-bar .name h1 a {
         font-weight: bold;
