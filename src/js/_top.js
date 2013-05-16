@@ -136,7 +136,7 @@ $(document).ready( function() {
 
   function updateStoreLink(rawValue) {
     var prices = getFormattedComputedPrices(rawValue),
-      link = document.createElement('a'),
+      link = document.createElement("a"),
       $elem = $("#pwyw a.button-buy");
 
     link.href = $elem.attr("href");
