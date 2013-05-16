@@ -14,7 +14,7 @@ namespace :dev do
   task :auto_generate do
     # Stasis::DevMode doesn't work as expected, dunno why.  Too lazy to dig
     # deeper right now.
-    system("cd src; stasis -d 3000 -p ../build/; cd ..")
+    system("cd src; stasis -d 3000 -p ../build/; cd ..; open http://localhost:3000")
   end
 
 end
