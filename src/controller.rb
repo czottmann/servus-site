@@ -19,6 +19,7 @@ before 'js/all.js' do |f|
       foundation/foundation.topbar.js
       foundation/foundation.clearing.js
       vendor/css3-mediaqueries.js
+      vendor/jquery.nouislider.min.js
       _top.js
     ) + Dir.glob("_page*")
 
