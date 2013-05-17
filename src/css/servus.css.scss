@@ -255,10 +255,20 @@ p#imprint {
   }
 
   #pwyw {
-    text-align: center;
+    &.panel {
+      padding: 1.25em 0;
+    }
 
     p {
       margin-bottom: 0;
+    }
+
+    .js-range-low {
+      text-align: right;
+    }
+
+    .js-range-high {
+      text-align: left;
     }
 
     .button-buy {
