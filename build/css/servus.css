@@ -2786,6 +2786,12 @@ p#imprint, .page-extras #imprint.screenshot {
     text-align: center; }
 .page-buy #pwyw.panel {
   padding: 1.25em 0; }
+.page-buy #pwyw .range-low p, .page-buy #pwyw .range-low .page-extras .screenshot, .page-extras .page-buy #pwyw .range-low .screenshot,
+.page-buy #pwyw .range-high p,
+.page-buy #pwyw .range-high .page-extras .screenshot,
+.page-extras .page-buy #pwyw .range-high .screenshot {
+  color: #888;
+  padding-top: 1.3em; }
 .page-buy #pwyw .range-low {
   padding-right: 0;
   text-align: right; }
@@ -2793,7 +2799,6 @@ p#imprint, .page-extras #imprint.screenshot {
   padding-left: 0;
   text-align: left; }
 .page-buy #pwyw #price-selection {
-  margin-top: 0.65em;
   width: 100%; }
 .page-buy #pwyw #fd-slider-price-selection {
   margin-top: 0.4em; }

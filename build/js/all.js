@@ -2180,7 +2180,8 @@ $(document).ready( function() {
   $("p.js-toggle-read-more a").one( "click", function(evt) {
     evt.preventDefault();
 
-    var $section = $("#read-more");
+    var $section = $("#read-more"),
+      $elem = $(this);
 
     $section.animate(
       { height: $section.data("height") + 26, opacity: 1 },
@@ -2190,7 +2191,7 @@ $(document).ready( function() {
       }
     );
 
-    $(this).closest("p").remove();
+    $elem.replaceWith( $elem.html() );
   });
 });
 
