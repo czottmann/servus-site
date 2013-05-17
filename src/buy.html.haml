@@ -11,12 +11,12 @@
 
       %p
         Hello, my name is Carlo Zottmann.  I am a freelance developer, 39
-        years old and married.  I invest a lot of time, care and energy in my
-        app Servus, and I'd like to still be able to support it in 1, 2 or 3
+        years old and married.  I invest a lot of time, care and energy in
+        Servus, and I'd like to still be able to support it in 1, 2 or 3
         years time.
 
       %p.js-toggle-read-more
-        This isn't about pity or haggling.
+        Don't get me wrong, please: this isn't about pity or haggling.
         %a{ :href => "#read-more" }
           It's about freedom and fairness.
 
@@ -59,8 +59,10 @@
 
       %p
         %strong
-          Please think about what Servus is worth to you, then pick a fair
-          price.
+          Please think about what Servus is worth
+          = succeed "," do
+            %em to you
+          then pick a fair price.
 
       %p
         Thank you!  :)
@@ -72,8 +74,8 @@
               %span.js-range-low €0 / $0
           .small-8.columns
             %p
-              %label.visuallyhidden{ :for => "price-selection" } Pick a price between €2 / $2.60 and €20 / $26
-              %input#price-selection{ :type => :range, :value => 5, :min => 2, :max => 20, :step => 0.5, :title => "Pick a price between €2/$2.60 and €20/$26" }
+              %label{ :for => "price-selection" } Pick your price:
+              %input#price-selection{ :type => :range, :value => 5, :min => 2, :max => 20, :step => 0.5, :title => "Pick your price" }
           .small-2.columns.range-high
             %p
               %span.js-range-high €0 / $0
