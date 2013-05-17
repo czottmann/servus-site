@@ -56,8 +56,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // Typekit suggestion to prevent flash of unstyled content during load.
-.wf-loading {
-  visibility: hidden;
+html.wf-loading {
+  visibility: hidden !important;
 }
 
 
@@ -236,3 +236,44 @@ p#imprint {
   text-align: center;
 }
 
+
+
+
+// PWYW page =================================================================
+
+.page-buy {
+  #read-more {
+    overflow: hidden;
+  }
+
+  i.formula {
+    background-color: #f2f2f8;
+    display: block;
+    margin: auto 1.5em;
+    padding: 0.5em;
+    text-align: center;
+  }
+
+  #pwyw {
+    text-align: center;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .button-buy {
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+    }
+
+    #price-selection {
+      margin-top: 0.75em;
+      width: 100%;
+    }
+
+    #fd-slider-price-selection {
+      margin-top: 0.5em;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+- @page_title = "Buy Servus"
+
+.page-buy
+  .row
+    .large-8.large-centered.columns
+      %h2
+        Buy Servus, Pick Your Price
+
+      %p
+        %strong This is a "Pay what you want" experiment.
+        %a.js-toggle-read-more{ :href => "#read-more" } Read more…
+
+      #read-more
+        %p
+          Here's the thing: pricing software is really, really hard.  When I'm
+          trying to find the right price for my applications, my personal
+          formula is this:
+
+        %p
+          %i.formula (price I would pay for something like it) / 2
+
+        %p
+          Back when I opened my store I knew I would pay ~$20 for a tool
+          like Servus, hence
+          %strong the price should be €8 / $10.
+
+        %p
+          But, frankly, I don't sell as many copies as I'd like.  :)  Maybe
+          Servus is scratching an itch other people simply don't feel, it's
+          possible.  Or maybe I am overvaluing what I've built, also
+          possible.
+
+        %p
+          So I asked some of my customers for their honest opinion.
+          Some told me Servus is too cheap.  A few said it's too expensive.
+          Also there are those who think the the price just right.  Hooray!
+          Back to square #1.
+
+        %p
+          But the guessing drives me crazy.  I'll probably never find the
+          right price on my own; and for the record, the free market fairies
+          are insane.
+          %i
+            (Selling their apps at €0.79 / $0.99 a pop is not a sound
+            long-term strategy for most developers.  Who would've thought?)
+
+        %p
+          %strong So.
+
+      %p
+        Hello, my name is Carlo Zottmann.  I am a freelance software
+        developer, 39 years old and married.  I'm not starving, but I've
+        invested a lot of time, care and energy in my product, and I'd like to
+        still be able to support it in 1, 2 or 3 years time.
+
+      %p
+        %strong
+          Please think about what Servus is worth to you, then pick a fair
+          price.
+
+      %p
+        Thank you!  :)
+
+      #pwyw.panel
+        .row
+          .small-2.columns
+            %p.js-range-low €0 / $0
+          .small-8.columns
+            %p
+              %label.visuallyhidden{ :for => "price-selection" } Pick a price between €2 / $2.60 and €20 / $26
+              %input#price-selection{ :type => :range, :value => 5, :min => 2, :max => 20, :step => 0.5, :title => "Pick a price between €2/$2.60 and €20/$26" }
+          .small-2.columns
+            %p.js-range-high €0 / $0
+        .row
+          .small-8.small-centered.columns
+            %p
+              %a.button-buy.large.button{ :href => "https://sites.fastspring.com/municode/instant/servus-paywhatyouwant" }
+                %i.icon-shopping-cart
+                Buy Servus
+                %br.show-for-small
+                for
+                %br.show-for-medium-up
+                %span.js-selected-price €0 / $0
