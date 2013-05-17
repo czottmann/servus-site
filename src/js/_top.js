@@ -171,7 +171,9 @@ $(document).ready( function() {
     .height(0)
     .css( "opacity", 0 );
 
-  $(".js-toggle-read-more").one( "click", function() {
+  $(".js-toggle-read-more").one( "click", function(evt) {
+    evt.preventDefault();
+
     var $section = $("#read-more");
 
     $section.animate(
