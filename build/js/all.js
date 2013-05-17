@@ -2175,7 +2175,7 @@ $(document).ready( function() {
     .height(0)
     .css( "opacity", 0 );
 
-  $(".js-toggle-read-more").one( "click", function(evt) {
+  $("p.js-toggle-read-more a").one( "click", function(evt) {
     evt.preventDefault();
 
     var $section = $("#read-more");
@@ -2188,7 +2188,7 @@ $(document).ready( function() {
       }
     );
 
-    $(".js-toggle-read-more").remove();
+    $(this).closest("p").remove();
   });
 });
 
