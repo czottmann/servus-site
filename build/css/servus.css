@@ -2778,26 +2778,26 @@ p#imprint, .page-extras #imprint.screenshot {
 
 .page-buy #read-more {
   overflow: hidden; }
-.page-buy i.formula {
-  background-color: #f2f2f8;
-  display: block;
-  margin: auto 1.5em;
-  padding: 0.5em;
-  text-align: center; }
+  .page-buy #read-more i.formula {
+    background-color: #f2f2f8;
+    display: block;
+    margin: auto 1.5em;
+    padding: 0.5em;
+    text-align: center; }
 .page-buy #pwyw.panel {
   padding: 1.25em 0; }
-.page-buy #pwyw p, .page-buy #pwyw .page-extras .screenshot, .page-extras .page-buy #pwyw .screenshot {
-  margin-bottom: 0; }
-.page-buy #pwyw .js-range-low {
+.page-buy #pwyw .range-low {
+  padding-right: 0;
   text-align: right; }
-.page-buy #pwyw .js-range-high {
+.page-buy #pwyw .range-high {
+  padding-left: 0;
   text-align: left; }
+.page-buy #pwyw #price-selection {
+  margin-top: 0.65em;
+  width: 100%; }
+.page-buy #pwyw #fd-slider-price-selection {
+  margin-top: 0.4em; }
 .page-buy #pwyw .button-buy {
   padding-left: 0;
   padding-right: 0;
   width: 100%; }
-.page-buy #pwyw #price-selection {
-  margin-top: 0.75em;
-  width: 100%; }
-.page-buy #pwyw #fd-slider-price-selection {
-  margin-top: 0.5em; }
