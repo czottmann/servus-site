@@ -42,7 +42,11 @@
         {
           load: "//use.typekit.net/lvn0xvt.js",
           complete: function() {
-            try { Typekit.load(); } catch(e) {};
+            try {
+              Typekit.load();
+            } catch(e) {
+              document.getElementsByTagName("html")[0].className = document.getElementsByTagName("html")[0].className.replace( /\bwf-loading\b/, "" );
+            };
           }
         },
         {
