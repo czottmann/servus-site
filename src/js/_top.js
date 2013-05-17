@@ -174,10 +174,13 @@ $(document).ready( function() {
   $(".js-toggle-read-more").one( "click", function() {
     var $section = $("#read-more");
 
-    $section.animate({
-      height: $section.data("height") + 26,
-      opacity: 1
-    }, 300 );
+    $section.animate(
+      { height: $section.data("height") + 26, opacity: 1 },
+      300,
+      function() {
+        $(this).height("auto");
+      }
+    );
 
     $(".js-toggle-read-more").remove();
   });
