@@ -171,7 +171,7 @@ $(document).ready( function() {
 
   // Toggle "read more" section visibility
   $("#read-more")
-    .data("original-height", $("#read-more").height() )
+    .data( "height", $("#read-more").height() )
     .height(0)
     .css( "opacity", 0 );
 
@@ -179,8 +179,8 @@ $(document).ready( function() {
     var $section = $("#read-more");
 
     $section.animate({
-      height: !$section.height() ? $section.data("original-height") : 0,
-      opacity: !$section.height() ? 1 : 0
+      height: $section.data("height") + 26,
+      opacity: 1
     }, 300 );
 
     $(".js-toggle-read-more").remove();
