@@ -152,18 +152,14 @@ $(document).ready( function() {
     });
   }
 
-  $("#pwyw-slider").noUiSlider({
-    handles: 1,
-    range: [ rangeLow, rangeHigh ],
-    start: suggestedPrice,
-    step: 0.5,
-    slide: function() {
+  $("#price-selection")
+    .on( "change", function() {
       var price = +$(this).val();
 
       updateCurrentPriceDisplay(price);
       updateStoreLink(price);
-    }
-  });
+    })
+    .trigger("focus");
 
   renderPriceRangeDisplay();
   updateCurrentPriceDisplay(suggestedPrice);
