@@ -56,8 +56,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // Typekit suggestion to prevent flash of unstyled content during load.
-.wf-loading {
-  visibility: hidden;
+html.wf-loading {
+  visibility: hidden !important;
 }
 
 
@@ -273,10 +273,10 @@ p#imprint {
       -ms-user-select: none;
       -webkit-box-sizing: border-box;
       -webkit-user-select: none;
-      background: #d9d7cb;
-      border-radius: 3px;
-      border: 1px solid #908d84;
-      box-shadow: inset 0px 1px 7px #b6b4a8;
+      background: $panel-border-color;
+      // border-radius: 3px;
+      border: 1px solid darken($panel-border-color, 5%);
+      // box-shadow: inset 0px 1px 7px #b6b4a8;
       box-sizing: border-box;
       cursor: default;
       display: block;
@@ -339,12 +339,11 @@ p#imprint {
       }
 
       div {
-        background: #efefe7;
-        // border-radius: 3px;
-        border: 1px solid #99968f;
+        @include box-shadow( 0 2px 5px rgba( 50, 50, 50, 0.45 ) );
+        background: $success-color;
         cursor: ew-resize;
-        height: 18px;
-        width: 18px;
+        height: 28px;
+        width: 12px;
       }
 
       &.disabled div {
@@ -356,7 +355,7 @@ p#imprint {
         width: 100%;
 
         div {
-          margin: -5px 0 0 -9px;
+          margin: -10px 0 0 -9px;
         }
       }
 
