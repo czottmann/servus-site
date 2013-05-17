@@ -121,14 +121,16 @@ $(document).ready( function() {
     $("#pwyw")
       .find(".js-range-low").html(
         [ "€", priceLow.eur,
-          "<br>",
+          "<br class='show-for-small'>",
+          " <span class='show-for-medium-up'>/</span> ",
           "$", priceLow.usd
         ].join("")
       )
       .end()
       .find(".js-range-high").html(
         [ "€", priceHigh.eur,
-          "<br>",
+          "<br class='show-for-small'>",
+          " <span class='show-for-medium-up'>/</span> ",
           "$", priceHigh.usd
         ].join("")
       );
