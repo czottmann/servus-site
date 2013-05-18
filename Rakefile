@@ -12,9 +12,10 @@ namespace :dev do
 
   desc "Auto-generation mode, open localhost:3000."
   task :auto_generate do
+    puts "", "Development server running: http://localhost:3000"
     # Stasis::DevMode doesn't work as expected, dunno why.  Too lazy to dig
     # deeper right now.
-    system("cd src; stasis -d 3000 -p ../build/; cd ..; open http://localhost:3000")
+    system("cd src; stasis -d 3000 -p ../build/; cd ..")
   end
 
 end
