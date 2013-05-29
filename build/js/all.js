@@ -2088,8 +2088,8 @@ $(document).ready( function() {
   }
 
   var rangeLow = 2.5,
-    rangeHigh = 20,
-    suggestedPrice = 5;
+    rangeHigh = 30,
+    suggestedPrice = 7;
 
   function getComputedPrices(rawValue) {
     return {
