@@ -10,7 +10,7 @@ use Rack::Rewrite do
   found "/~fb1", "https://servus.io/?utm_campaign=fb1"
 
   found "/beta", "https://rink.hockeyapp.net/apps/bf33ffe8d7ef7387daaf9d947b6af0a6"
-  found "/buy", "https://sites.fastspring.com/municode/instant/servus"
+  found "/buy", "/buy.html"   # "https://sites.fastspring.com/municode/instant/servus"
   found "/download", "https://updates.servus.io/download"
   found "/theme-docs", "/theme-docs.html"
 
