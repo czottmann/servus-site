@@ -31,7 +31,7 @@ namespace :git do
 end
 
 
-desc "Deploy to Heroku (by pushing to all remotes)."
+desc "Deploy to jiffybox."
 task :deploy do
-  system("git push all master")
+  system("scp -r build/* jiffybox:sites/servus.io/")
 end
